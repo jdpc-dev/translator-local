@@ -2165,6 +2165,26 @@
     "release": [
       "free",
       "liberate"
+    ],
+    "feed": [
+      "nourish",
+      "sustain"
+    ],
+    "insert": [
+      "introduce",
+      "enter"
+    ],
+    "aim": [
+      "target",
+      "point"
+    ],
+    "shoot": [
+      "fire",
+      "blast"
+    ],
+    "repeat": [
+      "reiterate",
+      "redo"
     ]
   },
   "es": {
@@ -4269,6 +4289,26 @@
     "soltar": [
       "liberar",
       "aflojar"
+    ],
+    "alimentar": [
+      "nutrir",
+      "sustentar"
+    ],
+    "insertar": [
+      "introducir",
+      "meter"
+    ],
+    "apuntar": [
+      "señalar",
+      "dirigir"
+    ],
+    "disparar": [
+      "tirar",
+      "lanzar"
+    ],
+    "repetir": [
+      "reiterar",
+      "rehacer"
     ]
   }
 }

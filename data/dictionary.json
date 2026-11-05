@@ -7316,6 +7316,34 @@
     {
       "en": "you should not let her go",
       "es": "no la deben de soltar"
+    },
+    {
+      "en": "feed",
+      "es": "alimentar"
+    },
+    {
+      "en": "insert",
+      "es": "insertar"
+    },
+    {
+      "en": "aim",
+      "es": "apuntar"
+    },
+    {
+      "en": "summer",
+      "es": "verano"
+    },
+    {
+      "en": "winter",
+      "es": "invierno"
+    },
+    {
+      "en": "spring",
+      "es": "primavera"
+    },
+    {
+      "en": "autumn",
+      "es": "otoño"
     }
   ]
 }

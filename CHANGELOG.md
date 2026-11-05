@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.5] - 2026-11-05
+
+### Added
+
+- Dictionary-membership scoring for language detection, plus a heuristic that
+  recognizes lists of Spanish infinitives (`-ar`, `-er`, `-ir`).
+- Verb entries for `feed`/`alimentar`, `insert`/`insertar`, `aim`/`apuntar`,
+  and the four seasons.
+- Synonym entries for the new verbs.
+- Regression tests for Spanish infinitive lists and English `-er` words.
+
+### Fixed
+
+- Spanish infinitive lists such as
+  `alimentar, insertar, cortar, apuntar, disparar, repetir` are now detected as
+  Spanish and translated instead of being treated as English and passed through.
+- Dataset now covers 1,836 pairs and 1,044 synonym entries.
+
 ## [0.2.4] - 2026-11-05
 
 ### Added

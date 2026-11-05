@@ -110,8 +110,10 @@ Word Alternatives:
 
 1. **Input** is read from an argument, file, or stdin.
 2. **Detection** adds 10 points to Spanish for any of `ñ ¿ ¡ á é í ó ú ü`, then
-   adds 1 point per stopword match for each language. Ties and zero scores
-   default to English with a warning.
+   adds 1 point per stopword match for each language. Dictionary membership adds
+   another point for content words, and a list of three or more Spanish
+   infinitives adds 2 points to Spanish. Ties and zero scores default to English
+   with a warning.
 3. **Translation** tokenizes the text while keeping whitespace and punctuation.
    It tries dictionary phrases longest-first (up to the longest bundled phrase),
    then falls back to single-word lookup. Matched spans preserve the source
@@ -122,9 +124,9 @@ Word Alternatives:
 
 ## Data
 
-The bundled dataset contains **1,829 bilingual pairs** (1,403 words and 426
-phrases), **267 Spanish→English reverse overrides**, and **1,034 synonym
-entries** (525 English and 509 Spanish), all embedded in the binary. Synonyms
+The bundled dataset contains **1,836 bilingual pairs** (1,410 words and 426
+phrases), **267 Spanish→English reverse overrides**, and **1,044 synonym
+entries** (530 English and 514 Spanish), all embedded in the binary. Synonyms
 are curated in bilingual concept groups so the English and Spanish alternatives
 stay aligned. Words without a suitable synonym return an empty list.
 

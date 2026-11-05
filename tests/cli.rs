@@ -154,6 +154,26 @@ fn translates_spanish_articles_and_object_phrases() {
 }
 
 #[test]
+fn translates_spanish_infinitive_verb_lists() {
+    let output = run(
+        &[
+            "alimentar, insertar, cortar, apuntar, disparar, repetir",
+            "--format",
+            "json",
+        ],
+        None,
+    );
+    let value = json_output(&output);
+
+    assert_eq!(value["detected_language"], "es");
+    assert_eq!(value["target_language"], "en");
+    assert_eq!(
+        value["translation"],
+        "feed, insert, cut, aim, shoot, repeat"
+    );
+}
+
+#[test]
 fn renders_human_readable_output() {
     let output = run(&["El gato rápido salta."], None);
     assert!(output.status.success());
@@ -175,7 +195,10 @@ fn reads_from_stdin() {
     assert_eq!(value["detected_language"], "en");
     assert_eq!(value["target_language"], "es");
     assert_eq!(value["translation"], "buenos días");
-    assert!(!output.stderr.is_empty(), "ambiguous detection should warn");
+    assert!(
+        output.stderr.is_empty(),
+        "dictionary words should not trigger a detection warning"
+    );
 }
 
 #[test]
