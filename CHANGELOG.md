@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.7] - 2026-11-05
+
+### Added
+
+- `hurts` → `duele` and the phrase `my ass hurts` → `me duele el culo`.
+- Alternatives for `hurts`/`duele`.
+- Regression test for the phrase translation.
+
+### Changed
+
+- Racial slurs and comparable derogatory terms are intentionally not curated
+  in the bundled dictionary; they remain out-of-vocabulary and can be marked
+  with `--oov bracket`.
+- Dataset now covers 2,072 pairs and 1,139 synonym entries.
+
 ## [0.2.6] - 2026-11-05
 
 ### Added

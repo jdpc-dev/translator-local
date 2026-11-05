@@ -267,6 +267,15 @@ fn translates_slang_and_profanity() {
 }
 
 #[test]
+fn translates_my_ass_hurts_phrase() {
+    let output = run(&["now my ass hurts.", "--format", "json"], None);
+    let value = json_output(&output);
+
+    assert_eq!(value["detected_language"], "en");
+    assert_eq!(value["translation"], "ahora me duele el culo.");
+}
+
+#[test]
 fn renders_human_readable_output() {
     let output = run(&["El gato rápido salta."], None);
     assert!(output.status.success());

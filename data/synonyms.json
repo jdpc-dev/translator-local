@@ -2381,6 +2381,10 @@
     "rate": [
       "speed",
       "frequency"
+    ],
+    "hurts": [
+      "aches",
+      "pains"
     ]
   },
   "es": {
@@ -4681,6 +4685,10 @@
     "remoto": [
       "distante",
       "lejano"
+    ],
+    "duele": [
+      "lastima",
+      "molesta"
     ]
   }
 }
