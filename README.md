@@ -1,5 +1,8 @@
 # translator-local
 
+[![CI](https://github.com/jdpc-dev/translator-local/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/jdpc-dev/translator-local/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/jdpc-dev/translator-local)](https://github.com/jdpc-dev/translator-local/releases)
+
 An offline, deterministic English ↔ Spanish command-line translator. It uses a
 bundled bilingual dictionary, n-gram matching, heuristic language detection,
 and a local synonym table. There is no machine learning, model runtime, or
@@ -28,6 +31,12 @@ make install PREFIX="$HOME/.local"
 ```
 
 The binary is `target/release/translate-cli`.
+
+Prebuilt archives are available from the
+[Releases](https://github.com/jdpc-dev/translator-local/releases) page for Linux
+(x86_64 and aarch64), macOS (universal), and Windows (x86_64). Each archive
+contains the binary, `LICENSE`, `README.md`, `CHANGELOG.md`, and a SHA-256
+checksum file.
 
 ## Usage
 
@@ -149,6 +158,17 @@ make size    # verify the release binary is under 15 MB
 make bench   # average runtime over 50 invocations
 ```
 
+CI runs tests on Linux, macOS, and Windows, enforces formatting and clippy, and
+checks the 15 MB size budget. Releases are built when a `v*` tag is pushed:
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+The release workflow creates a GitHub Release and uploads Linux x86_64/aarch64,
+universal macOS, and Windows x86_64 archives.
+
 Project layout:
 
 ```text
@@ -167,6 +187,10 @@ data/
 tests/
   cli.rs           End-to-end CLI tests
   data.rs          Dataset validation
+.github/workflows/
+  ci.yml           Test, lint, and size checks
+  release.yml      Tag-driven release archives
+CHANGELOG.md
 ```
 
 ## License
