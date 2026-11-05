@@ -23,7 +23,7 @@ They are the complete offline dataset; the tool makes no network requests.
   keys share a Spanish value, the first pair wins for the derived reverse
   direction; use `reverse.json` when an explicit override is needed.
 
-Current coverage: 2,248 pairs — 1,612 single words and 636 phrases.
+Current coverage: 2,249 pairs — 1,612 single words and 637 phrases.
 
 ## `reverse.json`
 

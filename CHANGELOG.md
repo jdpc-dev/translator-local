@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.10] - 2026-11-05
+
+### Changed
+
+- Added the phrase `fast cat` / `gato rápido` so Spanish noun-adjective order is
+  rendered correctly: `el gato rápido salta` → `the fast cat jumps`.
+- Updated the demo, JSON example, and regression tests for the new word order.
+
 ## [0.2.9] - 2026-11-05
 
 ### Added

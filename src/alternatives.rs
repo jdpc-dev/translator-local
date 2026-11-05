@@ -46,13 +46,13 @@ mod tests {
 
     #[test]
     fn returns_alternatives_for_the_demo_sentence() {
-        let result = alternatives("The cat fast jumps", Lang::En);
+        let result = alternatives("The fast cat jumps", Lang::En);
 
         assert_eq!(result.len(), 4);
         assert_eq!(result[0].word, "The");
         assert_eq!(result[0].alternatives, vec!["A", "That"]);
-        assert_eq!(result[1].alternatives, vec!["feline", "kitty"]);
-        assert_eq!(result[2].alternatives, vec!["quick", "rapid", "swift"]);
+        assert_eq!(result[1].alternatives, vec!["quick", "rapid", "swift"]);
+        assert_eq!(result[2].alternatives, vec!["feline", "kitty"]);
         assert_eq!(result[3].alternatives, vec!["leaps", "hops", "bounds"]);
     }
 

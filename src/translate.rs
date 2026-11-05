@@ -291,7 +291,11 @@ mod tests {
     fn translates_spanish_to_english() {
         assert_eq!(
             translate("El gato rápido salta.", Lang::Es, OovMode::Keep),
-            "The cat fast jumps."
+            "The fast cat jumps."
+        );
+        assert_eq!(
+            translate("el gato rápido salta", Lang::Es, OovMode::Keep),
+            "the fast cat jumps"
         );
     }
 
@@ -299,7 +303,7 @@ mod tests {
     fn translates_english_to_spanish() {
         assert_eq!(
             translate("The fast cat jumps", Lang::En, OovMode::Keep),
-            "El rápido gato salta"
+            "El gato rápido salta"
         );
     }
 

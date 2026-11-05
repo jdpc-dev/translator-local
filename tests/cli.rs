@@ -44,7 +44,7 @@ fn translates_the_spec_example_as_json() {
     assert_eq!(value["source_text"], "El gato rápido salta");
     assert_eq!(value["detected_language"], "es");
     assert_eq!(value["target_language"], "en");
-    assert_eq!(value["translation"], "The cat fast jumps");
+    assert_eq!(value["translation"], "The fast cat jumps");
 
     let alternatives = value["word_alternatives"]
         .as_array()
@@ -55,10 +55,12 @@ fn translates_the_spec_example_as_json() {
         alternatives[0]["alternatives"],
         serde_json::json!(["A", "That"])
     );
+    assert_eq!(alternatives[1]["word"], "fast");
     assert_eq!(
-        alternatives[2]["alternatives"],
+        alternatives[1]["alternatives"],
         serde_json::json!(["quick", "rapid", "swift"])
     );
+    assert_eq!(alternatives[2]["word"], "cat");
     assert!(
         output.stderr.is_empty(),
         "unexpected warning: {}",
@@ -323,9 +325,10 @@ fn renders_human_readable_output() {
 
     let stdout = String::from_utf8_lossy(&output.stdout);
     assert!(stdout.contains("Source (Detected: ES): El gato rápido salta."));
-    assert!(stdout.contains("Target (EN): The cat fast jumps."));
+    assert!(stdout.contains("Target (EN): The fast cat jumps."));
     assert!(stdout.contains("Word Alternatives:"));
     assert!(stdout.contains("- The → (A, That)"));
+    assert!(stdout.contains("- fast → (quick, rapid, swift)"));
     assert!(stdout.contains("- cat → (feline, kitty)"));
 }
 
@@ -369,7 +372,7 @@ fn reads_from_a_file() {
 
     let value = json_output(&output);
     assert_eq!(value["source_text"], "The fast cat jumps");
-    assert_eq!(value["translation"], "El rápido gato salta");
+    assert_eq!(value["translation"], "El gato rápido salta");
     assert_eq!(value["target_language"], "es");
 }
 
