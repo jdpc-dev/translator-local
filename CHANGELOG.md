@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.11] - 2026-11-05
+
+### Added
+
+- `shine`/`brillar` and `shines`/`brilla`.
+- Reverse overrides for `por que` → `why` and `en la noche` → `at night`.
+- Phrase `why does the moon shine` / `por que la luna brilla`.
+- Alternatives for `shine`, `shines`, `brillar`, and `brilla`.
+- Regression tests for both `porque` and `por que` moon questions.
+
+### Fixed
+
+- `brilla` now translates to `shines`.
+- `por que` (unaccented) now translates as `why` instead of `by that`.
+- `en la noche` now renders as `at night`.
+
 ## [0.2.10] - 2026-11-05
 
 ### Changed

@@ -319,6 +319,25 @@ fn translates_single_spanish_infinitive_and_gaming_term() {
 }
 
 #[test]
+fn translates_moon_questions() {
+    for (input, expected) in [
+        (
+            "porque la luna brilla en la noche?",
+            "because the moon shines at night?",
+        ),
+        (
+            "por que la luna brilla en la noche?",
+            "why does the moon shine at night?",
+        ),
+    ] {
+        let output = run(&[input, "--format", "json"], None);
+        let value = json_output(&output);
+        assert_eq!(value["detected_language"], "es", "input: {input}");
+        assert_eq!(value["translation"], expected, "input: {input}");
+    }
+}
+
+#[test]
 fn renders_human_readable_output() {
     let output = run(&["El gato rápido salta."], None);
     assert!(output.status.success());

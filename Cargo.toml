@@ -1,6 +1,6 @@
 [package]
 name = "translator-local"
-version = "0.2.10"
+version = "0.2.11"
 edition = "2024"
 description = "Offline, rule-based English-Spanish command-line translator"
 license = "GPL-3.0"

@@ -2389,6 +2389,14 @@
     "hide": [
       "conceal",
       "cover"
+    ],
+    "shines": [
+      "glows",
+      "sparkles"
+    ],
+    "shine": [
+      "glow",
+      "sparkle"
     ]
   },
   "es": {
@@ -4705,6 +4713,14 @@
     "medkits": [
       "botiquines",
       "botiquín"
+    ],
+    "brilla": [
+      "reluce",
+      "resplandece"
+    ],
+    "brillar": [
+      "relucir",
+      "resplandecer"
     ]
   }
 }
