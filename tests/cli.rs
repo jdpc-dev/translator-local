@@ -156,6 +156,21 @@ fn translates_spanish_articles_and_object_phrases() {
 }
 
 #[test]
+fn translates_spanish_plural_and_present_tense_inflections() {
+    for (input, expected) in [
+        ("camiones", "truck"),
+        ("lápices", "pencil"),
+        ("hablo", "talk"),
+        ("comemos", "eat"),
+        ("paises", "countries"),
+    ] {
+        let output = run(&[input, "--source", "es", "--format", "json"], None);
+        let value = json_output(&output);
+        assert_eq!(value["translation"], expected, "input: {input}");
+    }
+}
+
+#[test]
 fn translates_spanish_infinitive_verb_lists() {
     let output = run(
         &[

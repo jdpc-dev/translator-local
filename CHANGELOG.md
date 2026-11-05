@@ -9,10 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
-- Reverse overrides for `papel` → `paper`, `la mañana` → `the morning`, and
-  `el vino` → `the wine`.
-- Regression tests for short Spanish phrases, code identifiers, and
-  unaccented/typographic input.
+- Language-aware inflection reduction: Spanish plurals fall back to their
+  singular entry, and Spanish present-tense forms fall back to their
+  infinitive (`hablamos` → `talk`, `comemos` → `eat`).
+- Reverse override for `podemos` → `can`, plus `truck`/`camión` and
+  `pencil`/`lápiz` entries so plural reduction has canonical singulars.
+- Structured `AppError` type for CLI failures, with I/O and serialization
+  errors preserved as sources.
+- `make bench-check` and a CI average-runtime budget check.
+- Regression tests for short Spanish phrases, Spanish plurals and verbs, code
+  identifiers, and unaccented/typographic input.
 
 ### Changed
 
@@ -21,7 +27,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 - Translation now preserves dotted names, leading/trailing underscores, and
   digit-containing identifiers.
 - Lookups normalize typographic apostrophes and fall back to accent-folded
-  keys.
+  keys. Present-tense Spanish verbs are preferred over accented preterite
+  aliases (`hablo` → `talk`, while `habló` → `spoke`).
+- `Dictionary::contains` replaces `.lookup(...).is_some()` in detection, and
+  `Dictionary::lookup_exact` supports the verb-before-folded lookup order.
+- `is_code_like` is split into focused helpers without changing its behavior.
 - `Cargo.toml` declares a minimum Rust version and an SPDX license identifier.
 - Install and size targets are portable, and CI builds use the lockfile.
 

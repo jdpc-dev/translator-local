@@ -66,8 +66,8 @@ pub fn detect(text: &str) -> Detection {
         }
 
         let key = normalize_key(word);
-        let in_es = dictionary.lookup(Lang::Es, &key).is_some();
-        let in_en = dictionary.lookup(Lang::En, &key).is_some();
+        let in_es = dictionary.contains(Lang::Es, &key);
+        let in_en = dictionary.contains(Lang::En, &key);
 
         match (in_es, in_en) {
             (true, false) => es_score += 1,

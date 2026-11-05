@@ -24,8 +24,11 @@ They are the complete offline dataset; the tool makes no network requests.
   direction; use `reverse.json` when an explicit override is needed.
 - Lookups normalize typographic apostrophes and accept unaccented Spanish
   forms when the unaccented form is not itself an exact key.
+- Spanish plurals and present-tense verbs fall back to their singular or
+  infinitive entry at lookup time, so adding the base form covers regular
+  inflections.
 
-Current coverage: 2,252 pairs — 1,614 single words and 638 phrases.
+Current coverage: 2,254 pairs — 1,616 single words and 638 phrases.
 
 ## `reverse.json`
 
@@ -44,7 +47,7 @@ Explicit Spanish→English overrides for Spanish inflections, object pronouns,
 and phrases that cannot be represented cleanly in the forward EN→ES list. These
 entries override reverse lookups derived from `dictionary.json`.
 
-Current coverage: 671 overrides.
+Current coverage: 672 overrides.
 
 ## `synonyms.json`
 

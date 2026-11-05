@@ -14,7 +14,7 @@ network access.
 | :--- | :--- |
 | No AI/ML dependencies | Pure Rust with `regex`, `serde`, `serde_json`, and `clap` only |
 | Footprint under 15 MB | 2.5 MB stripped release binary with embedded JSON data; verify with `make size` |
-| Under 50 ms | About 11 ms per invocation including process startup on the development machine; verify with `make bench` |
+| Under 50 ms | About 11 ms per invocation including process startup on the development machine; verify with `make bench` or enforce with `make bench-check` |
 | Single standalone binary | `data/*.json` is compiled in with `include_str!` |
 | Fully offline | No network calls at runtime; all data is bundled |
 
@@ -118,20 +118,23 @@ Word Alternatives:
    default to English with a warning.
 3. **Translation** tokenizes the text while keeping whitespace and punctuation.
    It tries dictionary phrases longest-first (up to the longest bundled phrase),
-   then falls back to single-word lookup. Plural forms retry their singular
-   entry. Lookups also normalize typographic apostrophes and fall back to
-   accent-folded keys, so `don’t` matches `don't` and `rapido` matches `rápido`.
-   Code-like tokens (snake_case, camelCase, paths, dotted names, file
-   extensions) are preserved unchanged. Matched spans preserve the source
-   capitalization. Unknown words are passed through or bracketed.
+   then falls back to single-word lookup. English plurals retry their singular
+   entry. Spanish plurals retry their singular entry, and Spanish present-tense
+   forms retry their infinitive (`hablamos` → `hablar` → `talk`). Lookups also
+   normalize typographic apostrophes and fall back to accent-folded keys, so
+   `don’t` matches `don't` and `rapido` matches `rápido`. When an unaccented
+   form is ambiguous, present-tense verb forms win (`hablo` → `talk`, not
+   `habló` → `spoke`). Code-like tokens (snake_case, camelCase, paths, dotted
+   names, file extensions) are preserved unchanged. Matched spans preserve the
+   source capitalization. Unknown words are passed through or bracketed.
 4. **Alternatives** tokenize the translated output and look up up to three
    deterministic synonyms per word in the target language.
 5. **Output** is rendered as text or JSON.
 
 ## Data
 
-The bundled dataset contains **2,252 bilingual pairs** (1,614 words and 638
-phrases), **671 Spanish→English reverse overrides**, and **1,147 synonym
+The bundled dataset contains **2,254 bilingual pairs** (1,616 words and 638
+phrases), **672 Spanish→English reverse overrides**, and **1,147 synonym
 entries** (583 English and 564 Spanish), all embedded in the binary. Synonyms
 are curated in bilingual concept groups so the English and Spanish alternatives
 stay aligned. Words without a suitable synonym return an empty list.
@@ -172,15 +175,17 @@ These limitations are also printed by `translate-cli --help`.
 ## Development
 
 ```bash
-make test    # unit, integration, and data-integrity tests
-make check   # rustfmt check and clippy with warnings denied
-make build   # release build
-make size    # verify the release binary is under 15 MB
-make bench   # average runtime over 50 invocations
+make test        # unit, integration, and data-integrity tests
+make check       # rustfmt check and clippy with warnings denied
+make build       # release build
+make size        # verify the release binary is under 15 MB
+make bench       # average runtime over 50 invocations
+make bench-check # fail if the average runtime reaches 50 ms
 ```
 
 CI runs tests on Linux, macOS, and Windows, enforces formatting and clippy, and
-checks the 15 MB size budget. Releases are built when a `v*` tag is pushed:
+checks the 15 MB size and 50 ms average-runtime budgets. Releases are built when
+a `v*` tag is pushed:
 
 ```bash
 git tag v0.1.0
@@ -197,8 +202,9 @@ src/
   main.rs          CLI entry point and input handling
   cli.rs           Argument definitions and help text
   detect.rs        Heuristic language detection
+  error.rs         Structured CLI errors
   tokenize.rs      Punctuation-preserving tokenizer and case helper
-  translate.rs     Longest-phrase-first translation
+  translate.rs     Longest-phrase-first translation and inflection fallback
   alternatives.rs  Synonym lookup for translated words
   output.rs        Text and JSON rendering
   data.rs          Embedded data loading and lookup tables
@@ -209,7 +215,7 @@ tests/
   cli.rs           End-to-end CLI tests
   data.rs          Dataset validation
 .github/workflows/
-  ci.yml           Test, lint, and size checks
+  ci.yml           Test, lint, size, and speed checks
   release.yml      Tag-driven release archives
 CHANGELOG.md
 ```

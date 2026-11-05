@@ -39,11 +39,12 @@ jobs:
       - run: cargo fmt --check
       - run: cargo clippy --all-targets --locked -- -D warnings
 
-  size:
-    name: Size budget
+  budgets:
+    name: Size and performance budgets
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
       - uses: dtolnay/rust-toolchain@stable
       - uses: Swatinem/rust-cache@v2
       - run: make size
+      - run: make bench-check

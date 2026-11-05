@@ -1,4 +1,4 @@
-use crate::data::{Lang, dictionary, normalize_key};
+use crate::data::{Dictionary, Lang, dictionary, normalize_key};
 use crate::tokenize::{Token, apply_case, tokenize};
 use clap::ValueEnum;
 
@@ -81,16 +81,7 @@ pub fn translate(text: &str, source: Lang, oov: OovMode) -> String {
                 .collect::<Vec<_>>()
                 .join(" ");
 
-            let mut translation = dictionary.lookup(source, &key);
-            if translation.is_none() && length == 1 {
-                for candidate in singular_candidates(&key) {
-                    if let Some(found) = dictionary.lookup(source, &candidate) {
-                        translation = Some(found);
-                        break;
-                    }
-                }
-            }
-
+            let translation = lookup_word(dictionary, source, &key, length == 1);
             if let Some(translation) = translation {
                 chosen = Some((length, translation));
                 break;
@@ -150,7 +141,25 @@ fn is_code_like(tokens: &[Token], token_index: usize, word: &str) -> bool {
     if word.contains('_') || word.chars().any(|c| c.is_ascii_digit()) {
         return true;
     }
+    if has_internal_uppercase(word) {
+        return true;
+    }
 
+    let previous = token_index
+        .checked_sub(1)
+        .and_then(|index| tokens.get(index));
+    let next = tokens.get(token_index + 1);
+    if is_code_punctuation(previous) || is_code_punctuation(next) {
+        return true;
+    }
+
+    // Keep dotted identifiers such as `user.name` and `README.md` together.
+    // A dot followed by whitespace or the end of the input is sentence
+    // punctuation, so ordinary prose still translates.
+    is_dotted_identifier(tokens, token_index)
+}
+
+fn has_internal_uppercase(word: &str) -> bool {
     let mut previous_lower = false;
     for c in word.chars() {
         if previous_lower && c.is_uppercase() {
@@ -158,62 +167,154 @@ fn is_code_like(tokens: &[Token], token_index: usize, word: &str) -> bool {
         }
         previous_lower = c.is_lowercase();
     }
-
-    let prev = token_index.checked_sub(1).and_then(|i| tokens.get(i));
-    let next = tokens.get(token_index + 1);
-
-    let code_punct = |token: Option<&Token>| {
-        matches!(token, Some(Token::Punct(text))
-            if text
-                .chars()
-                .any(|c| matches!(c, '/' | '\\' | '@' | '$' | '_' | '-'))
-                || text.chars().any(|c| c.is_ascii_digit()))
-    };
-    if code_punct(prev) || code_punct(next) {
-        return true;
-    }
-
-    // Keep dotted identifiers such as `user.name` together. A dot followed
-    // by whitespace or the end of the input is sentence punctuation.
-    if matches!(next, Some(Token::Punct(text)) if text == ".")
-        && matches!(tokens.get(token_index + 2), Some(Token::Word(_)))
-    {
-        return true;
-    }
-    matches!(prev, Some(Token::Punct(text)) if text == ".")
+    false
 }
 
-fn singular_candidates(word: &str) -> Vec<String> {
-    if word.chars().count() <= 3 {
-        return Vec::new();
+fn is_code_punctuation(token: Option<&Token>) -> bool {
+    matches!(token, Some(Token::Punct(text))
+        if text.chars().any(|c| matches!(c, '/' | '\\' | '@' | '$' | '_' | '-'))
+            || text.chars().any(|c| c.is_ascii_digit()))
+}
+
+fn is_dotted_identifier(tokens: &[Token], token_index: usize) -> bool {
+    let after_dot = token_index
+        .checked_sub(1)
+        .and_then(|index| tokens.get(index))
+        .is_some_and(|token| matches!(token, Token::Punct(text) if text == "."));
+
+    let before_dot = matches!(tokens.get(token_index + 1), Some(Token::Punct(text)) if text == ".")
+        && matches!(tokens.get(token_index + 2), Some(Token::Word(_)));
+
+    after_dot || before_dot
+}
+
+/// Look up a word, retrying inflected forms when the exact key is absent.
+///
+/// English plurals use the existing `-ies`, `-ces`, `-es`, and `-s` rules.
+/// Spanish present-tense forms are tried before accent-folded aliases, so
+/// `hablo` (I speak) is not confused with the preterite `habló` (he spoke).
+/// Spanish plural reduction runs after the folded lookup so accent-folded
+/// plural reverse entries such as `paises` → `countries` still win.
+fn lookup_word<'a>(
+    dictionary: &'a Dictionary,
+    source: Lang,
+    word: &str,
+    allow_inflection: bool,
+) -> Option<&'a str> {
+    if !allow_inflection {
+        return dictionary.lookup(source, word);
     }
 
-    let mut candidates = Vec::new();
-    let mut push = |candidate: &str| {
-        if !candidate.is_empty()
-            && candidate != word
-            && !candidates.iter().any(|existing| existing == candidate)
-        {
-            candidates.push(candidate.to_string());
-        }
-    };
+    // Exact entries always win.
+    if let Some(found) = dictionary.lookup_exact(source, word) {
+        return Some(found);
+    }
 
+    if source == Lang::Es {
+        let mut verb_candidates = Vec::new();
+        spanish_verb_candidates(word, &mut verb_candidates);
+        for candidate in verb_candidates {
+            if let Some(found) = dictionary.lookup(source, &candidate) {
+                return Some(found);
+            }
+        }
+    }
+
+    // Accent-folded aliases for the original word.
+    if let Some(found) = dictionary.lookup(source, word) {
+        return Some(found);
+    }
+
+    // Remaining plural/singular fallbacks.
+    let mut candidates = Vec::new();
+    match source {
+        Lang::En => english_singular_candidates(word, &mut candidates),
+        Lang::Es => spanish_plural_candidates(word, &mut candidates),
+    }
+    candidates
+        .iter()
+        .find_map(|candidate| dictionary.lookup(source, candidate))
+}
+
+fn push_candidate(candidates: &mut Vec<String>, word: &str, candidate: impl Into<String>) {
+    let candidate = candidate.into();
+    if !candidate.is_empty() && candidate != word && !candidates.contains(&candidate) {
+        candidates.push(candidate);
+    }
+}
+
+fn english_singular_candidates(word: &str, candidates: &mut Vec<String>) {
     if let Some(stem) = word.strip_suffix("ies") {
-        push(&format!("{stem}y"));
+        push_candidate(candidates, word, format!("{stem}y"));
     }
     if let Some(stem) = word.strip_suffix("ces") {
-        push(&format!("{stem}z"));
+        push_candidate(candidates, word, format!("{stem}z"));
     }
     if let Some(stem) = word.strip_suffix("es") {
-        push(stem);
+        push_candidate(candidates, word, stem);
     }
     if !word.ends_with("ss")
         && let Some(stem) = word.strip_suffix('s')
     {
-        push(stem);
+        push_candidate(candidates, word, stem);
+    }
+}
+
+fn spanish_verb_candidates(word: &str, candidates: &mut Vec<String>) {
+    // Present-tense endings mapped to the infinitive endings they imply.
+    let endings: &[(&str, &[&str])] = &[
+        ("amos", &["ar"]),
+        ("emos", &["er"]),
+        ("imos", &["ir"]),
+        ("an", &["ar"]),
+        ("en", &["er", "ir"]),
+        ("as", &["ar"]),
+        ("es", &["er", "ir"]),
+        ("a", &["ar"]),
+        ("e", &["er", "ir"]),
+        ("o", &["ar", "er", "ir"]),
+    ];
+
+    for &(ending, infinitives) in endings {
+        let Some(stem) = word.strip_suffix(ending) else {
+            continue;
+        };
+        if stem.chars().count() < 2 {
+            continue;
+        }
+        for &infinitive in infinitives {
+            push_candidate(candidates, word, format!("{stem}{infinitive}"));
+        }
+    }
+}
+
+fn spanish_plural_candidates(word: &str, candidates: &mut Vec<String>) {
+    if let Some(stem) = word.strip_suffix("ces") {
+        push_candidate(candidates, word, format!("{stem}z"));
     }
 
-    candidates
+    if let Some(stem) = word.strip_suffix("es")
+        && stem
+            .chars()
+            .next_back()
+            .is_some_and(|c| !is_spanish_vowel(c))
+    {
+        push_candidate(candidates, word, stem);
+    }
+
+    if !word.ends_with("ss")
+        && let Some(stem) = word.strip_suffix('s')
+        && stem.chars().next_back().is_some_and(is_spanish_vowel)
+    {
+        push_candidate(candidates, word, stem);
+    }
+}
+
+fn is_spanish_vowel(c: char) -> bool {
+    matches!(
+        c,
+        'a' | 'e' | 'i' | 'o' | 'u' | 'á' | 'é' | 'í' | 'ó' | 'ú' | 'ü'
+    )
 }
 
 fn is_sentence_start(tokens: &[Token], token_index: usize) -> bool {
@@ -337,6 +438,73 @@ mod tests {
         assert_eq!(translate("campos", Lang::Es, OovMode::Keep), "fields");
         assert_eq!(translate("fields", Lang::En, OovMode::Keep), "campo");
         assert_eq!(translate("clients", Lang::En, OovMode::Keep), "cliente");
+    }
+
+    #[test]
+    fn resolves_spanish_plural_forms() {
+        for (input, expected) in [
+            ("gatos", "cat"),
+            ("casas", "house"),
+            ("árboles", "tree"),
+            ("arboles", "tree"),
+            ("voces", "voice"),
+            ("flores", "flower"),
+            ("nubes", "cloud"),
+            ("ventanas", "window"),
+            ("computadoras", "computer"),
+            ("servidores", "server"),
+            ("camiones", "truck"),
+            ("lápices", "pencil"),
+            ("lapices", "pencil"),
+            ("paises", "countries"),
+        ] {
+            assert_eq!(
+                translate(input, Lang::Es, OovMode::Keep),
+                expected,
+                "input: {input}"
+            );
+        }
+    }
+
+    #[test]
+    fn resolves_spanish_present_tense_verbs() {
+        for (input, expected) in [
+            ("hablas", "talk"),
+            ("hablamos", "talk"),
+            ("hablan", "talk"),
+            ("comes", "eat"),
+            ("comemos", "eat"),
+            ("vives", "live"),
+            ("vivimos", "live"),
+            ("trabajas", "work"),
+            ("trabajan", "work"),
+            ("podemos", "can"),
+            ("aprendemos", "learn"),
+            ("escribimos", "write"),
+            ("bebemos", "drink"),
+            ("caminamos", "walk"),
+            ("estudiamos", "study"),
+            ("hablo", "talk"),
+            ("llego", "arrive"),
+            ("compro", "buy"),
+            ("miro", "look"),
+            ("tomo", "take"),
+            ("llamo", "call"),
+            ("dejo", "let"),
+            ("uso", "use"),
+        ] {
+            assert_eq!(
+                translate(input, Lang::Es, OovMode::Keep),
+                expected,
+                "input: {input}"
+            );
+        }
+    }
+
+    #[test]
+    fn distinguishes_present_tense_from_accented_preterite() {
+        assert_eq!(translate("hablo", Lang::Es, OovMode::Keep), "talk");
+        assert_eq!(translate("habló", Lang::Es, OovMode::Keep), "spoke");
     }
 
     #[test]

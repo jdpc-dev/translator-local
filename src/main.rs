@@ -2,6 +2,7 @@ mod alternatives;
 mod cli;
 mod data;
 mod detect;
+mod error;
 mod output;
 mod tokenize;
 mod translate;
@@ -9,6 +10,7 @@ mod translate;
 use clap::Parser;
 use cli::{Cli, OutputFormat};
 use data::Lang;
+use error::AppError;
 use std::fs;
 use std::io::{self, IsTerminal, Read, Write};
 use std::process::ExitCode;
@@ -24,15 +26,18 @@ fn main() -> ExitCode {
     }
 }
 
-fn run(cli: Cli) -> Result<(), String> {
+fn run(cli: Cli) -> Result<(), AppError> {
     let text = read_input(&cli)?;
     if text.trim().is_empty() {
-        return Err("input text is empty".into());
+        return Err(AppError::EmptyInput);
     }
 
     let source_override = match cli.source.as_deref() {
         Some(code) => Some(
-            Lang::from_code(code).ok_or_else(|| format!("unsupported source language: {code}"))?,
+            Lang::from_code(code).ok_or_else(|| AppError::UnsupportedLanguage {
+                role: "source",
+                code: code.to_string(),
+            })?,
         ),
         None => None,
     };
@@ -65,13 +70,12 @@ fn run(cli: Cli) -> Result<(), String> {
 
     let target = match cli.target.as_deref() {
         Some(code) => {
-            let target = Lang::from_code(code)
-                .ok_or_else(|| format!("unsupported target language: {code}"))?;
+            let target = Lang::from_code(code).ok_or_else(|| AppError::UnsupportedLanguage {
+                role: "target",
+                code: code.to_string(),
+            })?;
             if target == source {
-                return Err(format!(
-                    "target language must differ from source language ({})",
-                    source.name()
-                ));
+                return Err(AppError::SameSourceAndTarget(source));
             }
             target
         }
@@ -88,43 +92,45 @@ fn run(cli: Cli) -> Result<(), String> {
         }
         OutputFormat::Json => {
             output::render_json(&text, source, target, &translation, &alternatives)
-                .map_err(|error| format!("cannot serialize output: {error}"))?
+                .map_err(AppError::SerializeOutput)?
         }
     };
 
     write_output(&rendered)
 }
 
-fn write_output(text: &str) -> Result<(), String> {
+fn write_output(text: &str) -> Result<(), AppError> {
     let stdout = io::stdout();
     let mut stdout = stdout.lock();
 
     match writeln!(stdout, "{text}") {
         Ok(()) => Ok(()),
         Err(error) if error.kind() == io::ErrorKind::BrokenPipe => Ok(()),
-        Err(error) => Err(format!("cannot write output: {error}")),
+        Err(error) => Err(AppError::WriteOutput(error)),
     }
 }
 
-fn read_input(cli: &Cli) -> Result<String, String> {
+fn read_input(cli: &Cli) -> Result<String, AppError> {
     if let Some(text) = &cli.text {
         return Ok(strip_trailing_newlines(text));
     }
 
     if let Some(path) = &cli.file {
-        let content = fs::read_to_string(path)
-            .map_err(|error| format!("cannot read '{}': {error}", path.display()))?;
+        let content = fs::read_to_string(path).map_err(|source| AppError::ReadFile {
+            path: path.clone(),
+            source,
+        })?;
         return Ok(strip_trailing_newlines(&content));
     }
 
     if io::stdin().is_terminal() {
-        return Err("no input provided; pass TEXT, use --file PATH, or pipe text via stdin".into());
+        return Err(AppError::NoInput);
     }
 
     let mut content = String::new();
     io::stdin()
         .read_to_string(&mut content)
-        .map_err(|error| format!("cannot read stdin: {error}"))?;
+        .map_err(AppError::ReadStdin)?;
     Ok(strip_trailing_newlines(&content))
 }
 

@@ -139,15 +139,24 @@ impl Dictionary {
         }
     }
 
-    pub fn lookup(&self, source: Lang, key: &str) -> Option<&str> {
-        let (table, folded) = match source {
-            Lang::En => (&self.en_to_es, &self.en_to_es_folded),
-            Lang::Es => (&self.es_to_en, &self.es_to_en_folded),
+    /// Look up an exact key without consulting accent-folded aliases.
+    pub fn lookup_exact(&self, source: Lang, key: &str) -> Option<&str> {
+        let table = match source {
+            Lang::En => &self.en_to_es,
+            Lang::Es => &self.es_to_en,
         };
+        table.get(key).map(String::as_str)
+    }
 
-        if let Some(value) = table.get(key) {
+    pub fn lookup(&self, source: Lang, key: &str) -> Option<&str> {
+        if let Some(value) = self.lookup_exact(source, key) {
             return Some(value);
         }
+
+        let folded = match source {
+            Lang::En => &self.en_to_es_folded,
+            Lang::Es => &self.es_to_en_folded,
+        };
 
         // Folded aliases are ASCII, so try the key directly first.
         if let Some(value) = folded.get(key) {
@@ -160,6 +169,11 @@ impl Dictionary {
         }
 
         folded.get(&folded_key).map(String::as_str)
+    }
+
+    /// Return whether `key` resolves in the given source language.
+    pub fn contains(&self, source: Lang, key: &str) -> bool {
+        self.lookup(source, key).is_some()
     }
 
     pub fn max_phrase_words(&self) -> usize {
@@ -297,5 +311,12 @@ mod tests {
         let keys = vec!["año".to_string()];
 
         assert!(folded_aliases(&keys, &table).is_empty());
+    }
+
+    #[test]
+    fn exact_lookup_ignores_accent_folded_aliases() {
+        let dictionary = dictionary();
+        assert_eq!(dictionary.lookup_exact(Lang::Es, "rapido"), None);
+        assert_eq!(dictionary.lookup(Lang::Es, "rapido"), Some("fast"));
     }
 }
