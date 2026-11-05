@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.3] - 2026-11-05
+
+### Added
+
+- Plural noun forms for common people/body terms (`boys`, `girls`, `dicks`,
+  `pussies`, and related terms).
+- Spanish plural-subject phrases such as `boys has` → `los niños tienen`,
+  including the forms needed for `boys has dick and girls has pussy.`
+- Expanded anatomy/slang vocabulary and alternatives, bringing the dataset to
+  1,819 pairs (1,399 words and 420 phrases) and 1,026 synonym entries.
+
+### Fixed
+
+- Plural subjects now produce `tienen` and articles in the covered phrase
+  patterns instead of the singular `tiene`.
+
 ## [0.2.2] - 2026-11-05
 
 ### Fixed

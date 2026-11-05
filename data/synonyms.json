@@ -2117,6 +2117,38 @@
     "manipulates": [
       "controls",
       "exploits"
+    ],
+    "boys": [
+      "lads",
+      "youngsters"
+    ],
+    "girls": [
+      "lasses",
+      "youngsters"
+    ],
+    "penis": [
+      "phallus",
+      "member"
+    ],
+    "vagina": [
+      "vulva",
+      "genitals"
+    ],
+    "dick": [
+      "penis",
+      "cock"
+    ],
+    "pussy": [
+      "vagina",
+      "cunt"
+    ],
+    "dicks": [
+      "penises",
+      "cocks"
+    ],
+    "pussies": [
+      "vaginas",
+      "cunts"
     ]
   },
   "es": {
@@ -4165,6 +4197,46 @@
     "manipula": [
       "controla",
       "explota"
+    ],
+    "niños": [
+      "chicos",
+      "muchachos"
+    ],
+    "niñas": [
+      "chicas",
+      "muchachas"
+    ],
+    "pene": [
+      "falo",
+      "miembro"
+    ],
+    "vagina": [
+      "coño",
+      "vulva"
+    ],
+    "tiene": [
+      "posee",
+      "dispone"
+    ],
+    "tienen": [
+      "poseen",
+      "disponen"
+    ],
+    "senos": [
+      "pechos",
+      "bustos"
+    ],
+    "trasero": [
+      "culo",
+      "nalgas"
+    ],
+    "penes": [
+      "falos",
+      "miembros"
+    ],
+    "vaginas": [
+      "coños",
+      "vulvas"
     ]
   }
 }

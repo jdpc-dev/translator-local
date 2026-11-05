@@ -126,6 +126,18 @@ fn translates_english_object_phrases_to_spanish_order() {
 }
 
 #[test]
+fn translates_plural_nouns_and_anatomy_vocabulary() {
+    let output = run(&["boys has dick and girls has pussy."], None);
+    assert!(output.status.success());
+
+    let stdout = String::from_utf8_lossy(&output.stdout);
+    assert!(stdout.contains("Target (ES): los niños tienen pene y las niñas tienen vagina."));
+    assert!(stdout.contains("- niños → (chicos, muchachos)"));
+    assert!(stdout.contains("- pene → (falo, miembro)"));
+    assert!(stdout.contains("- vagina → (coño, vulva)"));
+}
+
+#[test]
 fn renders_human_readable_output() {
     let output = run(&["El gato rápido salta."], None);
     assert!(output.status.success());

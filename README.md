@@ -122,9 +122,9 @@ Word Alternatives:
 
 ## Data
 
-The bundled dataset contains **1,780 bilingual pairs** (1,374 words and 406
-phrases), **253 Spanish→English reverse overrides**, and **1,008 synonym
-entries** (513 English and 495 Spanish), all embedded in the binary. Synonyms
+The bundled dataset contains **1,819 bilingual pairs** (1,399 words and 420
+phrases), **253 Spanish→English reverse overrides**, and **1,026 synonym
+entries** (521 English and 505 Spanish), all embedded in the binary. Synonyms
 are curated in bilingual concept groups so the English and Spanish alternatives
 stay aligned. Words without a suitable synonym return an empty list.
 
