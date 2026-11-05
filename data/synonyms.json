@@ -1,0 +1,1103 @@
+{
+  "version": 1,
+  "en": {
+    "the": [
+      "a",
+      "that"
+    ],
+    "cat": [
+      "feline",
+      "kitty"
+    ],
+    "fast": [
+      "quick",
+      "rapid",
+      "swift"
+    ],
+    "jump": [
+      "leap",
+      "hop",
+      "bound"
+    ],
+    "jumps": [
+      "leaps",
+      "hops",
+      "bounds"
+    ],
+    "good": [
+      "fine",
+      "nice"
+    ],
+    "bad": [
+      "poor",
+      "awful"
+    ],
+    "big": [
+      "large",
+      "huge"
+    ],
+    "small": [
+      "little",
+      "tiny"
+    ],
+    "happy": [
+      "glad",
+      "cheerful"
+    ],
+    "sad": [
+      "unhappy",
+      "sorrowful"
+    ],
+    "angry": [
+      "mad",
+      "furious"
+    ],
+    "tired": [
+      "weary",
+      "exhausted"
+    ],
+    "hungry": [
+      "starving",
+      "famished"
+    ],
+    "cold": [
+      "chilly",
+      "cool"
+    ],
+    "hot": [
+      "warm",
+      "heated"
+    ],
+    "slow": [
+      "sluggish",
+      "leisurely"
+    ],
+    "beautiful": [
+      "pretty",
+      "lovely"
+    ],
+    "ugly": [
+      "unattractive",
+      "hideous"
+    ],
+    "easy": [
+      "simple",
+      "effortless"
+    ],
+    "hard": [
+      "difficult",
+      "tough"
+    ],
+    "new": [
+      "fresh",
+      "modern"
+    ],
+    "old": [
+      "aged",
+      "ancient"
+    ],
+    "young": [
+      "youthful",
+      "junior"
+    ],
+    "rich": [
+      "wealthy",
+      "affluent"
+    ],
+    "poor": [
+      "needy",
+      "impoverished"
+    ],
+    "strong": [
+      "powerful",
+      "sturdy"
+    ],
+    "weak": [
+      "feeble",
+      "frail"
+    ],
+    "clean": [
+      "tidy",
+      "spotless"
+    ],
+    "dirty": [
+      "filthy",
+      "unclean"
+    ],
+    "full": [
+      "filled",
+      "complete"
+    ],
+    "empty": [
+      "vacant",
+      "hollow"
+    ],
+    "open": [
+      "unlocked",
+      "accessible"
+    ],
+    "closed": [
+      "shut",
+      "sealed"
+    ],
+    "true": [
+      "correct",
+      "accurate"
+    ],
+    "false": [
+      "untrue",
+      "incorrect"
+    ],
+    "same": [
+      "equal",
+      "identical"
+    ],
+    "different": [
+      "distinct",
+      "unlike"
+    ],
+    "important": [
+      "significant",
+      "vital"
+    ],
+    "interesting": [
+      "engaging",
+      "intriguing"
+    ],
+    "boring": [
+      "dull",
+      "tedious"
+    ],
+    "funny": [
+      "amusing",
+      "comical"
+    ],
+    "dangerous": [
+      "risky",
+      "hazardous"
+    ],
+    "safe": [
+      "secure",
+      "protected"
+    ],
+    "free": [
+      "liberated",
+      "unoccupied"
+    ],
+    "busy": [
+      "occupied",
+      "hectic"
+    ],
+    "ready": [
+      "prepared",
+      "set"
+    ],
+    "red": [
+      "crimson",
+      "scarlet"
+    ],
+    "blue": [
+      "azure",
+      "navy"
+    ],
+    "green": [
+      "emerald",
+      "verdant"
+    ],
+    "yellow": [
+      "golden",
+      "amber"
+    ],
+    "black": [
+      "dark",
+      "ebony"
+    ],
+    "white": [
+      "pale",
+      "ivory"
+    ],
+    "house": [
+      "home",
+      "residence"
+    ],
+    "car": [
+      "automobile",
+      "vehicle"
+    ],
+    "road": [
+      "street",
+      "path"
+    ],
+    "city": [
+      "town",
+      "metropolis"
+    ],
+    "country": [
+      "nation",
+      "state"
+    ],
+    "world": [
+      "earth",
+      "globe"
+    ],
+    "water": [
+      "liquid",
+      "rain"
+    ],
+    "fire": [
+      "flame",
+      "blaze"
+    ],
+    "food": [
+      "meal",
+      "nourishment"
+    ],
+    "money": [
+      "cash",
+      "currency"
+    ],
+    "friend": [
+      "companion",
+      "pal"
+    ],
+    "family": [
+      "relatives",
+      "kin"
+    ],
+    "man": [
+      "gentleman",
+      "male"
+    ],
+    "woman": [
+      "lady",
+      "female"
+    ],
+    "child": [
+      "kid",
+      "youngster"
+    ],
+    "people": [
+      "persons",
+      "folk"
+    ],
+    "day": [
+      "daytime",
+      "date"
+    ],
+    "night": [
+      "evening",
+      "darkness"
+    ],
+    "morning": [
+      "dawn",
+      "daybreak"
+    ],
+    "time": [
+      "period",
+      "moment"
+    ],
+    "book": [
+      "volume",
+      "text"
+    ],
+    "word": [
+      "term",
+      "expression"
+    ],
+    "language": [
+      "tongue",
+      "speech"
+    ],
+    "question": [
+      "query",
+      "inquiry"
+    ],
+    "answer": [
+      "reply",
+      "response"
+    ],
+    "story": [
+      "tale",
+      "narrative"
+    ],
+    "music": [
+      "melody",
+      "tune"
+    ],
+    "song": [
+      "tune",
+      "ballad"
+    ],
+    "movie": [
+      "film",
+      "picture"
+    ],
+    "game": [
+      "match",
+      "contest"
+    ],
+    "sport": [
+      "athletics",
+      "exercise"
+    ],
+    "team": [
+      "squad",
+      "group"
+    ],
+    "school": [
+      "academy",
+      "institution"
+    ],
+    "teacher": [
+      "instructor",
+      "educator"
+    ],
+    "student": [
+      "pupil",
+      "learner"
+    ],
+    "doctor": [
+      "physician",
+      "medic"
+    ],
+    "work": [
+      "labor",
+      "toil"
+    ],
+    "job": [
+      "task",
+      "occupation"
+    ],
+    "life": [
+      "existence",
+      "being"
+    ],
+    "death": [
+      "passing",
+      "demise"
+    ],
+    "health": [
+      "wellness",
+      "fitness"
+    ],
+    "love": [
+      "affection",
+      "adoration"
+    ],
+    "hope": [
+      "faith",
+      "optimism"
+    ],
+    "fear": [
+      "dread",
+      "anxiety"
+    ],
+    "dream": [
+      "vision",
+      "fantasy"
+    ],
+    "idea": [
+      "thought",
+      "notion"
+    ],
+    "mind": [
+      "intellect",
+      "brain"
+    ],
+    "heart": [
+      "core",
+      "soul"
+    ],
+    "voice": [
+      "sound",
+      "tone"
+    ],
+    "name": [
+      "title",
+      "label"
+    ],
+    "number": [
+      "figure",
+      "digit"
+    ],
+    "place": [
+      "location",
+      "spot"
+    ],
+    "thing": [
+      "object",
+      "item"
+    ],
+    "way": [
+      "path",
+      "method"
+    ],
+    "part": [
+      "piece",
+      "section"
+    ],
+    "end": [
+      "finish",
+      "conclusion"
+    ],
+    "help": [
+      "aid",
+      "assistance"
+    ],
+    "problem": [
+      "issue",
+      "trouble"
+    ],
+    "reason": [
+      "cause",
+      "motive"
+    ],
+    "result": [
+      "outcome",
+      "effect"
+    ],
+    "example": [
+      "instance",
+      "sample"
+    ],
+    "fact": [
+      "truth",
+      "reality"
+    ],
+    "order": [
+      "command",
+      "sequence"
+    ],
+    "group": [
+      "team",
+      "collection"
+    ],
+    "line": [
+      "row",
+      "streak"
+    ],
+    "point": [
+      "dot",
+      "mark"
+    ],
+    "form": [
+      "shape",
+      "document"
+    ],
+    "level": [
+      "degree",
+      "stage"
+    ],
+    "change": [
+      "alteration",
+      "shift"
+    ],
+    "move": [
+      "motion",
+      "shift"
+    ],
+    "sound": [
+      "noise",
+      "tone"
+    ],
+    "light": [
+      "brightness",
+      "lamp"
+    ],
+    "dark": [
+      "dim",
+      "gloomy"
+    ],
+    "sure": [
+      "certain",
+      "confident"
+    ],
+    "quick": [
+      "fast",
+      "swift"
+    ],
+    "quiet": [
+      "silent",
+      "calm"
+    ],
+    "real": [
+      "genuine",
+      "actual"
+    ],
+    "simple": [
+      "plain",
+      "basic"
+    ],
+    "strange": [
+      "odd",
+      "peculiar"
+    ],
+    "sweet": [
+      "sugary",
+      "pleasant"
+    ],
+    "thin": [
+      "slim",
+      "narrow"
+    ],
+    "wide": [
+      "broad",
+      "spacious"
+    ],
+    "wonderful": [
+      "marvelous",
+      "fantastic"
+    ]
+  },
+  "es": {
+    "el": [
+      "un",
+      "aquel"
+    ],
+    "la": [
+      "una",
+      "aquella"
+    ],
+    "los": [
+      "unos",
+      "aquellos"
+    ],
+    "las": [
+      "unas",
+      "aquellas"
+    ],
+    "gato": [
+      "felino",
+      "minino"
+    ],
+    "rápido": [
+      "veloz",
+      "ligero",
+      "raudo"
+    ],
+    "salta": [
+      "brinca",
+      "bota"
+    ],
+    "bueno": [
+      "buen",
+      "bondadoso"
+    ],
+    "malo": [
+      "mal",
+      "perverso"
+    ],
+    "grande": [
+      "enorme",
+      "amplio"
+    ],
+    "pequeño": [
+      "chico",
+      "diminuto"
+    ],
+    "feliz": [
+      "contento",
+      "alegre"
+    ],
+    "triste": [
+      "melancólico",
+      "apenado"
+    ],
+    "enojado": [
+      "furioso",
+      "molesto"
+    ],
+    "cansado": [
+      "agotado",
+      "fatigado"
+    ],
+    "hambriento": [
+      "famélico",
+      "voraz"
+    ],
+    "frío": [
+      "gélido",
+      "fresco"
+    ],
+    "caliente": [
+      "caluroso",
+      "ardiente"
+    ],
+    "lento": [
+      "pausado",
+      "calmoso"
+    ],
+    "hermoso": [
+      "bello",
+      "precioso"
+    ],
+    "feo": [
+      "horrible",
+      "desagradable"
+    ],
+    "fácil": [
+      "sencillo",
+      "simple"
+    ],
+    "difícil": [
+      "complicado",
+      "arduo"
+    ],
+    "nuevo": [
+      "reciente",
+      "moderno"
+    ],
+    "viejo": [
+      "antiguo",
+      "anciano"
+    ],
+    "joven": [
+      "juvenil",
+      "lozano"
+    ],
+    "rico": [
+      "adinerado",
+      "pudiente"
+    ],
+    "pobre": [
+      "necesitado",
+      "humilde"
+    ],
+    "fuerte": [
+      "potente",
+      "robusto"
+    ],
+    "débil": [
+      "frágil",
+      "endeble"
+    ],
+    "limpio": [
+      "aseado",
+      "pulcro"
+    ],
+    "sucio": [
+      "mugriento",
+      "asqueroso"
+    ],
+    "lleno": [
+      "completo",
+      "colmado"
+    ],
+    "vacío": [
+      "hueco",
+      "desocupado"
+    ],
+    "abierto": [
+      "despejado",
+      "franco"
+    ],
+    "cerrado": [
+      "clausurado",
+      "sellado"
+    ],
+    "verdadero": [
+      "cierto",
+      "real"
+    ],
+    "falso": [
+      "erróneo",
+      "mentiroso"
+    ],
+    "mismo": [
+      "igual",
+      "idéntico"
+    ],
+    "diferente": [
+      "distinto",
+      "diverso"
+    ],
+    "importante": [
+      "relevante",
+      "significativo"
+    ],
+    "interesante": [
+      "atractivo",
+      "intrigante"
+    ],
+    "aburrido": [
+      "tedioso",
+      "monótono"
+    ],
+    "divertido": [
+      "gracioso",
+      "entretenido"
+    ],
+    "peligroso": [
+      "riesgoso",
+      "arriesgado"
+    ],
+    "seguro": [
+      "cierto",
+      "confiable"
+    ],
+    "libre": [
+      "suelto",
+      "independiente"
+    ],
+    "ocupado": [
+      "atareado",
+      "ajetreado"
+    ],
+    "listo": [
+      "preparado",
+      "dispuesto"
+    ],
+    "rojo": [
+      "carmesí",
+      "escarlata"
+    ],
+    "azul": [
+      "celeste",
+      "añil"
+    ],
+    "verde": [
+      "esmeralda",
+      "verdoso"
+    ],
+    "amarillo": [
+      "dorado",
+      "ámbar"
+    ],
+    "negro": [
+      "oscuro",
+      "azabache"
+    ],
+    "blanco": [
+      "claro",
+      "marfil"
+    ],
+    "casa": [
+      "hogar",
+      "vivienda"
+    ],
+    "coche": [
+      "auto",
+      "vehículo"
+    ],
+    "calle": [
+      "vía",
+      "camino"
+    ],
+    "ciudad": [
+      "pueblo",
+      "urbe"
+    ],
+    "país": [
+      "nación",
+      "estado"
+    ],
+    "mundo": [
+      "tierra",
+      "globo"
+    ],
+    "agua": [
+      "líquido",
+      "manantial"
+    ],
+    "fuego": [
+      "llama",
+      "incendio"
+    ],
+    "comida": [
+      "alimento",
+      "sustento"
+    ],
+    "dinero": [
+      "efectivo",
+      "moneda"
+    ],
+    "amigo": [
+      "compañero",
+      "camarada"
+    ],
+    "familia": [
+      "parientes",
+      "parentela"
+    ],
+    "hombre": [
+      "señor",
+      "varón"
+    ],
+    "mujer": [
+      "dama",
+      "fémina"
+    ],
+    "niño": [
+      "chico",
+      "pequeño"
+    ],
+    "gente": [
+      "personas",
+      "pueblo"
+    ],
+    "día": [
+      "jornada",
+      "fecha"
+    ],
+    "noche": [
+      "oscuridad",
+      "velada"
+    ],
+    "mañana": [
+      "amanecer",
+      "porvenir"
+    ],
+    "tiempo": [
+      "época",
+      "momento"
+    ],
+    "libro": [
+      "volumen",
+      "texto"
+    ],
+    "palabra": [
+      "término",
+      "vocablo"
+    ],
+    "idioma": [
+      "lengua",
+      "habla"
+    ],
+    "pregunta": [
+      "consulta",
+      "interrogante"
+    ],
+    "respuesta": [
+      "réplica",
+      "contestación"
+    ],
+    "historia": [
+      "relato",
+      "narración"
+    ],
+    "música": [
+      "melodía",
+      "tonada"
+    ],
+    "canción": [
+      "melodía",
+      "balada"
+    ],
+    "película": [
+      "filme",
+      "cinta"
+    ],
+    "juego": [
+      "partido",
+      "competencia"
+    ],
+    "deporte": [
+      "atletismo",
+      "ejercicio"
+    ],
+    "equipo": [
+      "grupo",
+      "escuadra"
+    ],
+    "escuela": [
+      "academia",
+      "colegio"
+    ],
+    "profesor": [
+      "maestro",
+      "docente"
+    ],
+    "estudiante": [
+      "alumno",
+      "aprendiz"
+    ],
+    "trabajo": [
+      "labor",
+      "empleo"
+    ],
+    "vida": [
+      "existencia",
+      "ser"
+    ],
+    "muerte": [
+      "fallecimiento",
+      "deceso"
+    ],
+    "salud": [
+      "bienestar",
+      "sanidad"
+    ],
+    "amor": [
+      "afecto",
+      "cariño"
+    ],
+    "esperanza": [
+      "fe",
+      "optimismo"
+    ],
+    "miedo": [
+      "terror",
+      "ansiedad"
+    ],
+    "sueño": [
+      "visión",
+      "fantasía"
+    ],
+    "idea": [
+      "pensamiento",
+      "noción"
+    ],
+    "mente": [
+      "intelecto",
+      "cerebro"
+    ],
+    "corazón": [
+      "núcleo",
+      "alma"
+    ],
+    "voz": [
+      "sonido",
+      "tono"
+    ],
+    "nombre": [
+      "título",
+      "etiqueta"
+    ],
+    "número": [
+      "cifra",
+      "dígito"
+    ],
+    "lugar": [
+      "sitio",
+      "punto"
+    ],
+    "cosa": [
+      "objeto",
+      "artículo"
+    ],
+    "forma": [
+      "figura",
+      "documento"
+    ],
+    "parte": [
+      "pieza",
+      "sección"
+    ],
+    "final": [
+      "fin",
+      "conclusión"
+    ],
+    "principio": [
+      "inicio",
+      "comienzo"
+    ],
+    "ayuda": [
+      "asistencia",
+      "auxilio"
+    ],
+    "problema": [
+      "asunto",
+      "dificultad"
+    ],
+    "razón": [
+      "causa",
+      "motivo"
+    ],
+    "resultado": [
+      "efecto",
+      "consecuencia"
+    ],
+    "ejemplo": [
+      "caso",
+      "muestra"
+    ],
+    "hecho": [
+      "verdad",
+      "realidad"
+    ],
+    "orden": [
+      "mandato",
+      "secuencia"
+    ],
+    "grupo": [
+      "equipo",
+      "conjunto"
+    ],
+    "línea": [
+      "fila",
+      "hilera"
+    ],
+    "punto": [
+      "marca",
+      "lugar"
+    ],
+    "nivel": [
+      "grado",
+      "etapa"
+    ],
+    "cambio": [
+      "alteración",
+      "variación"
+    ],
+    "sonido": [
+      "ruido",
+      "tono"
+    ],
+    "luz": [
+      "brillo",
+      "lámpara"
+    ],
+    "oscuro": [
+      "sombrío",
+      "tenue"
+    ],
+    "rápida": [
+      "veloz",
+      "ligera"
+    ],
+    "contento": [
+      "feliz",
+      "alegre"
+    ],
+    "enfermo": [
+      "malo",
+      "indispuesto"
+    ],
+    "sano": [
+      "saludable",
+      "fuerte"
+    ],
+    "barato": [
+      "económico",
+      "asequible"
+    ],
+    "caro": [
+      "costoso",
+      "oneroso"
+    ],
+    "alto": [
+      "elevado",
+      "tallado"
+    ],
+    "bajo": [
+      "bajito",
+      "corto"
+    ],
+    "largo": [
+      "extenso",
+      "prolongado"
+    ],
+    "corto": [
+      "breve",
+      "reducido"
+    ],
+    "vieja": [
+      "antigua",
+      "anciana"
+    ],
+    "nueva": [
+      "reciente",
+      "moderna"
+    ]
+  }
+}
