@@ -36,20 +36,21 @@ pub fn render_text(
         target.code().to_uppercase()
     );
 
-    if alternatives.is_empty() {
-        output.push_str("\n(none)");
-    }
-
+    let mut shown = 0;
     for entry in alternatives {
         if entry.alternatives.is_empty() {
-            output.push_str(&format!("\n- {} → []", entry.word));
-        } else {
-            output.push_str(&format!(
-                "\n- {} → ({})",
-                entry.word,
-                entry.alternatives.join(", ")
-            ));
+            continue;
         }
+        shown += 1;
+        output.push_str(&format!(
+            "\n- {} → ({})",
+            entry.word,
+            entry.alternatives.join(", ")
+        ));
+    }
+
+    if shown == 0 {
+        output.push_str("\n(none)");
     }
 
     output
@@ -116,6 +117,41 @@ mod tests {
         let output = render_text("Hola", Lang::Es, Lang::En, false, "Hello", &[]);
         assert!(output.starts_with("Source (ES): Hola"));
         assert!(output.contains("Word Alternatives:\n(none)"));
+    }
+
+    #[test]
+    fn text_output_omits_words_without_alternatives() {
+        let output = render_text(
+            "el gobierno nos miente",
+            Lang::Es,
+            Lang::En,
+            true,
+            "the government lies to us",
+            &[
+                WordAlternatives {
+                    word: "the".into(),
+                    alternatives: vec![],
+                },
+                WordAlternatives {
+                    word: "government".into(),
+                    alternatives: vec!["authorities".into()],
+                },
+                WordAlternatives {
+                    word: "lies".into(),
+                    alternatives: vec!["fibs".into(), "deceives".into()],
+                },
+                WordAlternatives {
+                    word: "us".into(),
+                    alternatives: vec![],
+                },
+            ],
+        );
+
+        assert!(output.contains("- government → (authorities)"));
+        assert!(output.contains("- lies → (fibs, deceives)"));
+        assert!(!output.contains("- the →"));
+        assert!(!output.contains("- us →"));
+        assert!(!output.contains("[]"));
     }
 
     #[test]

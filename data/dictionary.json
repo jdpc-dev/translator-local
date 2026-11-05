@@ -219,19 +219,19 @@
     },
     {
       "en": "him",
-      "es": "él"
+      "es": "lo"
     },
     {
       "en": "her",
-      "es": "ella"
+      "es": "la"
     },
     {
       "en": "us",
-      "es": "nosotros"
+      "es": "nos"
     },
     {
       "en": "them",
-      "es": "ellos"
+      "es": "los"
     },
     {
       "en": "my",
@@ -6876,6 +6876,42 @@
     {
       "en": "will",
       "es": "voluntad"
+    },
+    {
+      "en": "lies",
+      "es": "miente"
+    },
+    {
+      "en": "lied",
+      "es": "mintió"
+    },
+    {
+      "en": "lying",
+      "es": "mintiendo"
+    },
+    {
+      "en": "manipulate",
+      "es": "manipular"
+    },
+    {
+      "en": "manipulates",
+      "es": "manipula"
+    },
+    {
+      "en": "manipulated",
+      "es": "manipuló"
+    },
+    {
+      "en": "manipulating",
+      "es": "manipulando"
+    },
+    {
+      "en": "there is",
+      "es": "hay"
+    },
+    {
+      "en": "there are",
+      "es": "hay"
     }
   ]
 }

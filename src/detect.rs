@@ -3,16 +3,24 @@ use crate::data::Lang;
 /// Characters that strongly signal Spanish.
 pub const ES_SPECIAL_CHARS: [char; 9] = ['ñ', '¿', '¡', 'á', 'é', 'í', 'ó', 'ú', 'ü'];
 
-/// Top common Spanish words, as required by the specification.
-pub const ES_STOPWORDS: [&str; 16] = [
+/// Common Spanish function words. The first sixteen are the required core
+/// list; the remainder improve confidence on ordinary prose.
+pub const ES_STOPWORDS: &[&str] = &[
     "el", "la", "de", "que", "y", "en", "un", "ser", "se", "no", "haber", "por", "con", "su",
-    "para", "como",
+    "para", "como", "los", "las", "una", "unos", "unas", "del", "al", "es", "son", "está", "están",
+    "este", "esta", "estos", "estas", "pero", "si", "o", "más", "muy", "ya", "hay", "nos", "me",
+    "te", "le", "les", "lo", "sus", "nuestro", "nuestra", "porque", "cuando", "donde", "tiene",
+    "tienen", "hace", "hacen",
 ];
 
-/// Top common English words, as required by the specification.
-pub const EN_STOPWORDS: [&str; 16] = [
+/// Common English function words. The first sixteen are the required core
+/// list; the remainder improve confidence on ordinary prose.
+pub const EN_STOPWORDS: &[&str] = &[
     "the", "be", "to", "of", "and", "a", "in", "that", "have", "i", "it", "for", "not", "on",
-    "with", "he",
+    "with", "he", "she", "they", "we", "you", "his", "her", "their", "our", "this", "these",
+    "those", "is", "are", "was", "were", "been", "do", "does", "did", "has", "had", "will",
+    "would", "can", "could", "may", "might", "must", "should", "there", "what", "which", "who",
+    "whom", "whose", "when", "where", "why", "how", "us", "them", "him", "my", "your", "its",
 ];
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -101,5 +109,19 @@ mod tests {
     fn spanish_punctuation_alone_is_enough() {
         let result = detect("¿Dónde?");
         assert_eq!(result.language, Lang::Es);
+    }
+
+    #[test]
+    fn detects_spanish_prose_without_accents() {
+        let result = detect("el gobierno nos miente y el dinero nos manipula");
+        assert_eq!(result.language, Lang::Es);
+        assert!(!result.ambiguous);
+    }
+
+    #[test]
+    fn detects_english_prose_without_accents() {
+        let result = detect("the government lies to us and the money manipulates us");
+        assert_eq!(result.language, Lang::En);
+        assert!(!result.ambiguous);
     }
 }

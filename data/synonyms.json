@@ -2109,6 +2109,14 @@
       "support",
       "help",
       "service"
+    ],
+    "lies": [
+      "fibs",
+      "deceives"
+    ],
+    "manipulates": [
+      "controls",
+      "exploits"
     ]
   },
   "es": {
@@ -4149,6 +4157,14 @@
     ],
     "voluntad": [
       "determinación"
+    ],
+    "miente": [
+      "engaña",
+      "finge"
+    ],
+    "manipula": [
+      "controla",
+      "explota"
     ]
   }
 }

@@ -2,6 +2,7 @@ use serde_json::Value;
 use std::collections::HashSet;
 
 const DICTIONARY_JSON: &str = include_str!("../data/dictionary.json");
+const REVERSE_JSON: &str = include_str!("../data/reverse.json");
 const SYNONYMS_JSON: &str = include_str!("../data/synonyms.json");
 
 fn dictionary_pairs() -> Vec<(String, String)> {
@@ -90,6 +91,51 @@ fn required_demo_entries_are_present() {
                 .iter()
                 .any(|(pair_en, pair_es)| pair_en == en && pair_es == es),
             "missing pair: {en:?} -> {es:?}"
+        );
+    }
+}
+
+#[test]
+fn reverse_overrides_are_well_formed() {
+    let value: Value = serde_json::from_str(REVERSE_JSON).expect("reverse.json is valid");
+    let pairs = value["pairs"].as_array().expect("pairs is an array");
+    assert!(
+        pairs.len() >= 200,
+        "expected at least 200 reverse entries, found {}",
+        pairs.len()
+    );
+
+    let mut seen = HashSet::new();
+    for pair in pairs {
+        let es = pair["es"].as_str().expect("es is a string");
+        let en = pair["en"].as_str().expect("en is a string");
+        assert!(!es.is_empty());
+        assert!(!en.is_empty());
+        assert_eq!(
+            *es,
+            es.to_lowercase(),
+            "reverse key is not lowercase: {es:?}"
+        );
+        assert_eq!(
+            *en,
+            en.to_lowercase(),
+            "reverse value is not lowercase: {en:?}"
+        );
+        assert!(seen.insert(es.to_string()), "duplicate reverse key: {es:?}");
+    }
+
+    for (es, en) in [
+        ("nos", "us"),
+        ("miente", "lies"),
+        ("manipula", "manipulates"),
+        ("nos miente", "lies to us"),
+        ("nos manipula", "manipulates us"),
+    ] {
+        assert!(
+            pairs
+                .iter()
+                .any(|pair| pair["es"].as_str() == Some(es) && pair["en"].as_str() == Some(en)),
+            "missing reverse pair: {es:?} -> {en:?}"
         );
     }
 }

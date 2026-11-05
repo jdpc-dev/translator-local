@@ -67,6 +67,46 @@ fn translates_the_spec_example_as_json() {
 }
 
 #[test]
+fn translates_spanish_inflections_and_object_pronouns() {
+    let output = run(
+        &[
+            "el gobierno nos miente y el dinero nos manipula",
+            "--format",
+            "json",
+        ],
+        None,
+    );
+    let value = json_output(&output);
+
+    assert_eq!(value["detected_language"], "es");
+    assert_eq!(
+        value["translation"],
+        "the government lies to us and the money manipulates us"
+    );
+
+    let alternatives = value["word_alternatives"]
+        .as_array()
+        .expect("word_alternatives is an array");
+    let alternatives_for = |word: &str| -> Vec<String> {
+        alternatives
+            .iter()
+            .find(|entry| entry["word"] == word)
+            .and_then(|entry| entry["alternatives"].as_array())
+            .map(|list| {
+                list.iter()
+                    .filter_map(|value| value.as_str().map(str::to_string))
+                    .collect()
+            })
+            .unwrap_or_default()
+    };
+    assert_eq!(alternatives_for("lies"), vec!["fibs", "deceives"]);
+    assert_eq!(
+        alternatives_for("manipulates"),
+        vec!["controls", "exploits"]
+    );
+}
+
+#[test]
 fn renders_human_readable_output() {
     let output = run(&["El gato rápido salta."], None);
     assert!(output.status.success());

@@ -19,10 +19,30 @@ They are the complete offline dataset; the tool makes no network requests.
 - Spanish values are lowercase.
 - A pair may be a single word or a phrase. Phrase entries are matched
   longest-first.
-- Lookups are bidirectional. When multiple English keys share a Spanish value,
-  the first pair in the file wins for the reverse direction.
+- Forward and reverse lookups are built automatically. When multiple English
+  keys share a Spanish value, the first pair wins for the derived reverse
+  direction; use `reverse.json` when an explicit override is needed.
 
-Current coverage: 1,719 pairs — 1,367 single words and 352 phrases.
+Current coverage: 1,728 pairs — 1,374 single words and 354 phrases.
+
+## `reverse.json`
+
+```json
+{
+  "version": 1,
+  "pairs": [
+    {"es": "nos", "en": "us"},
+    {"es": "miente", "en": "lies"},
+    {"es": "nos miente", "en": "lies to us"}
+  ]
+}
+```
+
+Explicit Spanish→English overrides for Spanish inflections, object pronouns,
+and phrases that cannot be represented cleanly in the forward EN→ES list. These
+entries override reverse lookups derived from `dictionary.json`.
+
+Current coverage: 253 overrides.
 
 ## `synonyms.json`
 
@@ -39,7 +59,7 @@ Current coverage: 1,719 pairs — 1,367 single words and 352 phrases.
 - Headwords and duplicate alternatives are not allowed.
 - A word may legitimately have no list; the tool returns `[]` for it.
 
-Current coverage: 1,004 entries — 511 English and 493 Spanish.
+Current coverage: 1,008 entries — 513 English and 495 Spanish.
 
 ## Provenance
 
@@ -49,8 +69,9 @@ no data-generation step is required at build time.
 
 ## Extending the data
 
-Add lowercase pairs or synonym lists, keep English dictionary keys unique
-(including after collapsing whitespace), then run:
+Add lowercase pairs, reverse overrides, or synonym lists; keep English
+dictionary keys and reverse Spanish keys unique (including after collapsing
+whitespace), then run:
 
 ```bash
 cargo test

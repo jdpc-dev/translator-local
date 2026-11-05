@@ -3,6 +3,7 @@ use std::collections::HashMap;
 use std::sync::OnceLock;
 
 const DICTIONARY_JSON: &str = include_str!("../data/dictionary.json");
+const REVERSE_JSON: &str = include_str!("../data/reverse.json");
 const SYNONYMS_JSON: &str = include_str!("../data/synonyms.json");
 
 /// The two languages supported by the tool.
@@ -57,6 +58,19 @@ struct Pair {
 }
 
 #[derive(Debug, Deserialize)]
+struct ReverseFile {
+    #[allow(dead_code)]
+    version: u32,
+    pairs: Vec<ReversePair>,
+}
+
+#[derive(Debug, Deserialize)]
+struct ReversePair {
+    es: String,
+    en: String,
+}
+
+#[derive(Debug, Deserialize)]
 struct SynonymsFile {
     #[allow(dead_code)]
     version: u32,
@@ -75,6 +89,8 @@ impl Dictionary {
     fn load() -> Self {
         let file: DictionaryFile =
             serde_json::from_str(DICTIONARY_JSON).expect("embedded dictionary.json is valid");
+        let reverse: ReverseFile =
+            serde_json::from_str(REVERSE_JSON).expect("embedded reverse.json is valid");
 
         let mut en_to_es = HashMap::new();
         let mut es_to_en = HashMap::new();
@@ -92,6 +108,14 @@ impl Dictionary {
                 .entry(normalize_key(&pair.en))
                 .or_insert_with(|| pair.es.clone());
             es_to_en.entry(normalize_key(&pair.es)).or_insert(pair.en);
+        }
+
+        // Explicit reverse pairs cover Spanish inflections and object pronouns
+        // that cannot be represented by the forward EN-ES pair list. They take
+        // precedence over reverse lookups derived from the forward pairs.
+        for pair in reverse.pairs {
+            max_phrase_words = max_phrase_words.max(pair.es.split_whitespace().count());
+            es_to_en.insert(normalize_key(&pair.es), pair.en);
         }
 
         Self {

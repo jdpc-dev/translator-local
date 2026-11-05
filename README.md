@@ -13,8 +13,8 @@ network access.
 | Requirement | Implementation |
 | :--- | :--- |
 | No AI/ML dependencies | Pure Rust with `regex`, `serde`, and `clap` only |
-| Footprint under 15 MB | 2.4 MB stripped release binary with embedded JSON data; verify with `make size` |
-| Under 50 ms | About 7 ms per invocation including process startup on the development machine; verify with `make bench` |
+| Footprint under 15 MB | 2.5 MB stripped release binary with embedded JSON data; verify with `make size` |
+| Under 50 ms | About 8 ms per invocation including process startup on the development machine; verify with `make bench` |
 | Single standalone binary | `data/*.json` is compiled in with `include_str!` |
 | Fully offline | No network calls at runtime; all data is bundled |
 
@@ -122,11 +122,11 @@ Word Alternatives:
 
 ## Data
 
-The bundled dataset contains **1,719 bilingual pairs** (1,367 words and 352
-phrases) and **1,004 synonym entries** (511 English and 493 Spanish), all
-embedded in the binary. Synonyms are curated in bilingual concept groups so the
-English and Spanish alternatives stay aligned. Words without a suitable
-synonym return an empty list.
+The bundled dataset contains **1,728 bilingual pairs** (1,374 words and 354
+phrases), **253 Spanish→English reverse overrides**, and **1,008 synonym
+entries** (513 English and 495 Spanish), all embedded in the binary. Synonyms
+are curated in bilingual concept groups so the English and Spanish alternatives
+stay aligned. Words without a suitable synonym return an empty list.
 
 Data lives in:
 
@@ -134,13 +134,16 @@ Data lives in:
   Lookup tables are built in both directions at startup. If several English
   words share a Spanish value (for example `fast` and `quick` → `rápido`), the
   first pair in the file wins for the reverse lookup.
+- `data/reverse.json` — explicit Spanish→English overrides for inflected verb
+  forms, object pronouns, and common phrases. These take precedence over reverse
+  lookups derived from the forward dictionary.
 - `data/synonyms.json` — `en` and `es` maps of word → ordered synonym list.
   The first three entries are returned, excluding the headword itself.
 
 See `data/README.md` for the full schema and data-maintenance notes.
 
-Both files are embedded at compile time. To extend the dictionary, add pairs
-using lowercase keys and values, keep English keys unique, then run
+All three files are embedded at compile time. To extend the dictionary, add
+pairs using lowercase keys and values, keep English keys unique, then run
 `cargo test`. The data tests enforce lowercase keys, unique English entries
 (including after whitespace normalization), non-empty values, and clean synonym
 lists.

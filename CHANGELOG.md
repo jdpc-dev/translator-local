@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-11-05
+
+### Added
+
+- Spanish-to-English reverse overrides (`data/reverse.json`) with 253 entries
+  covering common inflections, object pronouns, and pronoun/verb phrases.
+- Regression tests for Spanish prose without accents and the sentence
+  `el gobierno nos miente y el dinero nos manipula`.
+
+### Changed
+
+- Expanded language-detection stopword lists to improve confidence on ordinary
+  prose.
+- Updated dataset counts to 1,728 pairs and 1,008 synonym entries.
+
+### Fixed
+
+- Spanish inflected verbs and object pronouns now translate correctly:
+  `nos miente` → `lies to us`, `nos manipula` → `manipulates us`.
+- Human-readable output now omits words that have no alternatives instead of
+  printing empty `[]` entries; JSON still includes empty arrays as specified.
+
 ## [0.2.0] - 2026-11-05
 
 ### Changed

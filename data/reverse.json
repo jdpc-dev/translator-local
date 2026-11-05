@@ -1,0 +1,1017 @@
+{
+  "version": 1,
+  "pairs": [
+    {
+      "es": "nos",
+      "en": "us"
+    },
+    {
+      "es": "te",
+      "en": "you"
+    },
+    {
+      "es": "os",
+      "en": "you"
+    },
+    {
+      "es": "lo",
+      "en": "him"
+    },
+    {
+      "es": "la",
+      "en": "her"
+    },
+    {
+      "es": "los",
+      "en": "them"
+    },
+    {
+      "es": "las",
+      "en": "them"
+    },
+    {
+      "es": "le",
+      "en": "him"
+    },
+    {
+      "es": "les",
+      "en": "them"
+    },
+    {
+      "es": "se",
+      "en": "himself"
+    },
+    {
+      "es": "mí",
+      "en": "me"
+    },
+    {
+      "es": "ti",
+      "en": "you"
+    },
+    {
+      "es": "conmigo",
+      "en": "with me"
+    },
+    {
+      "es": "contigo",
+      "en": "with you"
+    },
+    {
+      "es": "nuestro",
+      "en": "our"
+    },
+    {
+      "es": "nuestra",
+      "en": "our"
+    },
+    {
+      "es": "nuestros",
+      "en": "our"
+    },
+    {
+      "es": "nuestras",
+      "en": "our"
+    },
+    {
+      "es": "mis",
+      "en": "my"
+    },
+    {
+      "es": "tus",
+      "en": "your"
+    },
+    {
+      "es": "sus",
+      "en": "their"
+    },
+    {
+      "es": "suyo",
+      "en": "theirs"
+    },
+    {
+      "es": "miente",
+      "en": "lies"
+    },
+    {
+      "es": "manipula",
+      "en": "manipulates"
+    },
+    {
+      "es": "habla",
+      "en": "speaks"
+    },
+    {
+      "es": "come",
+      "en": "eats"
+    },
+    {
+      "es": "vive",
+      "en": "lives"
+    },
+    {
+      "es": "trabaja",
+      "en": "works"
+    },
+    {
+      "es": "quiere",
+      "en": "wants"
+    },
+    {
+      "es": "puede",
+      "en": "can"
+    },
+    {
+      "es": "tiene",
+      "en": "has"
+    },
+    {
+      "es": "hace",
+      "en": "does"
+    },
+    {
+      "es": "va",
+      "en": "goes"
+    },
+    {
+      "es": "viene",
+      "en": "comes"
+    },
+    {
+      "es": "dice",
+      "en": "says"
+    },
+    {
+      "es": "piensa",
+      "en": "thinks"
+    },
+    {
+      "es": "sabe",
+      "en": "knows"
+    },
+    {
+      "es": "ve",
+      "en": "sees"
+    },
+    {
+      "es": "mira",
+      "en": "looks"
+    },
+    {
+      "es": "escucha",
+      "en": "listens"
+    },
+    {
+      "es": "camina",
+      "en": "walks"
+    },
+    {
+      "es": "corre",
+      "en": "runs"
+    },
+    {
+      "es": "duerme",
+      "en": "sleeps"
+    },
+    {
+      "es": "compra",
+      "en": "buys"
+    },
+    {
+      "es": "vende",
+      "en": "sells"
+    },
+    {
+      "es": "paga",
+      "en": "pays"
+    },
+    {
+      "es": "escribe",
+      "en": "writes"
+    },
+    {
+      "es": "lee",
+      "en": "reads"
+    },
+    {
+      "es": "bebe",
+      "en": "drinks"
+    },
+    {
+      "es": "canta",
+      "en": "sings"
+    },
+    {
+      "es": "baila",
+      "en": "dances"
+    },
+    {
+      "es": "juega",
+      "en": "plays"
+    },
+    {
+      "es": "estudia",
+      "en": "studies"
+    },
+    {
+      "es": "aprende",
+      "en": "learns"
+    },
+    {
+      "es": "enseña",
+      "en": "teaches"
+    },
+    {
+      "es": "entiende",
+      "en": "understands"
+    },
+    {
+      "es": "recuerda",
+      "en": "remembers"
+    },
+    {
+      "es": "olvida",
+      "en": "forgets"
+    },
+    {
+      "es": "ayuda",
+      "en": "helps"
+    },
+    {
+      "es": "necesita",
+      "en": "needs"
+    },
+    {
+      "es": "usa",
+      "en": "uses"
+    },
+    {
+      "es": "encuentra",
+      "en": "finds"
+    },
+    {
+      "es": "abre",
+      "en": "opens"
+    },
+    {
+      "es": "cierra",
+      "en": "closes"
+    },
+    {
+      "es": "empieza",
+      "en": "starts"
+    },
+    {
+      "es": "termina",
+      "en": "finishes"
+    },
+    {
+      "es": "espera",
+      "en": "waits"
+    },
+    {
+      "es": "llega",
+      "en": "arrives"
+    },
+    {
+      "es": "sale",
+      "en": "leaves"
+    },
+    {
+      "es": "vuelve",
+      "en": "returns"
+    },
+    {
+      "es": "entra",
+      "en": "enters"
+    },
+    {
+      "es": "muere",
+      "en": "dies"
+    },
+    {
+      "es": "roba",
+      "en": "steals"
+    },
+    {
+      "es": "mata",
+      "en": "kills"
+    },
+    {
+      "es": "rompe",
+      "en": "breaks"
+    },
+    {
+      "es": "arregla",
+      "en": "fixes"
+    },
+    {
+      "es": "limpia",
+      "en": "cleans"
+    },
+    {
+      "es": "lava",
+      "en": "washes"
+    },
+    {
+      "es": "cocina",
+      "en": "cooks"
+    },
+    {
+      "es": "conduce",
+      "en": "drives"
+    },
+    {
+      "es": "vuela",
+      "en": "flies"
+    },
+    {
+      "es": "sube",
+      "en": "climbs"
+    },
+    {
+      "es": "cae",
+      "en": "falls"
+    },
+    {
+      "es": "ríe",
+      "en": "laughs"
+    },
+    {
+      "es": "llora",
+      "en": "cries"
+    },
+    {
+      "es": "sonríe",
+      "en": "smiles"
+    },
+    {
+      "es": "sueña",
+      "en": "dreams"
+    },
+    {
+      "es": "cree",
+      "en": "believes"
+    },
+    {
+      "es": "duda",
+      "en": "doubts"
+    },
+    {
+      "es": "acepta",
+      "en": "accepts"
+    },
+    {
+      "es": "rechaza",
+      "en": "rejects"
+    },
+    {
+      "es": "permite",
+      "en": "allows"
+    },
+    {
+      "es": "promete",
+      "en": "promises"
+    },
+    {
+      "es": "sugiere",
+      "en": "suggests"
+    },
+    {
+      "es": "advierte",
+      "en": "warns"
+    },
+    {
+      "es": "protege",
+      "en": "protects"
+    },
+    {
+      "es": "salva",
+      "en": "saves"
+    },
+    {
+      "es": "gasta",
+      "en": "spends"
+    },
+    {
+      "es": "presta",
+      "en": "lends"
+    },
+    {
+      "es": "comparte",
+      "en": "shares"
+    },
+    {
+      "es": "mantiene",
+      "en": "keeps"
+    },
+    {
+      "es": "sostiene",
+      "en": "holds"
+    },
+    {
+      "es": "lanza",
+      "en": "throws"
+    },
+    {
+      "es": "atrapa",
+      "en": "catches"
+    },
+    {
+      "es": "empuja",
+      "en": "pushes"
+    },
+    {
+      "es": "dibuja",
+      "en": "draws"
+    },
+    {
+      "es": "pinta",
+      "en": "paints"
+    },
+    {
+      "es": "cuenta",
+      "en": "counts"
+    },
+    {
+      "es": "mide",
+      "en": "measures"
+    },
+    {
+      "es": "compara",
+      "en": "compares"
+    },
+    {
+      "es": "describe",
+      "en": "describes"
+    },
+    {
+      "es": "discute",
+      "en": "argues"
+    },
+    {
+      "es": "lucha",
+      "en": "fights"
+    },
+    {
+      "es": "ataca",
+      "en": "attacks"
+    },
+    {
+      "es": "defiende",
+      "en": "defends"
+    },
+    {
+      "es": "escapa",
+      "en": "escapes"
+    },
+    {
+      "es": "esconde",
+      "en": "hides"
+    },
+    {
+      "es": "busca",
+      "en": "searches"
+    },
+    {
+      "es": "descubre",
+      "en": "discovers"
+    },
+    {
+      "es": "inventa",
+      "en": "invents"
+    },
+    {
+      "es": "imagina",
+      "en": "imagines"
+    },
+    {
+      "es": "considera",
+      "en": "considers"
+    },
+    {
+      "es": "pretende",
+      "en": "intends"
+    },
+    {
+      "es": "planea",
+      "en": "plans"
+    },
+    {
+      "es": "prepara",
+      "en": "prepares"
+    },
+    {
+      "es": "organiza",
+      "en": "organizes"
+    },
+    {
+      "es": "gestiona",
+      "en": "manages"
+    },
+    {
+      "es": "lidera",
+      "en": "leads"
+    },
+    {
+      "es": "sigue",
+      "en": "follows"
+    },
+    {
+      "es": "une",
+      "en": "joins"
+    },
+    {
+      "es": "separa",
+      "en": "separates"
+    },
+    {
+      "es": "conecta",
+      "en": "connects"
+    },
+    {
+      "es": "incluye",
+      "en": "includes"
+    },
+    {
+      "es": "excluye",
+      "en": "excludes"
+    },
+    {
+      "es": "aumenta",
+      "en": "increases"
+    },
+    {
+      "es": "reduce",
+      "en": "reduces"
+    },
+    {
+      "es": "mejora",
+      "en": "improves"
+    },
+    {
+      "es": "desarrolla",
+      "en": "develops"
+    },
+    {
+      "es": "crea",
+      "en": "creates"
+    },
+    {
+      "es": "destruye",
+      "en": "destroys"
+    },
+    {
+      "es": "daña",
+      "en": "damages"
+    },
+    {
+      "es": "duele",
+      "en": "hurts"
+    },
+    {
+      "es": "desperdicia",
+      "en": "wastes"
+    },
+    {
+      "es": "requiere",
+      "en": "requires"
+    },
+    {
+      "es": "ofrece",
+      "en": "offers"
+    },
+    {
+      "es": "resuelve",
+      "en": "solves"
+    },
+    {
+      "es": "provoca",
+      "en": "causes"
+    },
+    {
+      "es": "afecta",
+      "en": "affects"
+    },
+    {
+      "es": "depende",
+      "en": "depends"
+    },
+    {
+      "es": "pertenece",
+      "en": "belongs"
+    },
+    {
+      "es": "contiene",
+      "en": "contains"
+    },
+    {
+      "es": "parece",
+      "en": "seems"
+    },
+    {
+      "es": "convierte",
+      "en": "becomes"
+    },
+    {
+      "es": "permanece",
+      "en": "remains"
+    },
+    {
+      "es": "sucede",
+      "en": "happens"
+    },
+    {
+      "es": "existe",
+      "en": "exists"
+    },
+    {
+      "es": "aparece",
+      "en": "appears"
+    },
+    {
+      "es": "desaparece",
+      "en": "disappears"
+    },
+    {
+      "es": "comienza",
+      "en": "begins"
+    },
+    {
+      "es": "acaba",
+      "en": "ends"
+    },
+    {
+      "es": "mintió",
+      "en": "lied"
+    },
+    {
+      "es": "manipuló",
+      "en": "manipulated"
+    },
+    {
+      "es": "habló",
+      "en": "spoke"
+    },
+    {
+      "es": "trabajó",
+      "en": "worked"
+    },
+    {
+      "es": "vivió",
+      "en": "lived"
+    },
+    {
+      "es": "jugó",
+      "en": "played"
+    },
+    {
+      "es": "bebió",
+      "en": "drank"
+    },
+    {
+      "es": "caminó",
+      "en": "walked"
+    },
+    {
+      "es": "vendió",
+      "en": "sold"
+    },
+    {
+      "es": "pagó",
+      "en": "paid"
+    },
+    {
+      "es": "salió",
+      "en": "left"
+    },
+    {
+      "es": "llegó",
+      "en": "arrived"
+    },
+    {
+      "es": "regresó",
+      "en": "returned"
+    },
+    {
+      "es": "murió",
+      "en": "died"
+    },
+    {
+      "es": "mató",
+      "en": "killed"
+    },
+    {
+      "es": "empezó",
+      "en": "started"
+    },
+    {
+      "es": "terminó",
+      "en": "finished"
+    },
+    {
+      "es": "ayudó",
+      "en": "helped"
+    },
+    {
+      "es": "necesitó",
+      "en": "needed"
+    },
+    {
+      "es": "llamó",
+      "en": "called"
+    },
+    {
+      "es": "respondió",
+      "en": "answered"
+    },
+    {
+      "es": "cambió",
+      "en": "changed"
+    },
+    {
+      "es": "movió",
+      "en": "moved"
+    },
+    {
+      "es": "entendió",
+      "en": "understood"
+    },
+    {
+      "es": "abrió",
+      "en": "opened"
+    },
+    {
+      "es": "cerró",
+      "en": "closed"
+    },
+    {
+      "es": "perdió",
+      "en": "lost"
+    },
+    {
+      "es": "ganó",
+      "en": "won"
+    },
+    {
+      "es": "dijo",
+      "en": "said"
+    },
+    {
+      "es": "vio",
+      "en": "saw"
+    },
+    {
+      "es": "dio",
+      "en": "gave"
+    },
+    {
+      "es": "tomó",
+      "en": "took"
+    },
+    {
+      "es": "puso",
+      "en": "put"
+    },
+    {
+      "es": "supo",
+      "en": "knew"
+    },
+    {
+      "es": "quiso",
+      "en": "wanted"
+    },
+    {
+      "es": "pudo",
+      "en": "could"
+    },
+    {
+      "es": "tuvo",
+      "en": "had"
+    },
+    {
+      "es": "estuvo",
+      "en": "was"
+    },
+    {
+      "es": "está",
+      "en": "is"
+    },
+    {
+      "es": "están",
+      "en": "are"
+    },
+    {
+      "es": "estoy",
+      "en": "am"
+    },
+    {
+      "es": "estamos",
+      "en": "are"
+    },
+    {
+      "es": "estás",
+      "en": "are"
+    },
+    {
+      "es": "estaba",
+      "en": "was"
+    },
+    {
+      "es": "estaban",
+      "en": "were"
+    },
+    {
+      "es": "eres",
+      "en": "are"
+    },
+    {
+      "es": "somos",
+      "en": "are"
+    },
+    {
+      "es": "será",
+      "en": "will be"
+    },
+    {
+      "es": "serán",
+      "en": "will be"
+    },
+    {
+      "es": "tienen",
+      "en": "have"
+    },
+    {
+      "es": "hacen",
+      "en": "do"
+    },
+    {
+      "es": "pueden",
+      "en": "can"
+    },
+    {
+      "es": "deben",
+      "en": "must"
+    },
+    {
+      "es": "quieren",
+      "en": "want"
+    },
+    {
+      "es": "saben",
+      "en": "know"
+    },
+    {
+      "es": "dicen",
+      "en": "say"
+    },
+    {
+      "es": "van",
+      "en": "go"
+    },
+    {
+      "es": "vienen",
+      "en": "come"
+    },
+    {
+      "es": "hay",
+      "en": "there is"
+    },
+    {
+      "es": "no hay",
+      "en": "there is no"
+    },
+    {
+      "es": "tiene que",
+      "en": "has to"
+    },
+    {
+      "es": "tienen que",
+      "en": "have to"
+    },
+    {
+      "es": "va a",
+      "en": "going to"
+    },
+    {
+      "es": "van a",
+      "en": "going to"
+    },
+    {
+      "es": "se llama",
+      "en": "is called"
+    },
+    {
+      "es": "se llaman",
+      "en": "are called"
+    },
+    {
+      "es": "nos miente",
+      "en": "lies to us"
+    },
+    {
+      "es": "nos manipula",
+      "en": "manipulates us"
+    },
+    {
+      "es": "nos ayuda",
+      "en": "helps us"
+    },
+    {
+      "es": "nos necesita",
+      "en": "needs us"
+    },
+    {
+      "es": "nos quiere",
+      "en": "wants us"
+    },
+    {
+      "es": "nos ve",
+      "en": "sees us"
+    },
+    {
+      "es": "nos escucha",
+      "en": "hears us"
+    },
+    {
+      "es": "nos conoce",
+      "en": "knows us"
+    },
+    {
+      "es": "nos ama",
+      "en": "loves us"
+    },
+    {
+      "es": "nos odia",
+      "en": "hates us"
+    },
+    {
+      "es": "nos dice",
+      "en": "tells us"
+    },
+    {
+      "es": "nos muestra",
+      "en": "shows us"
+    },
+    {
+      "es": "nos da",
+      "en": "gives us"
+    },
+    {
+      "es": "nos trae",
+      "en": "brings us"
+    },
+    {
+      "es": "nos envía",
+      "en": "sends us"
+    },
+    {
+      "es": "nos llama",
+      "en": "calls us"
+    },
+    {
+      "es": "nos usa",
+      "en": "uses us"
+    },
+    {
+      "es": "nos controla",
+      "en": "controls us"
+    },
+    {
+      "es": "nos explota",
+      "en": "exploits us"
+    },
+    {
+      "es": "me miente",
+      "en": "lies to me"
+    },
+    {
+      "es": "me manipula",
+      "en": "manipulates me"
+    },
+    {
+      "es": "te miente",
+      "en": "lies to you"
+    },
+    {
+      "es": "te manipula",
+      "en": "manipulates you"
+    },
+    {
+      "es": "nos gusta",
+      "en": "we like"
+    },
+    {
+      "es": "me gusta",
+      "en": "i like"
+    },
+    {
+      "es": "te gusta",
+      "en": "you like"
+    },
+    {
+      "es": "no nos gusta",
+      "en": "we do not like"
+    }
+  ]
+}
