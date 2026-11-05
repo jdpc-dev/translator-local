@@ -116,7 +116,9 @@ Word Alternatives:
    with a warning.
 3. **Translation** tokenizes the text while keeping whitespace and punctuation.
    It tries dictionary phrases longest-first (up to the longest bundled phrase),
-   then falls back to single-word lookup. Matched spans preserve the source
+   then falls back to single-word lookup. Plural forms retry their singular
+   entry. Code-like tokens (snake_case, camelCase, paths, dotted names, file
+   extensions) are preserved unchanged. Matched spans preserve the source
    capitalization. Unknown words are passed through or bracketed.
 4. **Alternatives** tokenize the translated output and look up up to three
    deterministic synonyms per word in the target language.
@@ -124,8 +126,8 @@ Word Alternatives:
 
 ## Data
 
-The bundled dataset contains **2,072 bilingual pairs** (1,492 words and 580
-phrases), **303 Spanish→English reverse overrides**, and **1,139 synonym
+The bundled dataset contains **2,245 bilingual pairs** (1,609 words and 636
+phrases), **662 Spanish→English reverse overrides**, and **1,139 synonym
 entries** (580 English and 559 Spanish), all embedded in the binary. Synonyms
 are curated in bilingual concept groups so the English and Spanish alternatives
 stay aligned. Words without a suitable synonym return an empty list.

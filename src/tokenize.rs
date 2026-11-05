@@ -3,7 +3,7 @@ use std::sync::LazyLock;
 
 static TOKEN_RE: LazyLock<Regex> = LazyLock::new(|| {
     Regex::new(
-        r"(?P<word>[\p{L}\p{M}]+(?:['’\-][\p{L}\p{M}]+)*)|(?P<space>\s+)|(?P<punct>[^\p{L}\p{M}\s]+)",
+        r"(?P<word>[\p{L}\p{M}]+(?:['’\-_][\p{L}\p{M}]+)*)|(?P<space>\s+)|(?P<punct>[^\p{L}\p{M}\s]+)",
     )
     .expect("tokenizer regex is valid")
 });
@@ -92,6 +92,13 @@ mod tests {
         let tokens = tokenize("low-ass wage and one-shot");
         assert_eq!(tokens[0], Token::Word("low-ass".into()));
         assert_eq!(tokens[6], Token::Word("one-shot".into()));
+    }
+
+    #[test]
+    fn keeps_underscores_inside_words() {
+        let tokens = tokenize("tbl_mantenimiento_ups product_warehouse");
+        assert_eq!(tokens[0], Token::Word("tbl_mantenimiento_ups".into()));
+        assert_eq!(tokens[2], Token::Word("product_warehouse".into()));
     }
 
     #[test]

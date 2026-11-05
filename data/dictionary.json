@@ -8288,6 +8288,698 @@
     {
       "en": "your ass",
       "es": "tu culo"
+    },
+    {
+      "en": "maintenance",
+      "es": "mantenimiento"
+    },
+    {
+      "en": "client",
+      "es": "cliente"
+    },
+    {
+      "en": "equipment",
+      "es": "equipo"
+    },
+    {
+      "en": "location",
+      "es": "ubicación"
+    },
+    {
+      "en": "modify",
+      "es": "modificar"
+    },
+    {
+      "en": "detail",
+      "es": "detalle"
+    },
+    {
+      "en": "screen",
+      "es": "pantalla"
+    },
+    {
+      "en": "validation",
+      "es": "validación"
+    },
+    {
+      "en": "edit",
+      "es": "editar"
+    },
+    {
+      "en": "implement",
+      "es": "implementar"
+    },
+    {
+      "en": "load",
+      "es": "cargar"
+    },
+    {
+      "en": "technician",
+      "es": "técnico"
+    },
+    {
+      "en": "export",
+      "es": "exportación"
+    },
+    {
+      "en": "generate",
+      "es": "generar"
+    },
+    {
+      "en": "default",
+      "es": "defecto"
+    },
+    {
+      "en": "column",
+      "es": "columna"
+    },
+    {
+      "en": "creation",
+      "es": "creación"
+    },
+    {
+      "en": "initial",
+      "es": "inicial"
+    },
+    {
+      "en": "assigned",
+      "es": "asignado"
+    },
+    {
+      "en": "button",
+      "es": "botón"
+    },
+    {
+      "en": "observation",
+      "es": "observación"
+    },
+    {
+      "en": "quote",
+      "es": "cotización"
+    },
+    {
+      "en": "delete",
+      "es": "eliminar"
+    },
+    {
+      "en": "update",
+      "es": "actualizar"
+    },
+    {
+      "en": "adjustment",
+      "es": "ajuste"
+    },
+    {
+      "en": "selected",
+      "es": "seleccionado"
+    },
+    {
+      "en": "option",
+      "es": "opción"
+    },
+    {
+      "en": "generator",
+      "es": "generador"
+    },
+    {
+      "en": "remove",
+      "es": "remover"
+    },
+    {
+      "en": "expense",
+      "es": "gasto"
+    },
+    {
+      "en": "transfer",
+      "es": "transferencia"
+    },
+    {
+      "en": "assignment",
+      "es": "asignación"
+    },
+    {
+      "en": "warehouse",
+      "es": "almacén"
+    },
+    {
+      "en": "inventory",
+      "es": "inventario"
+    },
+    {
+      "en": "quantity",
+      "es": "cantidad"
+    },
+    {
+      "en": "supplier",
+      "es": "proveedor"
+    },
+    {
+      "en": "contract",
+      "es": "contrato"
+    },
+    {
+      "en": "branch",
+      "es": "sucursal"
+    },
+    {
+      "en": "address",
+      "es": "dirección"
+    },
+    {
+      "en": "regime",
+      "es": "régimen"
+    },
+    {
+      "en": "currency",
+      "es": "moneda"
+    },
+    {
+      "en": "inactive",
+      "es": "inactivo"
+    },
+    {
+      "en": "draft",
+      "es": "borrador"
+    },
+    {
+      "en": "publish",
+      "es": "publicar"
+    },
+    {
+      "en": "completed",
+      "es": "completado"
+    },
+    {
+      "en": "pending",
+      "es": "pendiente"
+    },
+    {
+      "en": "approved",
+      "es": "aprobado"
+    },
+    {
+      "en": "rejected",
+      "es": "rechazado"
+    },
+    {
+      "en": "approve",
+      "es": "aprobar"
+    },
+    {
+      "en": "reject",
+      "es": "rechazar"
+    },
+    {
+      "en": "audit",
+      "es": "auditoría"
+    },
+    {
+      "en": "comment",
+      "es": "comentario"
+    },
+    {
+      "en": "weekly",
+      "es": "semanal"
+    },
+    {
+      "en": "monthly",
+      "es": "mensual"
+    },
+    {
+      "en": "quarterly",
+      "es": "trimestral"
+    },
+    {
+      "en": "annual",
+      "es": "anual"
+    },
+    {
+      "en": "schedule",
+      "es": "cronograma"
+    },
+    {
+      "en": "calendar",
+      "es": "calendario"
+    },
+    {
+      "en": "contact",
+      "es": "contacto"
+    },
+    {
+      "en": "seat",
+      "es": "sede"
+    },
+    {
+      "en": "priority",
+      "es": "prioridad"
+    },
+    {
+      "en": "description",
+      "es": "descripción"
+    },
+    {
+      "en": "title",
+      "es": "título"
+    },
+    {
+      "en": "request",
+      "es": "solicitud"
+    },
+    {
+      "en": "traceability",
+      "es": "trazabilidad"
+    },
+    {
+      "en": "redundancy",
+      "es": "redundancia"
+    },
+    {
+      "en": "inconsistency",
+      "es": "inconsistencia"
+    },
+    {
+      "en": "query",
+      "es": "consulta"
+    },
+    {
+      "en": "pagination",
+      "es": "paginación"
+    },
+    {
+      "en": "filter",
+      "es": "filtro"
+    },
+    {
+      "en": "search",
+      "es": "búsqueda"
+    },
+    {
+      "en": "selection",
+      "es": "selección"
+    },
+    {
+      "en": "duplicate",
+      "es": "duplicado"
+    },
+    {
+      "en": "optional",
+      "es": "opcional"
+    },
+    {
+      "en": "incorrect",
+      "es": "incorrecto"
+    },
+    {
+      "en": "string",
+      "es": "cadena"
+    },
+    {
+      "en": "integer",
+      "es": "entero"
+    },
+    {
+      "en": "boolean",
+      "es": "booleano"
+    },
+    {
+      "en": "constant",
+      "es": "constante"
+    },
+    {
+      "en": "array",
+      "es": "arreglo"
+    },
+    {
+      "en": "index",
+      "es": "índice"
+    },
+    {
+      "en": "row",
+      "es": "fila"
+    },
+    {
+      "en": "controller",
+      "es": "controlador"
+    },
+    {
+      "en": "route",
+      "es": "ruta"
+    },
+    {
+      "en": "migration",
+      "es": "migración"
+    },
+    {
+      "en": "component",
+      "es": "componente"
+    },
+    {
+      "en": "template",
+      "es": "plantilla"
+    },
+    {
+      "en": "interface",
+      "es": "interfaz"
+    },
+    {
+      "en": "session",
+      "es": "sesión"
+    },
+    {
+      "en": "permission",
+      "es": "permiso"
+    },
+    {
+      "en": "notification",
+      "es": "notificación"
+    },
+    {
+      "en": "folder",
+      "es": "carpeta"
+    },
+    {
+      "en": "document",
+      "es": "documento"
+    },
+    {
+      "en": "photo",
+      "es": "foto"
+    },
+    {
+      "en": "link",
+      "es": "enlace"
+    },
+    {
+      "en": "download",
+      "es": "descarga"
+    },
+    {
+      "en": "criterion",
+      "es": "criterio"
+    },
+    {
+      "en": "operator",
+      "es": "operador"
+    },
+    {
+      "en": "comparison",
+      "es": "comparación"
+    },
+    {
+      "en": "logic",
+      "es": "lógica"
+    },
+    {
+      "en": "arithmetic",
+      "es": "aritmética"
+    },
+    {
+      "en": "sum",
+      "es": "suma"
+    },
+    {
+      "en": "subtraction",
+      "es": "resta"
+    },
+    {
+      "en": "multiplication",
+      "es": "multiplicación"
+    },
+    {
+      "en": "division",
+      "es": "división"
+    },
+    {
+      "en": "negation",
+      "es": "negación"
+    },
+    {
+      "en": "float",
+      "es": "flotante"
+    },
+    {
+      "en": "input",
+      "es": "entrada"
+    },
+    {
+      "en": "dropdown",
+      "es": "desplegable"
+    },
+    {
+      "en": "event",
+      "es": "evento"
+    },
+    {
+      "en": "emit",
+      "es": "emitir"
+    },
+    {
+      "en": "seed",
+      "es": "semilla"
+    },
+    {
+      "en": "factory",
+      "es": "fábrica"
+    },
+    {
+      "en": "schema",
+      "es": "esquema"
+    },
+    {
+      "en": "constraint",
+      "es": "restricción"
+    },
+    {
+      "en": "pivot table",
+      "es": "tabla pivote"
+    },
+    {
+      "en": "foreign key",
+      "es": "llave foránea"
+    },
+    {
+      "en": "payment method",
+      "es": "método de pago"
+    },
+    {
+      "en": "purchase order",
+      "es": "orden de compra"
+    },
+    {
+      "en": "style guide",
+      "es": "guía de estilos"
+    },
+    {
+      "en": "search bar",
+      "es": "barra de búsqueda"
+    },
+    {
+      "en": "loading state",
+      "es": "estado de carga"
+    },
+    {
+      "en": "empty state",
+      "es": "estado vacío"
+    },
+    {
+      "en": "error state",
+      "es": "estado de error"
+    },
+    {
+      "en": "start date",
+      "es": "fecha de inicio"
+    },
+    {
+      "en": "end date",
+      "es": "fecha de fin"
+    },
+    {
+      "en": "date range",
+      "es": "rango de fechas"
+    },
+    {
+      "en": "file upload",
+      "es": "carga de archivo"
+    },
+    {
+      "en": "drag and drop",
+      "es": "arrastrar y soltar"
+    },
+    {
+      "en": "real time",
+      "es": "tiempo real"
+    },
+    {
+      "en": "per page",
+      "es": "por página"
+    },
+    {
+      "en": "all results",
+      "es": "todos los resultados"
+    },
+    {
+      "en": "paginated",
+      "es": "paginado"
+    },
+    {
+      "en": "on demand",
+      "es": "bajo demanda"
+    },
+    {
+      "en": "lazy loading",
+      "es": "carga diferida"
+    },
+    {
+      "en": "backend handling",
+      "es": "manejo en backend"
+    },
+    {
+      "en": "query results",
+      "es": "resultados de la consulta"
+    },
+    {
+      "en": "export to pdf",
+      "es": "exportar a pdf"
+    },
+    {
+      "en": "export to xlsx",
+      "es": "exportar a xlsx"
+    },
+    {
+      "en": "table header",
+      "es": "encabezado de tabla"
+    },
+    {
+      "en": "totals row",
+      "es": "fila de totales"
+    },
+    {
+      "en": "required field",
+      "es": "campo obligatorio"
+    },
+    {
+      "en": "default value",
+      "es": "valor por defecto"
+    },
+    {
+      "en": "role validation",
+      "es": "validación de rol"
+    },
+    {
+      "en": "conditional validation",
+      "es": "validación condicional"
+    },
+    {
+      "en": "approval functionality",
+      "es": "funcionalidad de aprobación"
+    },
+    {
+      "en": "auditor approval",
+      "es": "aprobación del auditor"
+    },
+    {
+      "en": "contains",
+      "es": "contiene"
+    },
+    {
+      "en": "air conditioning",
+      "es": "aire acondicionado"
+    },
+    {
+      "en": "product selector",
+      "es": "selector de productos"
+    },
+    {
+      "en": "creation form",
+      "es": "formulario de creación"
+    },
+    {
+      "en": "sales module",
+      "es": "módulo de salidas"
+    },
+    {
+      "en": "product list",
+      "es": "lista de productos"
+    },
+    {
+      "en": "to add",
+      "es": "para agregar"
+    },
+    {
+      "en": "to allow",
+      "es": "para permitir"
+    },
+    {
+      "en": "to modify",
+      "es": "para modificar"
+    },
+    {
+      "en": "to create",
+      "es": "para crear"
+    },
+    {
+      "en": "to delete",
+      "es": "para eliminar"
+    },
+    {
+      "en": "to update",
+      "es": "para actualizar"
+    },
+    {
+      "en": "to load",
+      "es": "para cargar"
+    },
+    {
+      "en": "to save",
+      "es": "para guardar"
+    },
+    {
+      "en": "to show",
+      "es": "para mostrar"
+    },
+    {
+      "en": "to select",
+      "es": "para seleccionar"
+    },
+    {
+      "en": "to filter",
+      "es": "para filtrar"
+    },
+    {
+      "en": "to export",
+      "es": "para exportar"
+    },
+    {
+      "en": "to import",
+      "es": "para importar"
+    },
+    {
+      "en": "to validate",
+      "es": "para validar"
+    },
+    {
+      "en": "to edit",
+      "es": "para editar"
+    },
+    {
+      "en": "to fix",
+      "es": "para corregir"
+    },
+    {
+      "en": "to implement",
+      "es": "para implementar"
+    },
+    {
+      "en": "schedule module",
+      "es": "módulo de cronograma"
+    },
+    {
+      "en": "air conditioning equipment",
+      "es": "equipos de aire acondicionado"
+    },
+    {
+      "en": "based on",
+      "es": "basado en"
     }
   ]
 }

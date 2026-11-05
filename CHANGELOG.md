@@ -7,6 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.8] - 2026-11-05
+
+### Added
+
+- Technical and business vocabulary derived from the prompt corpus: maintenance,
+  clients, equipment, fields, locations, modules, validation, records, reports,
+  inventory, warehouses, purchases, sales, balances, migrations, controllers,
+  routes, views, components, and related terms.
+- Common prompt phrases such as `create table`, `add fields`, `product
+  selector`, `creation form`, `sales module`, `to add`, `to allow`, `to
+  modify`, `to export`, and `to validate`.
+- Unaccented and plural reverse overrides for common Spanish forms
+  (`mantenimientos`, `campos`, `validaciones`, `opciones`, `ubicaciones`,
+  `exportar`, and others).
+- Regression tests for representative lines from `prompts.md`.
+
+### Changed
+
+- Plural forms now fall back to their singular dictionary entry.
+- Code-like tokens are preserved unchanged: snake_case, camelCase, file paths,
+  dotted identifiers, and common file extensions.
+- Dataset now covers 2,245 pairs, 662 reverse overrides, and 1,139 synonym
+  entries.
+
 ## [0.2.7] - 2026-11-05
 
 ### Added

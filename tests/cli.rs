@@ -276,6 +276,37 @@ fn translates_my_ass_hurts_phrase() {
 }
 
 #[test]
+fn translates_prompt_corpus_technical_lines() {
+    for (input, expected) in [
+        (
+            "crear tabla tbl_actividades_mantenimiento_ups que contenga las actividades relacionadas a registros en tbl_mantenimiento_ups con los campos nombre, estado y detalles",
+            "create table tbl_actividades_mantenimiento_ups that contains the activities related to records in tbl_mantenimiento_ups with the fields name, state and details",
+        ),
+        (
+            "Implementar módulo de cronograma para agregar mantenimientos a equipos de aire acondicionado",
+            "Implement schedule module to add maintenance to air conditioning equipment",
+        ),
+        (
+            "Mostrar unicamente compras en almacenes asignados al usuario",
+            "Show only purchases in warehouses assigned to the user",
+        ),
+        (
+            "Exportar todos los resultados a pdf y xlsx basado en products/index_products.vue",
+            "Export all results to pdf and xlsx based on products/index_products.vue",
+        ),
+        (
+            "Modificar módulo de salidas @/resources/src/views/app/pages/sales/create_sale.vue y @/resources/src/views/app/pages/sales/edit_sale.vue para permitir duplicados en la lista de productos seleccionados",
+            "Modify sales module @/resources/src/views/app/pages/sales/create_sale.vue and @/resources/src/views/app/pages/sales/edit_sale.vue to allow duplicate in the product list selected",
+        ),
+    ] {
+        let output = run(&[input, "--format", "json"], None);
+        let value = json_output(&output);
+        assert_eq!(value["detected_language"], "es", "input: {input}");
+        assert_eq!(value["translation"], expected, "input: {input}");
+    }
+}
+
+#[test]
 fn renders_human_readable_output() {
     let output = run(&["El gato rápido salta."], None);
     assert!(output.status.success());

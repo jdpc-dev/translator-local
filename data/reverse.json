@@ -1212,6 +1212,1442 @@
     {
       "es": "de la madrugada",
       "en": "from last night"
+    },
+    {
+      "es": "formulario",
+      "en": "form"
+    },
+    {
+      "es": "únicamente",
+      "en": "only"
+    },
+    {
+      "es": "unicamente",
+      "en": "only"
+    },
+    {
+      "es": "carga",
+      "en": "load"
+    },
+    {
+      "es": "tras",
+      "en": "after"
+    },
+    {
+      "es": "inicio",
+      "en": "start"
+    },
+    {
+      "es": "compañía",
+      "en": "company"
+    },
+    {
+      "es": "compania",
+      "en": "company"
+    },
+    {
+      "es": "reporte",
+      "en": "report"
+    },
+    {
+      "es": "obligatorio",
+      "en": "required"
+    },
+    {
+      "es": "obligatoria",
+      "en": "required"
+    },
+    {
+      "es": "enfoque",
+      "en": "focus"
+    },
+    {
+      "es": "petición",
+      "en": "request"
+    },
+    {
+      "es": "peticion",
+      "en": "request"
+    },
+    {
+      "es": "consulta",
+      "en": "query"
+    },
+    {
+      "es": "descarga",
+      "en": "download"
+    },
+    {
+      "es": "salida",
+      "en": "sale"
+    },
+    {
+      "es": "salidas",
+      "en": "sales"
+    },
+    {
+      "es": "devolución",
+      "en": "return"
+    },
+    {
+      "es": "devolucion",
+      "en": "return"
+    },
+    {
+      "es": "tabla",
+      "en": "table"
+    },
+    {
+      "es": "tablas",
+      "en": "tables"
+    },
+    {
+      "es": "donde",
+      "en": "where"
+    },
+    {
+      "es": "todos",
+      "en": "all"
+    },
+    {
+      "es": "todas",
+      "en": "all"
+    },
+    {
+      "es": "que",
+      "en": "that"
+    },
+    {
+      "es": "agregar",
+      "en": "add"
+    },
+    {
+      "es": "debe",
+      "en": "must"
+    },
+    {
+      "es": "corregir",
+      "en": "fix"
+    },
+    {
+      "es": "edición",
+      "en": "edit"
+    },
+    {
+      "es": "edicion",
+      "en": "edit"
+    },
+    {
+      "es": "creación",
+      "en": "creation"
+    },
+    {
+      "es": "creacion",
+      "en": "creation"
+    },
+    {
+      "es": "validación",
+      "en": "validation"
+    },
+    {
+      "es": "validacion",
+      "en": "validation"
+    },
+    {
+      "es": "ubicación",
+      "en": "location"
+    },
+    {
+      "es": "ubicacion",
+      "en": "location"
+    },
+    {
+      "es": "código",
+      "en": "code"
+    },
+    {
+      "es": "codigo",
+      "en": "code"
+    },
+    {
+      "es": "seleccionado",
+      "en": "selected"
+    },
+    {
+      "es": "seleccionada",
+      "en": "selected"
+    },
+    {
+      "es": "asignado",
+      "en": "assigned"
+    },
+    {
+      "es": "asignada",
+      "en": "assigned"
+    },
+    {
+      "es": "público",
+      "en": "public"
+    },
+    {
+      "es": "publico",
+      "en": "public"
+    },
+    {
+      "es": "técnico",
+      "en": "technician"
+    },
+    {
+      "es": "tecnico",
+      "en": "technician"
+    },
+    {
+      "es": "módulo",
+      "en": "module"
+    },
+    {
+      "es": "modulo",
+      "en": "module"
+    },
+    {
+      "es": "exportación",
+      "en": "export"
+    },
+    {
+      "es": "exportacion",
+      "en": "export"
+    },
+    {
+      "es": "generar",
+      "en": "generate"
+    },
+    {
+      "es": "remover",
+      "en": "remove"
+    },
+    {
+      "es": "actualizar",
+      "en": "update"
+    },
+    {
+      "es": "eliminar",
+      "en": "delete"
+    },
+    {
+      "es": "inventario",
+      "en": "inventory"
+    },
+    {
+      "es": "cantidad",
+      "en": "quantity"
+    },
+    {
+      "es": "proveedor",
+      "en": "supplier"
+    },
+    {
+      "es": "contrato",
+      "en": "contract"
+    },
+    {
+      "es": "sucursal",
+      "en": "branch"
+    },
+    {
+      "es": "dirección",
+      "en": "address"
+    },
+    {
+      "es": "direccion",
+      "en": "address"
+    },
+    {
+      "es": "régimen",
+      "en": "regime"
+    },
+    {
+      "es": "regimen",
+      "en": "regime"
+    },
+    {
+      "es": "moneda",
+      "en": "currency"
+    },
+    {
+      "es": "activo",
+      "en": "active"
+    },
+    {
+      "es": "activa",
+      "en": "active"
+    },
+    {
+      "es": "inactivo",
+      "en": "inactive"
+    },
+    {
+      "es": "inactiva",
+      "en": "inactive"
+    },
+    {
+      "es": "borrador",
+      "en": "draft"
+    },
+    {
+      "es": "publicar",
+      "en": "publish"
+    },
+    {
+      "es": "completado",
+      "en": "completed"
+    },
+    {
+      "es": "pendiente",
+      "en": "pending"
+    },
+    {
+      "es": "aprobado",
+      "en": "approved"
+    },
+    {
+      "es": "rechazado",
+      "en": "rejected"
+    },
+    {
+      "es": "aprobar",
+      "en": "approve"
+    },
+    {
+      "es": "rechazar",
+      "en": "reject"
+    },
+    {
+      "es": "auditoría",
+      "en": "audit"
+    },
+    {
+      "es": "auditoria",
+      "en": "audit"
+    },
+    {
+      "es": "comentario",
+      "en": "comment"
+    },
+    {
+      "es": "período",
+      "en": "period"
+    },
+    {
+      "es": "periodo",
+      "en": "period"
+    },
+    {
+      "es": "semanal",
+      "en": "weekly"
+    },
+    {
+      "es": "mensual",
+      "en": "monthly"
+    },
+    {
+      "es": "trimestral",
+      "en": "quarterly"
+    },
+    {
+      "es": "anual",
+      "en": "annual"
+    },
+    {
+      "es": "cronograma",
+      "en": "schedule"
+    },
+    {
+      "es": "calendario",
+      "en": "calendar"
+    },
+    {
+      "es": "contacto",
+      "en": "contact"
+    },
+    {
+      "es": "sede",
+      "en": "seat"
+    },
+    {
+      "es": "prioridad",
+      "en": "priority"
+    },
+    {
+      "es": "descripción",
+      "en": "description"
+    },
+    {
+      "es": "descripcion",
+      "en": "description"
+    },
+    {
+      "es": "título",
+      "en": "title"
+    },
+    {
+      "es": "titulo",
+      "en": "title"
+    },
+    {
+      "es": "solicitud",
+      "en": "request"
+    },
+    {
+      "es": "trazabilidad",
+      "en": "traceability"
+    },
+    {
+      "es": "redundancia",
+      "en": "redundancy"
+    },
+    {
+      "es": "inconsistencia",
+      "en": "inconsistency"
+    },
+    {
+      "es": "paginación",
+      "en": "pagination"
+    },
+    {
+      "es": "paginacion",
+      "en": "pagination"
+    },
+    {
+      "es": "filtro",
+      "en": "filter"
+    },
+    {
+      "es": "búsqueda",
+      "en": "search"
+    },
+    {
+      "es": "busqueda",
+      "en": "search"
+    },
+    {
+      "es": "selección",
+      "en": "selection"
+    },
+    {
+      "es": "seleccion",
+      "en": "selection"
+    },
+    {
+      "es": "duplicado",
+      "en": "duplicate"
+    },
+    {
+      "es": "opcional",
+      "en": "optional"
+    },
+    {
+      "es": "correcto",
+      "en": "correct"
+    },
+    {
+      "es": "incorrecto",
+      "en": "incorrect"
+    },
+    {
+      "es": "texto",
+      "en": "text"
+    },
+    {
+      "es": "cadena",
+      "en": "string"
+    },
+    {
+      "es": "entero",
+      "en": "integer"
+    },
+    {
+      "es": "booleano",
+      "en": "boolean"
+    },
+    {
+      "es": "método",
+      "en": "method"
+    },
+    {
+      "es": "metodo",
+      "en": "method"
+    },
+    {
+      "es": "función",
+      "en": "function"
+    },
+    {
+      "es": "funcion",
+      "en": "function"
+    },
+    {
+      "es": "constante",
+      "en": "constant"
+    },
+    {
+      "es": "arreglo",
+      "en": "array"
+    },
+    {
+      "es": "índice",
+      "en": "index"
+    },
+    {
+      "es": "indice",
+      "en": "index"
+    },
+    {
+      "es": "fila",
+      "en": "row"
+    },
+    {
+      "es": "controlador",
+      "en": "controller"
+    },
+    {
+      "es": "ruta",
+      "en": "route"
+    },
+    {
+      "es": "migración",
+      "en": "migration"
+    },
+    {
+      "es": "migracion",
+      "en": "migration"
+    },
+    {
+      "es": "vista",
+      "en": "view"
+    },
+    {
+      "es": "componente",
+      "en": "component"
+    },
+    {
+      "es": "plantilla",
+      "en": "template"
+    },
+    {
+      "es": "estilo",
+      "en": "style"
+    },
+    {
+      "es": "diseño",
+      "en": "design"
+    },
+    {
+      "es": "diseno",
+      "en": "design"
+    },
+    {
+      "es": "interfaz",
+      "en": "interface"
+    },
+    {
+      "es": "contraseña",
+      "en": "password"
+    },
+    {
+      "es": "contrasena",
+      "en": "password"
+    },
+    {
+      "es": "sesión",
+      "en": "session"
+    },
+    {
+      "es": "sesion",
+      "en": "session"
+    },
+    {
+      "es": "permiso",
+      "en": "permission"
+    },
+    {
+      "es": "notificación",
+      "en": "notification"
+    },
+    {
+      "es": "notificacion",
+      "en": "notification"
+    },
+    {
+      "es": "carpeta",
+      "en": "folder"
+    },
+    {
+      "es": "documento",
+      "en": "document"
+    },
+    {
+      "es": "foto",
+      "en": "photo"
+    },
+    {
+      "es": "enlace",
+      "en": "link"
+    },
+    {
+      "es": "lista",
+      "en": "list"
+    },
+    {
+      "es": "criterio",
+      "en": "criterion"
+    },
+    {
+      "es": "operador",
+      "en": "operator"
+    },
+    {
+      "es": "comparación",
+      "en": "comparison"
+    },
+    {
+      "es": "comparacion",
+      "en": "comparison"
+    },
+    {
+      "es": "lógica",
+      "en": "logic"
+    },
+    {
+      "es": "logica",
+      "en": "logic"
+    },
+    {
+      "es": "aritmética",
+      "en": "arithmetic"
+    },
+    {
+      "es": "aritmetica",
+      "en": "arithmetic"
+    },
+    {
+      "es": "suma",
+      "en": "sum"
+    },
+    {
+      "es": "resta",
+      "en": "subtraction"
+    },
+    {
+      "es": "multiplicación",
+      "en": "multiplication"
+    },
+    {
+      "es": "multiplicacion",
+      "en": "multiplication"
+    },
+    {
+      "es": "división",
+      "en": "division"
+    },
+    {
+      "es": "division",
+      "en": "division"
+    },
+    {
+      "es": "negación",
+      "en": "negation"
+    },
+    {
+      "es": "negacion",
+      "en": "negation"
+    },
+    {
+      "es": "referencia",
+      "en": "reference"
+    },
+    {
+      "es": "flotante",
+      "en": "float"
+    },
+    {
+      "es": "entrada",
+      "en": "input"
+    },
+    {
+      "es": "desplegable",
+      "en": "dropdown"
+    },
+    {
+      "es": "evento",
+      "en": "event"
+    },
+    {
+      "es": "emitir",
+      "en": "emit"
+    },
+    {
+      "es": "semilla",
+      "en": "seed"
+    },
+    {
+      "es": "fábrica",
+      "en": "factory"
+    },
+    {
+      "es": "fabrica",
+      "en": "factory"
+    },
+    {
+      "es": "esquema",
+      "en": "schema"
+    },
+    {
+      "es": "restricción",
+      "en": "constraint"
+    },
+    {
+      "es": "restriccion",
+      "en": "constraint"
+    },
+    {
+      "es": "contenga",
+      "en": "contains"
+    },
+    {
+      "es": "equipo",
+      "en": "equipment"
+    },
+    {
+      "es": "equipos",
+      "en": "equipment"
+    },
+    {
+      "es": "compras",
+      "en": "purchases"
+    },
+    {
+      "es": "almacenes",
+      "en": "warehouses"
+    },
+    {
+      "es": "almacén",
+      "en": "warehouse"
+    },
+    {
+      "es": "almacen",
+      "en": "warehouse"
+    },
+    {
+      "es": "al",
+      "en": "to the"
+    },
+    {
+      "es": "del",
+      "en": "of the"
+    },
+    {
+      "es": "en el",
+      "en": "in the"
+    },
+    {
+      "es": "en la",
+      "en": "in the"
+    },
+    {
+      "es": "en los",
+      "en": "in the"
+    },
+    {
+      "es": "en las",
+      "en": "in the"
+    },
+    {
+      "es": "de la",
+      "en": "of the"
+    },
+    {
+      "es": "de los",
+      "en": "of the"
+    },
+    {
+      "es": "de las",
+      "en": "of the"
+    },
+    {
+      "es": "a la",
+      "en": "to the"
+    },
+    {
+      "es": "a los",
+      "en": "to the"
+    },
+    {
+      "es": "a las",
+      "en": "to the"
+    },
+    {
+      "es": "relacionado",
+      "en": "related"
+    },
+    {
+      "es": "relacionada",
+      "en": "related"
+    },
+    {
+      "es": "relacionados",
+      "en": "related"
+    },
+    {
+      "es": "relacionadas",
+      "en": "related"
+    },
+    {
+      "es": "que contenga",
+      "en": "that contains"
+    },
+    {
+      "es": "para agregar",
+      "en": "to add"
+    },
+    {
+      "es": "para permitir",
+      "en": "to allow"
+    },
+    {
+      "es": "selector de productos",
+      "en": "product selector"
+    },
+    {
+      "es": "formulario de creación",
+      "en": "creation form"
+    },
+    {
+      "es": "módulo de salidas",
+      "en": "sales module"
+    },
+    {
+      "es": "lista de productos",
+      "en": "product list"
+    },
+    {
+      "es": "saldo",
+      "en": "balance"
+    },
+    {
+      "es": "observaciones",
+      "en": "observations"
+    },
+    {
+      "es": "cotizacion",
+      "en": "quote"
+    },
+    {
+      "es": "cotizaciones",
+      "en": "quotes"
+    },
+    {
+      "es": "boton",
+      "en": "button"
+    },
+    {
+      "es": "botones",
+      "en": "buttons"
+    },
+    {
+      "es": "opcion",
+      "en": "option"
+    },
+    {
+      "es": "opciones",
+      "en": "options"
+    },
+    {
+      "es": "seleccionar",
+      "en": "select"
+    },
+    {
+      "es": "misma",
+      "en": "same"
+    },
+    {
+      "es": "preventivo",
+      "en": "preventive"
+    },
+    {
+      "es": "inspeccion",
+      "en": "inspection"
+    },
+    {
+      "es": "inspección",
+      "en": "inspection"
+    },
+    {
+      "es": "acta",
+      "en": "minutes"
+    },
+    {
+      "es": "aires",
+      "en": "air conditioners"
+    },
+    {
+      "es": "devoluciones",
+      "en": "returns"
+    },
+    {
+      "es": "asignacion",
+      "en": "assignment"
+    },
+    {
+      "es": "asignaciones",
+      "en": "assignments"
+    },
+    {
+      "es": "validaciones",
+      "en": "validations"
+    },
+    {
+      "es": "ubicaciones",
+      "en": "locations"
+    },
+    {
+      "es": "pagina",
+      "en": "page"
+    },
+    {
+      "es": "paginas",
+      "en": "page"
+    },
+    {
+      "es": "numero",
+      "en": "number"
+    },
+    {
+      "es": "numeros",
+      "en": "number"
+    },
+    {
+      "es": "aplicacion",
+      "en": "application"
+    },
+    {
+      "es": "configuracion",
+      "en": "configuration"
+    },
+    {
+      "es": "conexion",
+      "en": "connection"
+    },
+    {
+      "es": "solucion",
+      "en": "solution"
+    },
+    {
+      "es": "condicion",
+      "en": "condition"
+    },
+    {
+      "es": "relacion",
+      "en": "relationship"
+    },
+    {
+      "es": "relaciones",
+      "en": "relationship"
+    },
+    {
+      "es": "importacion",
+      "en": "import"
+    },
+    {
+      "es": "importaciones",
+      "en": "imports"
+    },
+    {
+      "es": "autenticacion",
+      "en": "authentication"
+    },
+    {
+      "es": "autorizacion",
+      "en": "authorization"
+    },
+    {
+      "es": "version",
+      "en": "version"
+    },
+    {
+      "es": "telefono",
+      "en": "phone"
+    },
+    {
+      "es": "categoria",
+      "en": "category"
+    },
+    {
+      "es": "categorias",
+      "en": "categories"
+    },
+    {
+      "es": "unidad",
+      "en": "unit"
+    },
+    {
+      "es": "unidades",
+      "en": "units"
+    },
+    {
+      "es": "medicion",
+      "en": "measurement"
+    },
+    {
+      "es": "mediciones",
+      "en": "measurements"
+    },
+    {
+      "es": "firma",
+      "en": "signature"
+    },
+    {
+      "es": "firmas",
+      "en": "signatures"
+    },
+    {
+      "es": "auditorias",
+      "en": "audits"
+    },
+    {
+      "es": "aprobacion",
+      "en": "approval"
+    },
+    {
+      "es": "aprobaciones",
+      "en": "approvals"
+    },
+    {
+      "es": "rechazo",
+      "en": "rejection"
+    },
+    {
+      "es": "rechazos",
+      "en": "rejections"
+    },
+    {
+      "es": "imagen",
+      "en": "image"
+    },
+    {
+      "es": "imagenes",
+      "en": "images"
+    },
+    {
+      "es": "comparaciones",
+      "en": "comparisons"
+    },
+    {
+      "es": "restricciones",
+      "en": "constraints"
+    },
+    {
+      "es": "indices",
+      "en": "indexes"
+    },
+    {
+      "es": "disenos",
+      "en": "designs"
+    },
+    {
+      "es": "sesiones",
+      "en": "sessions"
+    },
+    {
+      "es": "notificaciones",
+      "en": "notifications"
+    },
+    {
+      "es": "fabricas",
+      "en": "factories"
+    },
+    {
+      "es": "dias",
+      "en": "days"
+    },
+    {
+      "es": "debito",
+      "en": "debit"
+    },
+    {
+      "es": "débito",
+      "en": "debit"
+    },
+    {
+      "es": "debitos",
+      "en": "debits"
+    },
+    {
+      "es": "credito",
+      "en": "credit"
+    },
+    {
+      "es": "crédito",
+      "en": "credit"
+    },
+    {
+      "es": "creditos",
+      "en": "credits"
+    },
+    {
+      "es": "periodos",
+      "en": "periods"
+    },
+    {
+      "es": "semana",
+      "en": "week"
+    },
+    {
+      "es": "semanas",
+      "en": "weeks"
+    },
+    {
+      "es": "folio",
+      "en": "folio"
+    },
+    {
+      "es": "monto",
+      "en": "amount"
+    },
+    {
+      "es": "montos",
+      "en": "amounts"
+    },
+    {
+      "es": "importe",
+      "en": "amount"
+    },
+    {
+      "es": "importes",
+      "en": "amounts"
+    },
+    {
+      "es": "concepto",
+      "en": "concept"
+    },
+    {
+      "es": "conceptos",
+      "en": "concepts"
+    },
+    {
+      "es": "descripciones",
+      "en": "descriptions"
+    },
+    {
+      "es": "observacion",
+      "en": "observation"
+    },
+    {
+      "es": "nota",
+      "en": "note"
+    },
+    {
+      "es": "notas",
+      "en": "notes"
+    },
+    {
+      "es": "comentarios",
+      "en": "comments"
+    },
+    {
+      "es": "respuesta",
+      "en": "response"
+    },
+    {
+      "es": "respuestas",
+      "en": "responses"
+    },
+    {
+      "es": "pregunta",
+      "en": "question"
+    },
+    {
+      "es": "preguntas",
+      "en": "questions"
+    },
+    {
+      "es": "usuario",
+      "en": "user"
+    },
+    {
+      "es": "usuarios",
+      "en": "users"
+    },
+    {
+      "es": "cliente",
+      "en": "client"
+    },
+    {
+      "es": "clientes",
+      "en": "clients"
+    },
+    {
+      "es": "producto",
+      "en": "product"
+    },
+    {
+      "es": "productos",
+      "en": "products"
+    },
+    {
+      "es": "servicio",
+      "en": "service"
+    },
+    {
+      "es": "servicios",
+      "en": "services"
+    },
+    {
+      "es": "proveedores",
+      "en": "suppliers"
+    },
+    {
+      "es": "empleado",
+      "en": "employee"
+    },
+    {
+      "es": "empleados",
+      "en": "employees"
+    },
+    {
+      "es": "sucursales",
+      "en": "branches"
+    },
+    {
+      "es": "ciudad",
+      "en": "city"
+    },
+    {
+      "es": "ciudades",
+      "en": "cities"
+    },
+    {
+      "es": "pais",
+      "en": "country"
+    },
+    {
+      "es": "paises",
+      "en": "countries"
+    },
+    {
+      "es": "departamento",
+      "en": "department"
+    },
+    {
+      "es": "departamentos",
+      "en": "departments"
+    },
+    {
+      "es": "direcciones",
+      "en": "addresses"
+    },
+    {
+      "es": "telefonos",
+      "en": "phones"
+    },
+    {
+      "es": "correos",
+      "en": "emails"
+    },
+    {
+      "es": "exportar",
+      "en": "export"
+    },
+    {
+      "es": "importar",
+      "en": "import"
+    },
+    {
+      "es": "compilar",
+      "en": "compile"
+    },
+    {
+      "es": "actividades",
+      "en": "activities"
+    },
+    {
+      "es": "mantenimientos",
+      "en": "maintenance"
+    },
+    {
+      "es": "empresas",
+      "en": "companies"
+    },
+    {
+      "es": "campos",
+      "en": "fields"
+    },
+    {
+      "es": "registros",
+      "en": "records"
+    },
+    {
+      "es": "detalles",
+      "en": "details"
+    },
+    {
+      "es": "resultados",
+      "en": "results"
+    },
+    {
+      "es": "formularios",
+      "en": "forms"
+    },
+    {
+      "es": "selectores",
+      "en": "selectors"
+    },
+    {
+      "es": "archivos",
+      "en": "files"
+    },
+    {
+      "es": "documentos",
+      "en": "documents"
+    },
+    {
+      "es": "fotos",
+      "en": "photos"
+    },
+    {
+      "es": "enlaces",
+      "en": "links"
+    },
+    {
+      "es": "listas",
+      "en": "lists"
+    },
+    {
+      "es": "columnas",
+      "en": "columns"
+    },
+    {
+      "es": "filas",
+      "en": "rows"
+    },
+    {
+      "es": "filtros",
+      "en": "filters"
+    },
+    {
+      "es": "busquedas",
+      "en": "searches"
+    },
+    {
+      "es": "consultas",
+      "en": "queries"
+    },
+    {
+      "es": "reportes",
+      "en": "reports"
+    },
+    {
+      "es": "exportaciones",
+      "en": "exports"
+    },
+    {
+      "es": "cargas",
+      "en": "loads"
+    },
+    {
+      "es": "descargas",
+      "en": "downloads"
+    },
+    {
+      "es": "reglas",
+      "en": "rules"
+    },
+    {
+      "es": "criterios",
+      "en": "criteria"
+    },
+    {
+      "es": "operadores",
+      "en": "operators"
+    },
+    {
+      "es": "valores",
+      "en": "values"
+    },
+    {
+      "es": "textos",
+      "en": "texts"
+    },
+    {
+      "es": "cadenas",
+      "en": "strings"
+    },
+    {
+      "es": "enteros",
+      "en": "integers"
+    },
+    {
+      "es": "booleanos",
+      "en": "booleans"
+    },
+    {
+      "es": "referencias",
+      "en": "references"
+    },
+    {
+      "es": "llaves",
+      "en": "keys"
+    },
+    {
+      "es": "esquemas",
+      "en": "schemas"
+    },
+    {
+      "es": "migraciones",
+      "en": "migrations"
+    },
+    {
+      "es": "modelos",
+      "en": "models"
+    },
+    {
+      "es": "controladores",
+      "en": "controllers"
+    },
+    {
+      "es": "rutas",
+      "en": "routes"
+    },
+    {
+      "es": "vistas",
+      "en": "views"
+    },
+    {
+      "es": "componentes",
+      "en": "components"
+    },
+    {
+      "es": "plantillas",
+      "en": "templates"
+    },
+    {
+      "es": "estilos",
+      "en": "styles"
+    },
+    {
+      "es": "permisos",
+      "en": "permissions"
+    },
+    {
+      "es": "carpetas",
+      "en": "folders"
+    },
+    {
+      "es": "eventos",
+      "en": "events"
+    },
+    {
+      "es": "semillas",
+      "en": "seeds"
     }
   ]
 }
