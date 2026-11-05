@@ -6912,6 +6912,214 @@
     {
       "en": "there are",
       "es": "hay"
+    },
+    {
+      "en": "lies to us",
+      "es": "nos miente"
+    },
+    {
+      "en": "lie to us",
+      "es": "nos miente"
+    },
+    {
+      "en": "manipulates us",
+      "es": "nos manipula"
+    },
+    {
+      "en": "manipulate us",
+      "es": "nos manipula"
+    },
+    {
+      "en": "lies to me",
+      "es": "me miente"
+    },
+    {
+      "en": "lie to me",
+      "es": "me miente"
+    },
+    {
+      "en": "lies to you",
+      "es": "te miente"
+    },
+    {
+      "en": "lie to you",
+      "es": "te miente"
+    },
+    {
+      "en": "lies to him",
+      "es": "le miente"
+    },
+    {
+      "en": "lies to her",
+      "es": "le miente"
+    },
+    {
+      "en": "lies to them",
+      "es": "les miente"
+    },
+    {
+      "en": "manipulates me",
+      "es": "me manipula"
+    },
+    {
+      "en": "manipulate me",
+      "es": "me manipula"
+    },
+    {
+      "en": "manipulates you",
+      "es": "te manipula"
+    },
+    {
+      "en": "manipulate you",
+      "es": "te manipula"
+    },
+    {
+      "en": "manipulates him",
+      "es": "le manipula"
+    },
+    {
+      "en": "manipulates her",
+      "es": "le manipula"
+    },
+    {
+      "en": "manipulates them",
+      "es": "les manipula"
+    },
+    {
+      "en": "tells us",
+      "es": "nos dice"
+    },
+    {
+      "en": "tell us",
+      "es": "nos dice"
+    },
+    {
+      "en": "helps us",
+      "es": "nos ayuda"
+    },
+    {
+      "en": "help us",
+      "es": "nos ayuda"
+    },
+    {
+      "en": "needs us",
+      "es": "nos necesita"
+    },
+    {
+      "en": "need us",
+      "es": "nos necesita"
+    },
+    {
+      "en": "wants us",
+      "es": "nos quiere"
+    },
+    {
+      "en": "want us",
+      "es": "nos quiere"
+    },
+    {
+      "en": "sees us",
+      "es": "nos ve"
+    },
+    {
+      "en": "see us",
+      "es": "nos ve"
+    },
+    {
+      "en": "hears us",
+      "es": "nos escucha"
+    },
+    {
+      "en": "hear us",
+      "es": "nos escucha"
+    },
+    {
+      "en": "knows us",
+      "es": "nos conoce"
+    },
+    {
+      "en": "know us",
+      "es": "nos conoce"
+    },
+    {
+      "en": "loves us",
+      "es": "nos ama"
+    },
+    {
+      "en": "love us",
+      "es": "nos ama"
+    },
+    {
+      "en": "hates us",
+      "es": "nos odia"
+    },
+    {
+      "en": "hate us",
+      "es": "nos odia"
+    },
+    {
+      "en": "shows us",
+      "es": "nos muestra"
+    },
+    {
+      "en": "show us",
+      "es": "nos muestra"
+    },
+    {
+      "en": "gives us",
+      "es": "nos da"
+    },
+    {
+      "en": "give us",
+      "es": "nos da"
+    },
+    {
+      "en": "brings us",
+      "es": "nos trae"
+    },
+    {
+      "en": "bring us",
+      "es": "nos trae"
+    },
+    {
+      "en": "sends us",
+      "es": "nos envía"
+    },
+    {
+      "en": "send us",
+      "es": "nos envía"
+    },
+    {
+      "en": "calls us",
+      "es": "nos llama"
+    },
+    {
+      "en": "call us",
+      "es": "nos llama"
+    },
+    {
+      "en": "uses us",
+      "es": "nos usa"
+    },
+    {
+      "en": "use us",
+      "es": "nos usa"
+    },
+    {
+      "en": "controls us",
+      "es": "nos controla"
+    },
+    {
+      "en": "control us",
+      "es": "nos controla"
+    },
+    {
+      "en": "exploits us",
+      "es": "nos explota"
+    },
+    {
+      "en": "exploit us",
+      "es": "nos explota"
     }
   ]
 }

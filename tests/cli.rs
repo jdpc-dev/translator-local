@@ -107,6 +107,25 @@ fn translates_spanish_inflections_and_object_pronouns() {
 }
 
 #[test]
+fn translates_english_object_phrases_to_spanish_order() {
+    let output = run(
+        &[
+            "the government lies to us and the money manipulates us",
+            "--format",
+            "json",
+        ],
+        None,
+    );
+    let value = json_output(&output);
+
+    assert_eq!(value["detected_language"], "en");
+    assert_eq!(
+        value["translation"],
+        "el gobierno nos miente y el dinero nos manipula"
+    );
+}
+
+#[test]
 fn renders_human_readable_output() {
     let output = run(&["El gato rápido salta."], None);
     assert!(output.status.success());

@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.2] - 2026-11-05
+
+### Fixed
+
+- English verb + object-pronoun phrases now produce Spanish clitic order:
+  `lies to us` → `nos miente`, `manipulates us` → `nos manipula`.
+- Added 52 EN→ES phrase pairs for common object-pronoun constructions, bringing
+  the dictionary to 1,780 pairs (1,374 words and 406 phrases).
+- Added an end-to-end regression test for the English→Spanish direction.
+
 ## [0.2.1] - 2026-11-05
 
 ### Added
