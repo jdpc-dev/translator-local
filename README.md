@@ -13,8 +13,8 @@ network access.
 | Requirement | Implementation |
 | :--- | :--- |
 | No AI/ML dependencies | Pure Rust with `regex`, `serde`, and `clap` only |
-| Footprint under 15 MB | 2.3 MB stripped release binary with embedded JSON data; verify with `make size` |
-| Under 50 ms | About 6 ms per invocation including process startup on the development machine; verify with `make bench` |
+| Footprint under 15 MB | 2.4 MB stripped release binary with embedded JSON data; verify with `make size` |
+| Under 50 ms | About 7 ms per invocation including process startup on the development machine; verify with `make bench` |
 | Single standalone binary | `data/*.json` is compiled in with `include_str!` |
 | Fully offline | No network calls at runtime; all data is bundled |
 
@@ -122,8 +122,13 @@ Word Alternatives:
 
 ## Data
 
-The bundled seed contains roughly 970 bilingual pairs (including 115 phrases)
-and 270 synonym entries. Data lives in:
+The bundled dataset contains **1,719 bilingual pairs** (1,367 words and 352
+phrases) and **1,004 synonym entries** (511 English and 493 Spanish), all
+embedded in the binary. Synonyms are curated in bilingual concept groups so the
+English and Spanish alternatives stay aligned. Words without a suitable
+synonym return an empty list.
+
+Data lives in:
 
 - `data/dictionary.json` — one canonical list of `{"en": ..., "es": ...}` pairs.
   Lookup tables are built in both directions at startup. If several English
@@ -132,10 +137,13 @@ and 270 synonym entries. Data lives in:
 - `data/synonyms.json` — `en` and `es` maps of word → ordered synonym list.
   The first three entries are returned, excluding the headword itself.
 
+See `data/README.md` for the full schema and data-maintenance notes.
+
 Both files are embedded at compile time. To extend the dictionary, add pairs
 using lowercase keys and values, keep English keys unique, then run
-`cargo test`. The data tests enforce lowercase keys, unique English entries,
-non-empty values, and clean synonym lists.
+`cargo test`. The data tests enforce lowercase keys, unique English entries
+(including after whitespace normalization), non-empty values, and clean synonym
+lists.
 
 ## Known limitations
 

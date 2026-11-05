@@ -23,12 +23,13 @@ fn dictionary_pairs() -> Vec<(String, String)> {
 fn dictionary_seed_is_substantial_and_well_formed() {
     let pairs = dictionary_pairs();
     assert!(
-        pairs.len() >= 900,
-        "expected at least 900 pairs, found {}",
+        pairs.len() >= 1500,
+        "expected at least 1500 pairs, found {}",
         pairs.len()
     );
 
     let mut seen = HashSet::new();
+    let mut phrased_words = HashSet::new();
     let mut phrases = 0;
     let mut max_phrase_words = 1;
 
@@ -47,6 +48,12 @@ fn dictionary_seed_is_substantial_and_well_formed() {
         );
         assert!(seen.insert(en.clone()), "duplicate English key: {en:?}");
 
+        let normalized = en.split_whitespace().collect::<Vec<_>>().join(" ");
+        assert!(
+            phrased_words.insert(normalized.clone()),
+            "duplicate normalized English key: {normalized:?}"
+        );
+
         if en.contains(' ') {
             phrases += 1;
         }
@@ -55,8 +62,12 @@ fn dictionary_seed_is_substantial_and_well_formed() {
             .max(es.split_whitespace().count());
     }
 
-    assert!(phrases >= 100, "expected at least 100 phrases");
-    assert!(max_phrase_words >= 3, "expected multi-word phrase coverage");
+    assert!(
+        pairs.len() - phrases >= 1200,
+        "expected at least 1200 single-word entries"
+    );
+    assert!(phrases >= 300, "expected at least 300 phrases");
+    assert!(max_phrase_words >= 5, "expected five-word phrase coverage");
 }
 
 #[test]
@@ -70,6 +81,9 @@ fn required_demo_entries_are_present() {
         ("good morning", "buenos días"),
         ("i am cold", "tengo frío"),
         ("you're welcome", "de nada"),
+        ("computer", "computadora"),
+        ("where is the pharmacy", "dónde está la farmacia"),
+        ("value", "valor"),
     ] {
         assert!(
             pairs
@@ -87,8 +101,8 @@ fn synonyms_are_clean_and_do_not_repeat_the_headword() {
     for lang in ["en", "es"] {
         let entries = value[lang].as_object().expect("language map is an object");
         assert!(
-            entries.len() >= 100,
-            "{lang} should have at least 100 synonym entries"
+            entries.len() >= 450,
+            "{lang} should have at least 450 synonym entries"
         );
 
         for (word, alternatives) in entries {
@@ -102,6 +116,11 @@ fn synonyms_are_clean_and_do_not_repeat_the_headword() {
             for alternative in alternatives {
                 let alternative = alternative.as_str().expect("alternative is a string");
                 assert!(!alternative.is_empty());
+                assert_eq!(
+                    *alternative,
+                    alternative.to_lowercase(),
+                    "synonym is not lowercase: {alternative:?}"
+                );
                 assert_ne!(
                     alternative.to_lowercase(),
                     word.to_lowercase(),

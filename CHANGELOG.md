@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Changed
+
+- Expanded the embedded dictionary from 967 to 1,719 pairs: 1,367 words and 352
+  phrases, including common function words, inflections, everyday vocabulary,
+  travel/health phrases, and conversation phrases.
+- Expanded synonym tables from 273 to 1,004 entries (511 English and 493
+  Spanish), adding curated bilingual concept groups for adjectives, nouns, and
+  verbs.
+- Updated data-integrity tests to enforce the larger seed size and normalized
+  English-key uniqueness.
+
 ## [0.1.0] - 2026-11-05
 
 ### Added

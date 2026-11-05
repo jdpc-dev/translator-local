@@ -26,35 +26,43 @@
     ],
     "good": [
       "fine",
-      "nice"
+      "nice",
+      "okay"
     ],
     "bad": [
       "poor",
-      "awful"
+      "awful",
+      "terrible"
     ],
     "big": [
       "large",
-      "huge"
+      "huge",
+      "enormous"
     ],
     "small": [
       "little",
-      "tiny"
+      "tiny",
+      "minor"
     ],
     "happy": [
       "glad",
-      "cheerful"
+      "cheerful",
+      "delighted"
     ],
     "sad": [
       "unhappy",
-      "sorrowful"
+      "sorrowful",
+      "gloomy"
     ],
     "angry": [
       "mad",
-      "furious"
+      "furious",
+      "irritated"
     ],
     "tired": [
       "weary",
-      "exhausted"
+      "exhausted",
+      "drained"
     ],
     "hungry": [
       "starving",
@@ -62,7 +70,8 @@
     ],
     "cold": [
       "chilly",
-      "cool"
+      "cool",
+      "freezing"
     ],
     "hot": [
       "warm",
@@ -70,11 +79,13 @@
     ],
     "slow": [
       "sluggish",
-      "leisurely"
+      "leisurely",
+      "gradual"
     ],
     "beautiful": [
       "pretty",
-      "lovely"
+      "lovely",
+      "gorgeous"
     ],
     "ugly": [
       "unattractive",
@@ -86,19 +97,23 @@
     ],
     "hard": [
       "difficult",
-      "tough"
+      "tough",
+      "challenging"
     ],
     "new": [
       "fresh",
-      "modern"
+      "modern",
+      "recent"
     ],
     "old": [
       "aged",
-      "ancient"
+      "ancient",
+      "elderly"
     ],
     "young": [
       "youthful",
-      "junior"
+      "junior",
+      "juvenile"
     ],
     "rich": [
       "wealthy",
@@ -106,7 +121,8 @@
     ],
     "poor": [
       "needy",
-      "impoverished"
+      "impoverished",
+      "bad"
     ],
     "strong": [
       "powerful",
@@ -114,7 +130,8 @@
     ],
     "weak": [
       "feeble",
-      "frail"
+      "frail",
+      "fragile"
     ],
     "clean": [
       "tidy",
@@ -122,7 +139,8 @@
     ],
     "dirty": [
       "filthy",
-      "unclean"
+      "unclean",
+      "messy"
     ],
     "full": [
       "filled",
@@ -134,7 +152,8 @@
     ],
     "open": [
       "unlocked",
-      "accessible"
+      "accessible",
+      "unlock"
     ],
     "closed": [
       "shut",
@@ -158,7 +177,8 @@
     ],
     "important": [
       "significant",
-      "vital"
+      "vital",
+      "relevant"
     ],
     "interesting": [
       "engaging",
@@ -182,7 +202,8 @@
     ],
     "free": [
       "liberated",
-      "unoccupied"
+      "unoccupied",
+      "independent"
     ],
     "busy": [
       "occupied",
@@ -278,7 +299,8 @@
     ],
     "people": [
       "persons",
-      "folk"
+      "folk",
+      "population"
     ],
     "day": [
       "daytime",
@@ -310,11 +332,13 @@
     ],
     "question": [
       "query",
-      "inquiry"
+      "inquiry",
+      "ask"
     ],
     "answer": [
       "reply",
-      "response"
+      "response",
+      "solution"
     ],
     "story": [
       "tale",
@@ -342,7 +366,8 @@
     ],
     "team": [
       "squad",
-      "group"
+      "group",
+      "collection"
     ],
     "school": [
       "academy",
@@ -366,7 +391,8 @@
     ],
     "job": [
       "task",
-      "occupation"
+      "occupation",
+      "employment"
     ],
     "life": [
       "existence",
@@ -382,11 +408,13 @@
     ],
     "love": [
       "affection",
-      "adoration"
+      "adoration",
+      "adore"
     ],
     "hope": [
       "faith",
-      "optimism"
+      "optimism",
+      "wish"
     ],
     "fear": [
       "dread",
@@ -394,7 +422,8 @@
     ],
     "dream": [
       "vision",
-      "fantasy"
+      "fantasy",
+      "imagine"
     ],
     "idea": [
       "thought",
@@ -434,15 +463,18 @@
     ],
     "part": [
       "piece",
-      "section"
+      "section",
+      "division"
     ],
     "end": [
       "finish",
-      "conclusion"
+      "conclusion",
+      "complete"
     ],
     "help": [
       "aid",
-      "assistance"
+      "assistance",
+      "support"
     ],
     "problem": [
       "issue",
@@ -454,7 +486,8 @@
     ],
     "result": [
       "outcome",
-      "effect"
+      "effect",
+      "consequence"
     ],
     "example": [
       "instance",
@@ -470,7 +503,8 @@
     ],
     "group": [
       "team",
-      "collection"
+      "collection",
+      "squad"
     ],
     "line": [
       "row",
@@ -482,7 +516,8 @@
     ],
     "form": [
       "shape",
-      "document"
+      "document",
+      "figure"
     ],
     "level": [
       "degree",
@@ -490,15 +525,18 @@
     ],
     "change": [
       "alteration",
-      "shift"
+      "shift",
+      "alter"
     ],
     "move": [
       "motion",
-      "shift"
+      "shift",
+      "transfer"
     ],
     "sound": [
       "noise",
-      "tone"
+      "tone",
+      "voice"
     ],
     "light": [
       "brightness",
@@ -514,11 +552,13 @@
     ],
     "quick": [
       "fast",
-      "swift"
+      "swift",
+      "rapid"
     ],
     "quiet": [
       "silent",
-      "calm"
+      "calm",
+      "peaceful"
     ],
     "real": [
       "genuine",
@@ -526,11 +566,13 @@
     ],
     "simple": [
       "plain",
-      "basic"
+      "basic",
+      "easy"
     ],
     "strange": [
       "odd",
-      "peculiar"
+      "peculiar",
+      "weird"
     ],
     "sweet": [
       "sugary",
@@ -538,7 +580,8 @@
     ],
     "thin": [
       "slim",
-      "narrow"
+      "narrow",
+      "skinny"
     ],
     "wide": [
       "broad",
@@ -547,6 +590,1525 @@
     "wonderful": [
       "marvelous",
       "fantastic"
+    ],
+    "glad": [
+      "happy",
+      "cheerful",
+      "delighted"
+    ],
+    "afraid": [
+      "scared",
+      "frightened",
+      "fearful"
+    ],
+    "alone": [
+      "lonely",
+      "isolated"
+    ],
+    "positive": [
+      "hopeful",
+      "optimistic"
+    ],
+    "fine": [
+      "good",
+      "nice",
+      "okay"
+    ],
+    "terrible": [
+      "bad",
+      "poor",
+      "awful"
+    ],
+    "large": [
+      "big",
+      "huge",
+      "enormous"
+    ],
+    "huge": [
+      "big",
+      "large",
+      "enormous"
+    ],
+    "little": [
+      "small",
+      "tiny",
+      "minor"
+    ],
+    "warm": [
+      "hot",
+      "heated"
+    ],
+    "cool": [
+      "cold",
+      "chilly",
+      "freezing"
+    ],
+    "fresh": [
+      "new",
+      "modern",
+      "recent"
+    ],
+    "modern": [
+      "new",
+      "fresh",
+      "recent"
+    ],
+    "recent": [
+      "new",
+      "fresh",
+      "modern"
+    ],
+    "difficult": [
+      "hard",
+      "tough",
+      "challenging"
+    ],
+    "long": [
+      "lengthy",
+      "extended"
+    ],
+    "short": [
+      "brief",
+      "concise",
+      "low"
+    ],
+    "high": [
+      "tall",
+      "elevated"
+    ],
+    "tall": [
+      "high",
+      "elevated"
+    ],
+    "low": [
+      "short",
+      "shallow"
+    ],
+    "expensive": [
+      "costly",
+      "pricey"
+    ],
+    "cheap": [
+      "inexpensive",
+      "affordable"
+    ],
+    "complete": [
+      "full",
+      "filled",
+      "finish"
+    ],
+    "independent": [
+      "free",
+      "liberated"
+    ],
+    "set": [
+      "ready",
+      "prepared"
+    ],
+    "significant": [
+      "important",
+      "relevant",
+      "vital"
+    ],
+    "honest": [
+      "truthful",
+      "sincere"
+    ],
+    "kind": [
+      "friendly",
+      "gentle",
+      "caring"
+    ],
+    "friendly": [
+      "kind",
+      "gentle",
+      "caring"
+    ],
+    "gentle": [
+      "kind",
+      "friendly",
+      "caring"
+    ],
+    "heavy": [
+      "weighty",
+      "massive"
+    ],
+    "thick": [
+      "dense",
+      "compact"
+    ],
+    "deep": [
+      "profound"
+    ],
+    "dry": [
+      "arid"
+    ],
+    "famous": [
+      "renowned",
+      "known"
+    ],
+    "known": [
+      "famous",
+      "renowned"
+    ],
+    "popular": [
+      "liked",
+      "appreciated"
+    ],
+    "common": [
+      "usual",
+      "ordinary"
+    ],
+    "usual": [
+      "common",
+      "ordinary",
+      "normal"
+    ],
+    "ordinary": [
+      "common",
+      "usual"
+    ],
+    "special": [
+      "unique",
+      "exceptional"
+    ],
+    "normal": [
+      "usual",
+      "standard"
+    ],
+    "standard": [
+      "normal",
+      "usual"
+    ],
+    "basic": [
+      "simple",
+      "plain"
+    ],
+    "complex": [
+      "complicated",
+      "difficult"
+    ],
+    "perfect": [
+      "flawless",
+      "ideal"
+    ],
+    "excellent": [
+      "outstanding",
+      "superb"
+    ],
+    "successful": [
+      "prosperous",
+      "accomplished"
+    ],
+    "possible": [
+      "feasible",
+      "likely"
+    ],
+    "likely": [
+      "possible",
+      "feasible"
+    ],
+    "impossible": [
+      "unfeasible"
+    ],
+    "necessary": [
+      "essential",
+      "required"
+    ],
+    "required": [
+      "necessary",
+      "essential"
+    ],
+    "correct": [
+      "true",
+      "accurate"
+    ],
+    "equal": [
+      "same",
+      "identical"
+    ],
+    "mother": [
+      "mom",
+      "mama"
+    ],
+    "father": [
+      "dad",
+      "papa"
+    ],
+    "baby": [
+      "infant",
+      "newborn"
+    ],
+    "girl": [
+      "lass",
+      "schoolgirl"
+    ],
+    "person": [
+      "individual",
+      "human"
+    ],
+    "individual": [
+      "person",
+      "human"
+    ],
+    "human": [
+      "person",
+      "individual"
+    ],
+    "persons": [
+      "people",
+      "folk"
+    ],
+    "home": [
+      "house",
+      "residence"
+    ],
+    "room": [
+      "chamber",
+      "space"
+    ],
+    "space": [
+      "room",
+      "chamber"
+    ],
+    "door": [
+      "doorway",
+      "entrance"
+    ],
+    "table": [
+      "desk"
+    ],
+    "chair": [
+      "seat"
+    ],
+    "bed": [
+      "cot"
+    ],
+    "kitchen": [
+      "galley"
+    ],
+    "bathroom": [
+      "restroom",
+      "toilet"
+    ],
+    "garden": [
+      "yard"
+    ],
+    "key": [
+      "opener"
+    ],
+    "box": [
+      "case",
+      "container"
+    ],
+    "case": [
+      "box",
+      "container"
+    ],
+    "bread": [
+      "loaf"
+    ],
+    "meat": [
+      "flesh"
+    ],
+    "tea": [
+      "infusion"
+    ],
+    "beer": [
+      "ale"
+    ],
+    "lunch": [
+      "meal"
+    ],
+    "dinner": [
+      "supper"
+    ],
+    "restaurant": [
+      "eatery",
+      "diner"
+    ],
+    "menu": [
+      "list"
+    ],
+    "list": [
+      "menu"
+    ],
+    "plate": [
+      "dish"
+    ],
+    "cup": [
+      "mug"
+    ],
+    "earth": [
+      "world",
+      "globe"
+    ],
+    "nation": [
+      "country",
+      "state"
+    ],
+    "state": [
+      "country",
+      "nation",
+      "condition"
+    ],
+    "town": [
+      "city",
+      "metropolis",
+      "village"
+    ],
+    "village": [
+      "town",
+      "settlement"
+    ],
+    "street": [
+      "road",
+      "path"
+    ],
+    "train": [
+      "railway"
+    ],
+    "plane": [
+      "aircraft"
+    ],
+    "boat": [
+      "ship",
+      "vessel"
+    ],
+    "ship": [
+      "boat",
+      "vessel"
+    ],
+    "price": [
+      "cost",
+      "value",
+      "expense"
+    ],
+    "cost": [
+      "price",
+      "value",
+      "expense"
+    ],
+    "value": [
+      "price",
+      "cost",
+      "worth"
+    ],
+    "shop": [
+      "store"
+    ],
+    "market": [
+      "marketplace"
+    ],
+    "university": [
+      "college"
+    ],
+    "college": [
+      "university"
+    ],
+    "volume": [
+      "book",
+      "text"
+    ],
+    "text": [
+      "book",
+      "volume"
+    ],
+    "page": [
+      "sheet"
+    ],
+    "term": [
+      "word",
+      "expression"
+    ],
+    "expression": [
+      "word",
+      "term"
+    ],
+    "response": [
+      "answer",
+      "reply"
+    ],
+    "picture": [
+      "movie",
+      "film",
+      "image"
+    ],
+    "government": [
+      "authorities",
+      "regime"
+    ],
+    "law": [
+      "rule",
+      "regulation"
+    ],
+    "rule": [
+      "law",
+      "regulation"
+    ],
+    "war": [
+      "conflict",
+      "battle"
+    ],
+    "peace": [
+      "calm",
+      "harmony"
+    ],
+    "thought": [
+      "idea",
+      "notion"
+    ],
+    "brain": [
+      "mind",
+      "intellect"
+    ],
+    "figure": [
+      "number",
+      "digit",
+      "shape"
+    ],
+    "object": [
+      "thing",
+      "item",
+      "disagree"
+    ],
+    "section": [
+      "part",
+      "piece",
+      "division"
+    ],
+    "finish": [
+      "end",
+      "conclusion",
+      "complete"
+    ],
+    "cause": [
+      "reason",
+      "motive",
+      "provoke"
+    ],
+    "effect": [
+      "result",
+      "outcome",
+      "consequence"
+    ],
+    "truth": [
+      "fact",
+      "reality"
+    ],
+    "degree": [
+      "level",
+      "stage"
+    ],
+    "stage": [
+      "level",
+      "degree"
+    ],
+    "issue": [
+      "problem",
+      "trouble"
+    ],
+    "solution": [
+      "answer",
+      "remedy"
+    ],
+    "information": [
+      "data",
+      "facts"
+    ],
+    "data": [
+      "information",
+      "facts"
+    ],
+    "news": [
+      "report"
+    ],
+    "report": [
+      "news"
+    ],
+    "message": [
+      "note",
+      "communication"
+    ],
+    "note": [
+      "message",
+      "communication"
+    ],
+    "system": [
+      "structure",
+      "organization"
+    ],
+    "structure": [
+      "system",
+      "organization"
+    ],
+    "organization": [
+      "system",
+      "structure"
+    ],
+    "program": [
+      "application",
+      "software"
+    ],
+    "application": [
+      "program",
+      "software"
+    ],
+    "file": [
+      "document",
+      "record"
+    ],
+    "record": [
+      "file",
+      "document",
+      "account"
+    ],
+    "computer": [
+      "machine",
+      "pc"
+    ],
+    "machine": [
+      "computer",
+      "pc"
+    ],
+    "phone": [
+      "telephone",
+      "mobile"
+    ],
+    "image": [
+      "picture",
+      "photo"
+    ],
+    "color": [
+      "hue",
+      "shade",
+      "paint"
+    ],
+    "shape": [
+      "form",
+      "figure"
+    ],
+    "size": [
+      "dimension",
+      "measure"
+    ],
+    "power": [
+      "strength",
+      "force"
+    ],
+    "force": [
+      "power",
+      "strength"
+    ],
+    "energy": [
+      "vitality"
+    ],
+    "science": [
+      "knowledge"
+    ],
+    "knowledge": [
+      "science",
+      "experience",
+      "practice"
+    ],
+    "art": [
+      "craft"
+    ],
+    "society": [
+      "community",
+      "public"
+    ],
+    "community": [
+      "society",
+      "public"
+    ],
+    "public": [
+      "society",
+      "community"
+    ],
+    "culture": [
+      "tradition"
+    ],
+    "future": [
+      "tomorrow"
+    ],
+    "tomorrow": [
+      "future"
+    ],
+    "past": [
+      "history"
+    ],
+    "history": [
+      "past"
+    ],
+    "moment": [
+      "instant",
+      "minute"
+    ],
+    "minute": [
+      "moment",
+      "instant"
+    ],
+    "century": [
+      "age",
+      "era"
+    ],
+    "age": [
+      "century",
+      "era",
+      "period"
+    ],
+    "period": [
+      "age",
+      "era"
+    ],
+    "action": [
+      "act",
+      "deed"
+    ],
+    "act": [
+      "action",
+      "deed"
+    ],
+    "activity": [
+      "occupation"
+    ],
+    "support": [
+      "help",
+      "assistance",
+      "encourage"
+    ],
+    "experience": [
+      "knowledge",
+      "practice"
+    ],
+    "practice": [
+      "experience",
+      "knowledge"
+    ],
+    "type": [
+      "kind",
+      "sort"
+    ],
+    "side": [
+      "edge",
+      "flank"
+    ],
+    "interest": [
+      "curiosity",
+      "concern"
+    ],
+    "policy": [
+      "plan",
+      "strategy"
+    ],
+    "plan": [
+      "policy",
+      "strategy",
+      "intend"
+    ],
+    "analysis": [
+      "study",
+      "examination"
+    ],
+    "study": [
+      "analysis",
+      "examination",
+      "research"
+    ],
+    "education": [
+      "learning",
+      "teaching"
+    ],
+    "learning": [
+      "education",
+      "teaching"
+    ],
+    "understanding": [
+      "knowledge",
+      "wisdom"
+    ],
+    "research": [
+      "study",
+      "investigation"
+    ],
+    "importance": [
+      "value",
+      "worth"
+    ],
+    "control": [
+      "command",
+      "authority"
+    ],
+    "authority": [
+      "control",
+      "command"
+    ],
+    "development": [
+      "growth",
+      "progress"
+    ],
+    "growth": [
+      "development",
+      "progress"
+    ],
+    "process": [
+      "procedure",
+      "method"
+    ],
+    "method": [
+      "process",
+      "procedure"
+    ],
+    "condition": [
+      "state",
+      "situation"
+    ],
+    "situation": [
+      "condition",
+      "state"
+    ],
+    "environment": [
+      "surroundings",
+      "nature"
+    ],
+    "nature": [
+      "environment",
+      "surroundings"
+    ],
+    "material": [
+      "substance",
+      "matter"
+    ],
+    "matter": [
+      "material",
+      "substance"
+    ],
+    "population": [
+      "inhabitants",
+      "people"
+    ],
+    "treatment": [
+      "care",
+      "therapy"
+    ],
+    "care": [
+      "treatment",
+      "therapy"
+    ],
+    "service": [
+      "assistance",
+      "help"
+    ],
+    "product": [
+      "goods",
+      "item"
+    ],
+    "business": [
+      "company",
+      "trade",
+      "firm"
+    ],
+    "company": [
+      "business",
+      "trade",
+      "firm"
+    ],
+    "trade": [
+      "business",
+      "company",
+      "sell"
+    ],
+    "industry": [
+      "manufacturing",
+      "business"
+    ],
+    "office": [
+      "workplace"
+    ],
+    "boss": [
+      "manager",
+      "supervisor"
+    ],
+    "worker": [
+      "employee",
+      "laborer"
+    ],
+    "account": [
+      "record"
+    ],
+    "security": [
+      "safety",
+      "protection"
+    ],
+    "risk": [
+      "danger",
+      "hazard"
+    ],
+    "tax": [
+      "duty",
+      "levy"
+    ],
+    "income": [
+      "earnings",
+      "revenue"
+    ],
+    "gain": [
+      "profit",
+      "earnings",
+      "earn"
+    ],
+    "go": [
+      "leave",
+      "depart"
+    ],
+    "leave": [
+      "go",
+      "depart",
+      "exit"
+    ],
+    "come": [
+      "arrive",
+      "approach",
+      "reach"
+    ],
+    "arrive": [
+      "come",
+      "approach",
+      "reach"
+    ],
+    "approach": [
+      "come",
+      "arrive"
+    ],
+    "run": [
+      "jog",
+      "sprint",
+      "manage"
+    ],
+    "walk": [
+      "stroll"
+    ],
+    "dog": [
+      "hound",
+      "canine"
+    ],
+    "look": [
+      "watch",
+      "observe",
+      "seem"
+    ],
+    "watch": [
+      "look",
+      "observe"
+    ],
+    "see": [
+      "observe",
+      "notice",
+      "visit"
+    ],
+    "notice": [
+      "see",
+      "observe"
+    ],
+    "hear": [
+      "listen"
+    ],
+    "listen": [
+      "hear"
+    ],
+    "speak": [
+      "talk",
+      "say"
+    ],
+    "talk": [
+      "speak",
+      "say",
+      "discuss"
+    ],
+    "say": [
+      "speak",
+      "talk",
+      "tell"
+    ],
+    "tell": [
+      "say",
+      "state"
+    ],
+    "ask": [
+      "question",
+      "inquire"
+    ],
+    "respond": [
+      "answer",
+      "reply"
+    ],
+    "think": [
+      "believe",
+      "consider"
+    ],
+    "believe": [
+      "think",
+      "consider",
+      "trust"
+    ],
+    "consider": [
+      "think",
+      "believe",
+      "contemplate"
+    ],
+    "know": [
+      "understand",
+      "recognize"
+    ],
+    "understand": [
+      "know",
+      "recognize",
+      "comprehend"
+    ],
+    "recognize": [
+      "know",
+      "understand"
+    ],
+    "learn": [
+      "study",
+      "memorize",
+      "examine"
+    ],
+    "teach": [
+      "instruct",
+      "educate"
+    ],
+    "read": [
+      "peruse"
+    ],
+    "write": [
+      "compose"
+    ],
+    "explain": [
+      "clarify",
+      "describe",
+      "depict"
+    ],
+    "remember": [
+      "recall",
+      "recollect"
+    ],
+    "forget": [
+      "overlook"
+    ],
+    "want": [
+      "desire",
+      "wish"
+    ],
+    "wish": [
+      "want",
+      "desire",
+      "hope"
+    ],
+    "need": [
+      "require",
+      "demand"
+    ],
+    "require": [
+      "need",
+      "demand"
+    ],
+    "demand": [
+      "need",
+      "require"
+    ],
+    "like": [
+      "enjoy",
+      "appreciate"
+    ],
+    "hate": [
+      "detest",
+      "loathe"
+    ],
+    "labor": [
+      "work",
+      "toil"
+    ],
+    "play": [
+      "enjoy"
+    ],
+    "eat": [
+      "consume",
+      "devour"
+    ],
+    "drink": [
+      "sip",
+      "consume"
+    ],
+    "sleep": [
+      "rest",
+      "slumber"
+    ],
+    "rest": [
+      "sleep",
+      "slumber"
+    ],
+    "wake": [
+      "awaken"
+    ],
+    "drive": [
+      "steer"
+    ],
+    "fly": [
+      "soar"
+    ],
+    "swim": [
+      "bathe"
+    ],
+    "buy": [
+      "purchase"
+    ],
+    "sell": [
+      "trade"
+    ],
+    "pay": [
+      "compensate"
+    ],
+    "send": [
+      "dispatch"
+    ],
+    "receive": [
+      "get",
+      "obtain",
+      "accept"
+    ],
+    "get": [
+      "receive",
+      "obtain",
+      "acquire"
+    ],
+    "bring": [
+      "carry",
+      "deliver"
+    ],
+    "carry": [
+      "bring",
+      "deliver",
+      "transport"
+    ],
+    "take": [
+      "grab",
+      "seize"
+    ],
+    "give": [
+      "offer",
+      "provide"
+    ],
+    "offer": [
+      "give",
+      "provide",
+      "propose"
+    ],
+    "provide": [
+      "give",
+      "offer",
+      "propose"
+    ],
+    "make": [
+      "create",
+      "produce"
+    ],
+    "create": [
+      "make",
+      "produce",
+      "build"
+    ],
+    "produce": [
+      "make",
+      "create"
+    ],
+    "build": [
+      "construct",
+      "create"
+    ],
+    "break": [
+      "smash",
+      "crack"
+    ],
+    "fix": [
+      "repair",
+      "mend",
+      "solve"
+    ],
+    "close": [
+      "shut",
+      "seal"
+    ],
+    "shut": [
+      "close",
+      "seal"
+    ],
+    "start": [
+      "begin",
+      "commence"
+    ],
+    "begin": [
+      "start",
+      "commence"
+    ],
+    "stop": [
+      "halt",
+      "cease",
+      "prevent"
+    ],
+    "continue": [
+      "proceed",
+      "persist",
+      "remain"
+    ],
+    "turn": [
+      "rotate",
+      "twist"
+    ],
+    "bear": [
+      "carry",
+      "transport"
+    ],
+    "wash": [
+      "rinse",
+      "scrub"
+    ],
+    "cook": [
+      "prepare",
+      "bake"
+    ],
+    "cut": [
+      "slice",
+      "chop"
+    ],
+    "choose": [
+      "select",
+      "pick",
+      "decide"
+    ],
+    "pick": [
+      "choose",
+      "select"
+    ],
+    "decide": [
+      "determine",
+      "choose"
+    ],
+    "try": [
+      "attempt",
+      "test"
+    ],
+    "test": [
+      "try",
+      "attempt"
+    ],
+    "fail": [
+      "lose",
+      "flop"
+    ],
+    "lose": [
+      "fail",
+      "flop",
+      "misplace"
+    ],
+    "win": [
+      "succeed",
+      "triumph"
+    ],
+    "succeed": [
+      "win",
+      "triumph"
+    ],
+    "find": [
+      "discover",
+      "locate",
+      "uncover"
+    ],
+    "meet": [
+      "encounter",
+      "gather"
+    ],
+    "wait": [
+      "stay",
+      "remain"
+    ],
+    "stay": [
+      "wait",
+      "remain",
+      "continue"
+    ],
+    "remain": [
+      "wait",
+      "stay",
+      "continue"
+    ],
+    "exit": [
+      "leave",
+      "depart"
+    ],
+    "reach": [
+      "arrive",
+      "come"
+    ],
+    "travel": [
+      "journey",
+      "tour"
+    ],
+    "visit": [
+      "see"
+    ],
+    "live": [
+      "reside",
+      "dwell",
+      "exist"
+    ],
+    "die": [
+      "perish"
+    ],
+    "kill": [
+      "murder",
+      "slay"
+    ],
+    "laugh": [
+      "chuckle",
+      "giggle"
+    ],
+    "cry": [
+      "weep",
+      "sob"
+    ],
+    "smile": [
+      "grin"
+    ],
+    "imagine": [
+      "dream",
+      "fantasize",
+      "picture"
+    ],
+    "expect": [
+      "hope",
+      "wish",
+      "anticipate"
+    ],
+    "trust": [
+      "believe",
+      "credit"
+    ],
+    "allow": [
+      "permit",
+      "let"
+    ],
+    "let": [
+      "allow",
+      "permit"
+    ],
+    "suggest": [
+      "propose",
+      "recommend"
+    ],
+    "prevent": [
+      "avoid",
+      "stop"
+    ],
+    "avoid": [
+      "prevent",
+      "stop"
+    ],
+    "protect": [
+      "defend",
+      "guard"
+    ],
+    "save": [
+      "rescue",
+      "preserve"
+    ],
+    "spend": [
+      "use",
+      "consume"
+    ],
+    "use": [
+      "spend",
+      "consume",
+      "employ"
+    ],
+    "lend": [
+      "loan"
+    ],
+    "own": [
+      "possess",
+      "have"
+    ],
+    "have": [
+      "own",
+      "possess"
+    ],
+    "share": [
+      "divide",
+      "distribute"
+    ],
+    "keep": [
+      "retain",
+      "hold"
+    ],
+    "hold": [
+      "keep",
+      "retain",
+      "grasp"
+    ],
+    "drop": [
+      "release",
+      "fall",
+      "descend"
+    ],
+    "throw": [
+      "toss",
+      "fling"
+    ],
+    "catch": [
+      "grab",
+      "capture"
+    ],
+    "push": [
+      "shove",
+      "press"
+    ],
+    "press": [
+      "push",
+      "shove"
+    ],
+    "pull": [
+      "drag",
+      "tug"
+    ],
+    "climb": [
+      "ascend",
+      "rise"
+    ],
+    "rise": [
+      "climb",
+      "ascend",
+      "increase"
+    ],
+    "fall": [
+      "drop",
+      "descend"
+    ],
+    "sing": [
+      "chant"
+    ],
+    "dance": [
+      "move"
+    ],
+    "draw": [
+      "sketch",
+      "paint"
+    ],
+    "count": [
+      "calculate",
+      "tally"
+    ],
+    "argue": [
+      "dispute",
+      "quarrel"
+    ],
+    "fight": [
+      "combat",
+      "struggle"
+    ],
+    "cover": [
+      "hide",
+      "conceal"
+    ],
+    "design": [
+      "plan",
+      "scheme"
+    ],
+    "manage": [
+      "run",
+      "direct"
+    ],
+    "direct": [
+      "manage",
+      "run",
+      "lead"
+    ],
+    "lead": [
+      "guide",
+      "direct"
+    ],
+    "follow": [
+      "pursue",
+      "trail"
+    ],
+    "join": [
+      "connect",
+      "unite",
+      "link"
+    ],
+    "include": [
+      "contain",
+      "involve",
+      "hold"
+    ],
+    "increase": [
+      "grow",
+      "rise"
+    ],
+    "grow": [
+      "increase",
+      "rise",
+      "develop"
+    ],
+    "reduce": [
+      "decrease",
+      "lower"
+    ],
+    "lower": [
+      "reduce",
+      "decrease"
+    ],
+    "improve": [
+      "enhance"
+    ],
+    "develop": [
+      "grow",
+      "expand"
+    ],
+    "solve": [
+      "resolve",
+      "fix"
+    ],
+    "influence": [
+      "affect",
+      "impact"
+    ],
+    "seem": [
+      "appear",
+      "look"
+    ],
+    "appear": [
+      "seem",
+      "look",
+      "emerge"
+    ],
+    "become": [
+      "grow"
+    ],
+    "happen": [
+      "occur"
+    ],
+    "occur": [
+      "happen"
+    ],
+    "will": [
+      "volition",
+      "determination"
+    ],
+    "assistance": [
+      "support",
+      "help",
+      "service"
     ]
   },
   "es": {
@@ -581,35 +2143,43 @@
     ],
     "bueno": [
       "buen",
-      "bondadoso"
+      "bondadoso",
+      "agradable"
     ],
     "malo": [
       "mal",
-      "perverso"
+      "perverso",
+      "pobre"
     ],
     "grande": [
       "enorme",
-      "amplio"
+      "amplio",
+      "vasto"
     ],
     "pequeño": [
       "chico",
-      "diminuto"
+      "diminuto",
+      "menor"
     ],
     "feliz": [
       "contento",
-      "alegre"
+      "alegre",
+      "satisfecho"
     ],
     "triste": [
       "melancólico",
-      "apenado"
+      "apenado",
+      "infeliz"
     ],
     "enojado": [
       "furioso",
-      "molesto"
+      "molesto",
+      "irritado"
     ],
     "cansado": [
       "agotado",
-      "fatigado"
+      "fatigado",
+      "exhausto"
     ],
     "hambriento": [
       "famélico",
@@ -617,19 +2187,23 @@
     ],
     "frío": [
       "gélido",
-      "fresco"
+      "fresco",
+      "helado"
     ],
     "caliente": [
       "caluroso",
-      "ardiente"
+      "ardiente",
+      "cálido"
     ],
     "lento": [
       "pausado",
-      "calmoso"
+      "calmoso",
+      "gradual"
     ],
     "hermoso": [
       "bello",
-      "precioso"
+      "precioso",
+      "bonito"
     ],
     "feo": [
       "horrible",
@@ -641,19 +2215,23 @@
     ],
     "difícil": [
       "complicado",
-      "arduo"
+      "arduo",
+      "duro"
     ],
     "nuevo": [
       "reciente",
-      "moderno"
+      "moderno",
+      "fresco"
     ],
     "viejo": [
       "antiguo",
-      "anciano"
+      "anciano",
+      "vetusto"
     ],
     "joven": [
       "juvenil",
-      "lozano"
+      "lozano",
+      "adolescente"
     ],
     "rico": [
       "adinerado",
@@ -661,11 +2239,13 @@
     ],
     "pobre": [
       "necesitado",
-      "humilde"
+      "humilde",
+      "malo"
     ],
     "fuerte": [
       "potente",
-      "robusto"
+      "robusto",
+      "ruidoso"
     ],
     "débil": [
       "frágil",
@@ -677,7 +2257,8 @@
     ],
     "sucio": [
       "mugriento",
-      "asqueroso"
+      "asqueroso",
+      "desordenado"
     ],
     "lleno": [
       "completo",
@@ -697,11 +2278,13 @@
     ],
     "verdadero": [
       "cierto",
-      "real"
+      "real",
+      "correcto"
     ],
     "falso": [
       "erróneo",
-      "mentiroso"
+      "mentiroso",
+      "incorrecto"
     ],
     "mismo": [
       "igual",
@@ -713,7 +2296,8 @@
     ],
     "importante": [
       "relevante",
-      "significativo"
+      "significativo",
+      "vital"
     ],
     "interesante": [
       "atractivo",
@@ -721,11 +2305,13 @@
     ],
     "aburrido": [
       "tedioso",
-      "monótono"
+      "monótono",
+      "desinteresado"
     ],
     "divertido": [
       "gracioso",
-      "entretenido"
+      "entretenido",
+      "cómico"
     ],
     "peligroso": [
       "riesgoso",
@@ -733,11 +2319,13 @@
     ],
     "seguro": [
       "cierto",
-      "confiable"
+      "confiable",
+      "protegido"
     ],
     "libre": [
       "suelto",
-      "independiente"
+      "independiente",
+      "liberado"
     ],
     "ocupado": [
       "atareado",
@@ -745,7 +2333,8 @@
     ],
     "listo": [
       "preparado",
-      "dispuesto"
+      "dispuesto",
+      "inteligente"
     ],
     "rojo": [
       "carmesí",
@@ -781,7 +2370,8 @@
     ],
     "calle": [
       "vía",
-      "camino"
+      "camino",
+      "carretera"
     ],
     "ciudad": [
       "pueblo",
@@ -805,7 +2395,8 @@
     ],
     "comida": [
       "alimento",
-      "sustento"
+      "sustento",
+      "almuerzo"
     ],
     "dinero": [
       "efectivo",
@@ -829,11 +2420,13 @@
     ],
     "niño": [
       "chico",
-      "pequeño"
+      "pequeño",
+      "infante"
     ],
     "gente": [
       "personas",
-      "pueblo"
+      "pueblo",
+      "población"
     ],
     "día": [
       "jornada",
@@ -857,7 +2450,8 @@
     ],
     "palabra": [
       "término",
-      "vocablo"
+      "vocablo",
+      "expresión"
     ],
     "idioma": [
       "lengua",
@@ -869,11 +2463,13 @@
     ],
     "respuesta": [
       "réplica",
-      "contestación"
+      "contestación",
+      "solución"
     ],
     "historia": [
       "relato",
-      "narración"
+      "narración",
+      "pasado"
     ],
     "música": [
       "melodía",
@@ -897,11 +2493,13 @@
     ],
     "equipo": [
       "grupo",
-      "escuadra"
+      "escuadra",
+      "conjunto"
     ],
     "escuela": [
       "academia",
-      "colegio"
+      "colegio",
+      "institución"
     ],
     "profesor": [
       "maestro",
@@ -913,7 +2511,8 @@
     ],
     "trabajo": [
       "labor",
-      "empleo"
+      "empleo",
+      "ocupación"
     ],
     "vida": [
       "existencia",
@@ -969,7 +2568,8 @@
     ],
     "lugar": [
       "sitio",
-      "punto"
+      "punto",
+      "marca"
     ],
     "cosa": [
       "objeto",
@@ -977,11 +2577,13 @@
     ],
     "forma": [
       "figura",
-      "documento"
+      "documento",
+      "contorno"
     ],
     "parte": [
       "pieza",
-      "sección"
+      "sección",
+      "división"
     ],
     "final": [
       "fin",
@@ -993,7 +2595,8 @@
     ],
     "ayuda": [
       "asistencia",
-      "auxilio"
+      "auxilio",
+      "apoyo"
     ],
     "problema": [
       "asunto",
@@ -1013,7 +2616,8 @@
     ],
     "hecho": [
       "verdad",
-      "realidad"
+      "realidad",
+      "acción"
     ],
     "orden": [
       "mandato",
@@ -1021,7 +2625,8 @@
     ],
     "grupo": [
       "equipo",
-      "conjunto"
+      "conjunto",
+      "escuadra"
     ],
     "línea": [
       "fila",
@@ -1029,7 +2634,8 @@
     ],
     "punto": [
       "marca",
-      "lugar"
+      "lugar",
+      "sitio"
     ],
     "nivel": [
       "grado",
@@ -1041,7 +2647,8 @@
     ],
     "sonido": [
       "ruido",
-      "tono"
+      "tono",
+      "voz"
     ],
     "luz": [
       "brillo",
@@ -1057,7 +2664,8 @@
     ],
     "contento": [
       "feliz",
-      "alegre"
+      "alegre",
+      "satisfecho"
     ],
     "enfermo": [
       "malo",
@@ -1077,11 +2685,13 @@
     ],
     "alto": [
       "elevado",
-      "tallado"
+      "tallado",
+      "eminente"
     ],
     "bajo": [
       "bajito",
-      "corto"
+      "corto",
+      "superficial"
     ],
     "largo": [
       "extenso",
@@ -1089,7 +2699,8 @@
     ],
     "corto": [
       "breve",
-      "reducido"
+      "reducido",
+      "conciso"
     ],
     "vieja": [
       "antigua",
@@ -1098,6 +2709,1446 @@
     "nueva": [
       "reciente",
       "moderna"
+    ],
+    "asustado": [
+      "temeroso",
+      "espantado",
+      "miedoso"
+    ],
+    "tranquilo": [
+      "calmado",
+      "sereno",
+      "pacífico"
+    ],
+    "preocupado": [
+      "nervioso",
+      "ansioso",
+      "inquieto"
+    ],
+    "solo": [
+      "solitario",
+      "aislado"
+    ],
+    "positivo": [
+      "esperanzado",
+      "optimista"
+    ],
+    "correcto": [
+      "bueno",
+      "agradable",
+      "excelente"
+    ],
+    "excelente": [
+      "bueno",
+      "agradable",
+      "correcto"
+    ],
+    "terrible": [
+      "malo",
+      "pobre",
+      "horrible"
+    ],
+    "enorme": [
+      "grande",
+      "amplio",
+      "vasto"
+    ],
+    "cálido": [
+      "caliente",
+      "caluroso"
+    ],
+    "fresco": [
+      "frío",
+      "helado",
+      "gélido"
+    ],
+    "moderno": [
+      "nuevo",
+      "fresco",
+      "reciente"
+    ],
+    "reciente": [
+      "nuevo",
+      "fresco",
+      "moderno"
+    ],
+    "simple": [
+      "fácil",
+      "sencillo",
+      "básico"
+    ],
+    "económico": [
+      "barato",
+      "asequible"
+    ],
+    "completo": [
+      "lleno",
+      "colmado"
+    ],
+    "necesitado": [
+      "pobre",
+      "humilde"
+    ],
+    "independiente": [
+      "libre",
+      "liberado"
+    ],
+    "significativo": [
+      "importante",
+      "relevante",
+      "vital"
+    ],
+    "honesto": [
+      "sincero",
+      "franco"
+    ],
+    "amable": [
+      "simpático",
+      "gentil",
+      "cariñoso"
+    ],
+    "pesado": [
+      "masivo",
+      "contundente"
+    ],
+    "grueso": [
+      "denso",
+      "compacto"
+    ],
+    "delgado": [
+      "flaco",
+      "esbelto"
+    ],
+    "ancho": [
+      "amplio",
+      "espacioso"
+    ],
+    "limitado": [
+      "estrecho",
+      "angosto"
+    ],
+    "profundo": [
+      "hondo"
+    ],
+    "seco": [
+      "árido"
+    ],
+    "dulce": [
+      "azucarado",
+      "agradable"
+    ],
+    "famoso": [
+      "renombrado",
+      "conocido"
+    ],
+    "conocido": [
+      "famoso",
+      "renombrado"
+    ],
+    "popular": [
+      "querido",
+      "apreciado"
+    ],
+    "común": [
+      "usual",
+      "ordinario"
+    ],
+    "ordinario": [
+      "común",
+      "usual"
+    ],
+    "especial": [
+      "único",
+      "excepcional"
+    ],
+    "normal": [
+      "usual",
+      "estándar"
+    ],
+    "estándar": [
+      "normal",
+      "usual"
+    ],
+    "extraño": [
+      "raro",
+      "peculiar"
+    ],
+    "básico": [
+      "simple",
+      "sencillo"
+    ],
+    "complejo": [
+      "complicado",
+      "difícil"
+    ],
+    "perfecto": [
+      "impecable",
+      "ideal"
+    ],
+    "maravilloso": [
+      "fantástico",
+      "espléndido"
+    ],
+    "exitoso": [
+      "próspero",
+      "logrado"
+    ],
+    "posible": [
+      "factible",
+      "probable"
+    ],
+    "probable": [
+      "posible",
+      "factible"
+    ],
+    "imposible": [
+      "inviable"
+    ],
+    "necesario": [
+      "esencial",
+      "requerido"
+    ],
+    "requerido": [
+      "necesario",
+      "esencial"
+    ],
+    "incorrecto": [
+      "falso",
+      "erróneo"
+    ],
+    "igual": [
+      "mismo",
+      "idéntico"
+    ],
+    "madre": [
+      "mamá",
+      "progenitora"
+    ],
+    "padre": [
+      "papá",
+      "progenitor"
+    ],
+    "bebé": [
+      "infante",
+      "nene"
+    ],
+    "señor": [
+      "hombre",
+      "varón"
+    ],
+    "niña": [
+      "muchacha",
+      "chica"
+    ],
+    "persona": [
+      "individuo",
+      "humano"
+    ],
+    "humano": [
+      "persona",
+      "individuo"
+    ],
+    "personas": [
+      "gente",
+      "pueblo"
+    ],
+    "pueblo": [
+      "gente",
+      "personas",
+      "ciudad"
+    ],
+    "médico": [
+      "doctor",
+      "facultativo"
+    ],
+    "hogar": [
+      "casa",
+      "vivienda"
+    ],
+    "habitación": [
+      "cuarto",
+      "espacio"
+    ],
+    "espacio": [
+      "habitación",
+      "cuarto"
+    ],
+    "puerta": [
+      "entrada",
+      "portal"
+    ],
+    "mesa": [
+      "escritorio"
+    ],
+    "silla": [
+      "asiento"
+    ],
+    "cama": [
+      "lecho"
+    ],
+    "cocina": [
+      "fogón"
+    ],
+    "baño": [
+      "aseo",
+      "servicio"
+    ],
+    "servicio": [
+      "baño",
+      "aseo",
+      "asistencia"
+    ],
+    "jardín": [
+      "patio"
+    ],
+    "llave": [
+      "clave"
+    ],
+    "caja": [
+      "recipiente",
+      "contenedor"
+    ],
+    "pan": [
+      "hogaza"
+    ],
+    "carne": [
+      "pulpa"
+    ],
+    "té": [
+      "infusión"
+    ],
+    "cerveza": [
+      "birra"
+    ],
+    "almuerzo": [
+      "comida"
+    ],
+    "cena": [
+      "comida"
+    ],
+    "restaurante": [
+      "comedor",
+      "fonda"
+    ],
+    "menú": [
+      "carta"
+    ],
+    "carta": [
+      "menú"
+    ],
+    "plato": [
+      "fuente"
+    ],
+    "fuente": [
+      "plato"
+    ],
+    "taza": [
+      "tazón"
+    ],
+    "tierra": [
+      "mundo",
+      "globo"
+    ],
+    "nación": [
+      "país",
+      "estado"
+    ],
+    "estado": [
+      "país",
+      "nación",
+      "condición"
+    ],
+    "aldea": [
+      "pueblo",
+      "asentamiento"
+    ],
+    "carretera": [
+      "calle",
+      "camino"
+    ],
+    "camino": [
+      "carretera",
+      "calle"
+    ],
+    "tren": [
+      "ferrocarril"
+    ],
+    "avión": [
+      "aeronave"
+    ],
+    "barco": [
+      "nave",
+      "embarcación"
+    ],
+    "precio": [
+      "costo",
+      "valor",
+      "gasto"
+    ],
+    "costo": [
+      "precio",
+      "valor",
+      "gasto"
+    ],
+    "valor": [
+      "precio",
+      "costo",
+      "importancia"
+    ],
+    "tienda": [
+      "comercio"
+    ],
+    "comercio": [
+      "tienda",
+      "negocio",
+      "empresa"
+    ],
+    "mercado": [
+      "plaza"
+    ],
+    "universidad": [
+      "colegio"
+    ],
+    "volumen": [
+      "libro",
+      "texto"
+    ],
+    "texto": [
+      "libro",
+      "volumen"
+    ],
+    "página": [
+      "hoja"
+    ],
+    "término": [
+      "palabra",
+      "expresión"
+    ],
+    "expresión": [
+      "palabra",
+      "término"
+    ],
+    "gobierno": [
+      "autoridad",
+      "régimen"
+    ],
+    "autoridad": [
+      "gobierno",
+      "régimen",
+      "control"
+    ],
+    "ley": [
+      "regla",
+      "norma"
+    ],
+    "regla": [
+      "ley",
+      "norma"
+    ],
+    "guerra": [
+      "conflicto",
+      "batalla"
+    ],
+    "paz": [
+      "calma",
+      "armonía"
+    ],
+    "cerebro": [
+      "mente",
+      "intelecto"
+    ],
+    "sitio": [
+      "lugar",
+      "punto"
+    ],
+    "objeto": [
+      "cosa",
+      "artículo"
+    ],
+    "artículo": [
+      "cosa",
+      "objeto",
+      "producto"
+    ],
+    "sección": [
+      "parte",
+      "pieza",
+      "división"
+    ],
+    "efecto": [
+      "resultado",
+      "consecuencia"
+    ],
+    "caso": [
+      "ejemplo",
+      "muestra"
+    ],
+    "muestra": [
+      "ejemplo",
+      "caso"
+    ],
+    "verdad": [
+      "hecho",
+      "realidad"
+    ],
+    "grado": [
+      "nivel",
+      "etapa"
+    ],
+    "etapa": [
+      "nivel",
+      "grado"
+    ],
+    "asunto": [
+      "problema",
+      "dificultad"
+    ],
+    "solución": [
+      "respuesta",
+      "remedio"
+    ],
+    "información": [
+      "datos",
+      "hechos"
+    ],
+    "datos": [
+      "información",
+      "hechos"
+    ],
+    "noticias": [
+      "informe"
+    ],
+    "informe": [
+      "noticias"
+    ],
+    "mensaje": [
+      "nota",
+      "comunicación"
+    ],
+    "nota": [
+      "mensaje",
+      "comunicación"
+    ],
+    "sistema": [
+      "estructura",
+      "organización"
+    ],
+    "estructura": [
+      "sistema",
+      "organización"
+    ],
+    "organización": [
+      "sistema",
+      "estructura"
+    ],
+    "programa": [
+      "aplicación",
+      "software"
+    ],
+    "aplicación": [
+      "programa",
+      "software"
+    ],
+    "archivo": [
+      "documento",
+      "registro"
+    ],
+    "registro": [
+      "archivo",
+      "documento",
+      "cuenta"
+    ],
+    "computadora": [
+      "ordenador",
+      "computador"
+    ],
+    "teléfono": [
+      "móvil",
+      "celular"
+    ],
+    "imagen": [
+      "foto",
+      "ilustración"
+    ],
+    "color": [
+      "tono",
+      "matiz"
+    ],
+    "figura": [
+      "forma",
+      "contorno"
+    ],
+    "tamaño": [
+      "dimensión",
+      "medida"
+    ],
+    "poder": [
+      "fuerza",
+      "potencia"
+    ],
+    "fuerza": [
+      "poder",
+      "potencia"
+    ],
+    "energía": [
+      "vitalidad"
+    ],
+    "ciencia": [
+      "conocimiento"
+    ],
+    "conocimiento": [
+      "ciencia",
+      "experiencia",
+      "práctica"
+    ],
+    "arte": [
+      "oficio"
+    ],
+    "sociedad": [
+      "comunidad",
+      "público"
+    ],
+    "comunidad": [
+      "sociedad",
+      "público"
+    ],
+    "público": [
+      "sociedad",
+      "comunidad"
+    ],
+    "cultura": [
+      "tradición"
+    ],
+    "futuro": [
+      "porvenir"
+    ],
+    "pasado": [
+      "historia"
+    ],
+    "momento": [
+      "instante",
+      "minuto"
+    ],
+    "minuto": [
+      "momento",
+      "instante"
+    ],
+    "siglo": [
+      "edad",
+      "era"
+    ],
+    "edad": [
+      "siglo",
+      "era",
+      "época"
+    ],
+    "era": [
+      "siglo",
+      "edad",
+      "época"
+    ],
+    "acción": [
+      "acto",
+      "hecho"
+    ],
+    "actividad": [
+      "ocupación"
+    ],
+    "apoyo": [
+      "ayuda",
+      "asistencia"
+    ],
+    "experiencia": [
+      "conocimiento",
+      "práctica"
+    ],
+    "tipo": [
+      "clase",
+      "especie"
+    ],
+    "clase": [
+      "tipo",
+      "especie"
+    ],
+    "lado": [
+      "borde",
+      "flanco"
+    ],
+    "interés": [
+      "curiosidad",
+      "preocupación"
+    ],
+    "política": [
+      "plan",
+      "estrategia"
+    ],
+    "análisis": [
+      "estudio",
+      "examen"
+    ],
+    "educación": [
+      "aprendizaje",
+      "enseñanza"
+    ],
+    "aprendizaje": [
+      "educación",
+      "enseñanza"
+    ],
+    "entendimiento": [
+      "conocimiento",
+      "sabiduría"
+    ],
+    "investigación": [
+      "estudio",
+      "indagación"
+    ],
+    "importancia": [
+      "valor",
+      "mérito"
+    ],
+    "desarrollo": [
+      "crecimiento",
+      "progreso"
+    ],
+    "crecimiento": [
+      "desarrollo",
+      "progreso"
+    ],
+    "proceso": [
+      "procedimiento",
+      "método"
+    ],
+    "método": [
+      "proceso",
+      "procedimiento"
+    ],
+    "condición": [
+      "estado",
+      "situación"
+    ],
+    "situación": [
+      "condición",
+      "estado"
+    ],
+    "ambiente": [
+      "entorno",
+      "naturaleza"
+    ],
+    "naturaleza": [
+      "entorno",
+      "ambiente"
+    ],
+    "material": [
+      "sustancia",
+      "materia"
+    ],
+    "población": [
+      "habitantes",
+      "gente"
+    ],
+    "tratamiento": [
+      "cuidado",
+      "terapia"
+    ],
+    "cuidado": [
+      "tratamiento",
+      "terapia"
+    ],
+    "producto": [
+      "bien",
+      "artículo"
+    ],
+    "bien": [
+      "producto",
+      "artículo"
+    ],
+    "negocio": [
+      "empresa",
+      "comercio",
+      "compañía"
+    ],
+    "empresa": [
+      "negocio",
+      "comercio",
+      "compañía"
+    ],
+    "industria": [
+      "manufactura",
+      "negocio"
+    ],
+    "oficina": [
+      "despacho"
+    ],
+    "jefe": [
+      "gerente",
+      "supervisor"
+    ],
+    "trabajador": [
+      "empleado",
+      "obrero"
+    ],
+    "cuenta": [
+      "registro"
+    ],
+    "seguridad": [
+      "protección"
+    ],
+    "riesgo": [
+      "peligro",
+      "amenaza"
+    ],
+    "impuesto": [
+      "tasa",
+      "tributo"
+    ],
+    "tasa": [
+      "impuesto",
+      "tributo"
+    ],
+    "ingreso": [
+      "ganancia",
+      "renta"
+    ],
+    "ir": [
+      "salir",
+      "marchar"
+    ],
+    "salir": [
+      "ir",
+      "marchar",
+      "partir"
+    ],
+    "venir": [
+      "llegar",
+      "acercarse",
+      "alcanzar"
+    ],
+    "llegar": [
+      "venir",
+      "acercarse",
+      "alcanzar"
+    ],
+    "correr": [
+      "trotar",
+      "esprintar"
+    ],
+    "caminar": [
+      "pasear"
+    ],
+    "perro": [
+      "canino",
+      "sabueso"
+    ],
+    "saltar": [
+      "brincar",
+      "botar"
+    ],
+    "mirar": [
+      "observar",
+      "ver"
+    ],
+    "ver": [
+      "mirar",
+      "observar",
+      "notar"
+    ],
+    "notar": [
+      "ver",
+      "observar"
+    ],
+    "oír": [
+      "escuchar"
+    ],
+    "escuchar": [
+      "oír"
+    ],
+    "hablar": [
+      "conversar",
+      "decir"
+    ],
+    "decir": [
+      "hablar",
+      "conversar",
+      "contar"
+    ],
+    "contar": [
+      "decir",
+      "expresar",
+      "calcular"
+    ],
+    "preguntar": [
+      "cuestionar",
+      "inquirir"
+    ],
+    "responder": [
+      "contestar",
+      "replicar"
+    ],
+    "pensar": [
+      "creer",
+      "considerar"
+    ],
+    "creer": [
+      "pensar",
+      "considerar",
+      "confiar"
+    ],
+    "considerar": [
+      "pensar",
+      "creer",
+      "contemplar"
+    ],
+    "saber": [
+      "conocer",
+      "entender"
+    ],
+    "conocer": [
+      "saber",
+      "entender",
+      "encontrar"
+    ],
+    "entender": [
+      "saber",
+      "conocer",
+      "comprender"
+    ],
+    "aprender": [
+      "estudiar",
+      "memorizar",
+      "examinar"
+    ],
+    "estudiar": [
+      "aprender",
+      "memorizar",
+      "examinar"
+    ],
+    "enseñar": [
+      "instruir",
+      "educar"
+    ],
+    "leer": [
+      "hojear"
+    ],
+    "escribir": [
+      "redactar"
+    ],
+    "explicar": [
+      "aclarar",
+      "describir",
+      "representar"
+    ],
+    "recordar": [
+      "evocar",
+      "rememorar"
+    ],
+    "olvidar": [
+      "omitir"
+    ],
+    "querer": [
+      "desear",
+      "anhelar",
+      "amar"
+    ],
+    "desear": [
+      "querer",
+      "anhelar",
+      "esperar"
+    ],
+    "necesitar": [
+      "requerir",
+      "exigir"
+    ],
+    "requerir": [
+      "necesitar",
+      "exigir"
+    ],
+    "gustar": [
+      "disfrutar",
+      "apreciar"
+    ],
+    "odiar": [
+      "detestar",
+      "aborrecer"
+    ],
+    "ayudar": [
+      "asistir",
+      "auxiliar"
+    ],
+    "trabajar": [
+      "laborar",
+      "esforzarse"
+    ],
+    "jugar": [
+      "divertirse",
+      "disfrutar"
+    ],
+    "comer": [
+      "consumir",
+      "devorar"
+    ],
+    "beber": [
+      "tomar",
+      "sorber"
+    ],
+    "tomar": [
+      "beber",
+      "sorber",
+      "agarrar"
+    ],
+    "dormir": [
+      "descansar",
+      "dormitar"
+    ],
+    "descansar": [
+      "dormir",
+      "dormitar"
+    ],
+    "despertar": [
+      "despertarse",
+      "levantar"
+    ],
+    "levantar": [
+      "despertar",
+      "despertarse"
+    ],
+    "conducir": [
+      "manejar"
+    ],
+    "volar": [
+      "planear"
+    ],
+    "planear": [
+      "volar",
+      "pretender",
+      "intentar"
+    ],
+    "nadar": [
+      "bañarse"
+    ],
+    "comprar": [
+      "adquirir"
+    ],
+    "vender": [
+      "comercializar"
+    ],
+    "pagar": [
+      "compensar"
+    ],
+    "enviar": [
+      "despachar"
+    ],
+    "recibir": [
+      "obtener",
+      "conseguir",
+      "aceptar"
+    ],
+    "obtener": [
+      "recibir",
+      "conseguir",
+      "adquirir"
+    ],
+    "traer": [
+      "llevar",
+      "entregar"
+    ],
+    "llevar": [
+      "traer",
+      "entregar",
+      "transportar"
+    ],
+    "dar": [
+      "ofrecer",
+      "proporcionar"
+    ],
+    "ofrecer": [
+      "dar",
+      "proporcionar",
+      "proponer"
+    ],
+    "proporcionar": [
+      "dar",
+      "ofrecer"
+    ],
+    "hacer": [
+      "crear",
+      "producir"
+    ],
+    "crear": [
+      "hacer",
+      "producir",
+      "construir"
+    ],
+    "producir": [
+      "hacer",
+      "crear"
+    ],
+    "construir": [
+      "edificar",
+      "crear"
+    ],
+    "romper": [
+      "quebrar",
+      "partir"
+    ],
+    "arreglar": [
+      "reparar",
+      "componer",
+      "resolver"
+    ],
+    "abrir": [
+      "destapar",
+      "descubrir"
+    ],
+    "cerrar": [
+      "clausurar",
+      "sellar"
+    ],
+    "empezar": [
+      "comenzar",
+      "iniciar"
+    ],
+    "comenzar": [
+      "empezar",
+      "iniciar"
+    ],
+    "terminar": [
+      "acabar",
+      "completar",
+      "concluir"
+    ],
+    "detener": [
+      "parar",
+      "cesar"
+    ],
+    "continuar": [
+      "proceder",
+      "persistir",
+      "seguir"
+    ],
+    "cambiar": [
+      "alterar",
+      "modificar"
+    ],
+    "mover": [
+      "trasladar",
+      "desplazar"
+    ],
+    "girar": [
+      "rotar",
+      "torcer"
+    ],
+    "lavar": [
+      "enjuagar",
+      "fregar"
+    ],
+    "cocinar": [
+      "preparar",
+      "guisar"
+    ],
+    "cortar": [
+      "rebanar",
+      "picar"
+    ],
+    "elegir": [
+      "seleccionar",
+      "escoger"
+    ],
+    "escoger": [
+      "elegir",
+      "seleccionar"
+    ],
+    "decidir": [
+      "determinar",
+      "resolver"
+    ],
+    "resolver": [
+      "decidir",
+      "determinar",
+      "solucionar"
+    ],
+    "intentar": [
+      "probar",
+      "ensayar",
+      "pretender"
+    ],
+    "probar": [
+      "intentar",
+      "ensayar"
+    ],
+    "fallar": [
+      "fracasar",
+      "perder"
+    ],
+    "perder": [
+      "fallar",
+      "fracasar",
+      "extraviar"
+    ],
+    "ganar": [
+      "triunfar",
+      "vencer",
+      "obtener"
+    ],
+    "encontrar": [
+      "descubrir",
+      "localizar",
+      "reunir"
+    ],
+    "esperar": [
+      "aguardar",
+      "permanecer",
+      "desear"
+    ],
+    "permanecer": [
+      "esperar",
+      "aguardar",
+      "quedarse"
+    ],
+    "alcanzar": [
+      "llegar",
+      "venir"
+    ],
+    "regresar": [
+      "volver",
+      "retornar"
+    ],
+    "viajar": [
+      "recorrer",
+      "pasear"
+    ],
+    "visitar": [
+      "ver",
+      "frecuentar"
+    ],
+    "vivir": [
+      "residir",
+      "habitar",
+      "existir"
+    ],
+    "morir": [
+      "fallecer",
+      "perecer"
+    ],
+    "matar": [
+      "asesinar",
+      "eliminar"
+    ],
+    "reír": [
+      "carcajear",
+      "sonreír"
+    ],
+    "llorar": [
+      "sollozar",
+      "gemir"
+    ],
+    "sonreír": [
+      "reír"
+    ],
+    "imaginar": [
+      "soñar",
+      "fantasear",
+      "visualizar"
+    ],
+    "confiar": [
+      "esperar",
+      "desear",
+      "creer"
+    ],
+    "permitir": [
+      "autorizar",
+      "dejar"
+    ],
+    "dejar": [
+      "permitir",
+      "autorizar",
+      "prestar"
+    ],
+    "sugerir": [
+      "proponer",
+      "recomendar"
+    ],
+    "prevenir": [
+      "evitar",
+      "impedir"
+    ],
+    "evitar": [
+      "prevenir",
+      "impedir"
+    ],
+    "proteger": [
+      "defender",
+      "cuidar",
+      "guardar"
+    ],
+    "salvar": [
+      "rescatar",
+      "preservar"
+    ],
+    "gastar": [
+      "usar",
+      "consumir"
+    ],
+    "usar": [
+      "gastar",
+      "consumir",
+      "emplear"
+    ],
+    "prestar": [
+      "dejar"
+    ],
+    "deber": [
+      "adeudar"
+    ],
+    "tener": [
+      "poseer",
+      "disfrutar"
+    ],
+    "compartir": [
+      "dividir",
+      "repartir"
+    ],
+    "mantener": [
+      "conservar",
+      "guardar"
+    ],
+    "sostener": [
+      "agarrar",
+      "sujetar"
+    ],
+    "caer": [
+      "soltar",
+      "bajar",
+      "descender"
+    ],
+    "lanzar": [
+      "arrojar",
+      "tirar"
+    ],
+    "tirar": [
+      "lanzar",
+      "arrojar",
+      "arrastrar"
+    ],
+    "atrapar": [
+      "agarrar",
+      "capturar"
+    ],
+    "empujar": [
+      "presionar",
+      "impulsar"
+    ],
+    "subir": [
+      "ascender",
+      "trepar",
+      "aumentar"
+    ],
+    "cantar": [
+      "entonar"
+    ],
+    "bailar": [
+      "danzar"
+    ],
+    "dibujar": [
+      "esbozar",
+      "pintar"
+    ],
+    "discutir": [
+      "debatir",
+      "conversar",
+      "disputar"
+    ],
+    "luchar": [
+      "combatir",
+      "pelear"
+    ],
+    "buscar": [
+      "registrar",
+      "indagar"
+    ],
+    "suponer": [
+      "imaginar",
+      "visualizar"
+    ],
+    "gestionar": [
+      "dirigir",
+      "administrar"
+    ],
+    "liderar": [
+      "guiar",
+      "dirigir"
+    ],
+    "seguir": [
+      "perseguir",
+      "continuar"
+    ],
+    "unirse": [
+      "conectar",
+      "unir"
+    ],
+    "incluir": [
+      "contener",
+      "implicar",
+      "abarcar"
+    ],
+    "aumentar": [
+      "crecer",
+      "subir"
+    ],
+    "crecer": [
+      "aumentar",
+      "subir",
+      "desarrollar"
+    ],
+    "reducir": [
+      "disminuir",
+      "bajar"
+    ],
+    "mejorar": [
+      "perfeccionar",
+      "optimizar"
+    ],
+    "desarrollar": [
+      "crecer",
+      "expandir"
+    ],
+    "causar": [
+      "provocar",
+      "originar"
+    ],
+    "parecer": [
+      "aparentar",
+      "lucir"
+    ],
+    "volverse": [
+      "convertirse",
+      "transformarse"
+    ],
+    "quedarse": [
+      "permanecer",
+      "continuar"
+    ],
+    "suceder": [
+      "ocurrir",
+      "pasar"
+    ],
+    "ocurrir": [
+      "suceder",
+      "pasar"
+    ],
+    "pasar": [
+      "suceder",
+      "ocurrir"
+    ],
+    "ser": [
+      "existir",
+      "vivir"
+    ],
+    "aparecer": [
+      "surgir",
+      "mostrarse"
+    ],
+    "voluntad": [
+      "determinación"
     ]
   }
 }
