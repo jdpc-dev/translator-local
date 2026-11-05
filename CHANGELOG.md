@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Added
+
+- Reverse overrides for `papel` → `paper`, `la mañana` → `the morning`, and
+  `el vino` → `the wine`.
+- Regression tests for short Spanish phrases, code identifiers, and
+  unaccented/typographic input.
+
+### Changed
+
+- Language detection is more conservative about English `-er` terms, adds a
+  full-phrase bonus, and accepts unaccented Spanish dictionary entries.
+- Translation now preserves dotted names, leading/trailing underscores, and
+  digit-containing identifiers.
+- Lookups normalize typographic apostrophes and fall back to accent-folded
+  keys.
+- `Cargo.toml` declares a minimum Rust version and an SPDX license identifier.
+- Install and size targets are portable, and CI builds use the lockfile.
+
+### Fixed
+
+- Closed stdout pipes no longer panic with exit code 101.
+- Inverted Spanish punctuation is removed from English output.
+
 ## [0.2.11] - 2026-11-05
 
 ### Added

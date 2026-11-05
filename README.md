@@ -12,9 +12,9 @@ network access.
 
 | Requirement | Implementation |
 | :--- | :--- |
-| No AI/ML dependencies | Pure Rust with `regex`, `serde`, and `clap` only |
+| No AI/ML dependencies | Pure Rust with `regex`, `serde`, `serde_json`, and `clap` only |
 | Footprint under 15 MB | 2.5 MB stripped release binary with embedded JSON data; verify with `make size` |
-| Under 50 ms | About 9 ms per invocation including process startup on the development machine; verify with `make bench` |
+| Under 50 ms | About 11 ms per invocation including process startup on the development machine; verify with `make bench` |
 | Single standalone binary | `data/*.json` is compiled in with `include_str!` |
 | Fully offline | No network calls at runtime; all data is bundled |
 
@@ -54,9 +54,10 @@ translate-cli --file input.txt --target es
 echo "good morning" | translate-cli
 ```
 
-Input precedence is: positional `TEXT`, then `--file`, then stdin. If stdin is
-a terminal and no text or file was supplied, the command exits with a usage
-error instead of waiting for input.
+Input comes from positional `TEXT` or `--file` (they are mutually exclusive).
+If neither is supplied, stdin is read. If stdin is a terminal and no text or
+file was supplied, the command exits with a usage error instead of waiting for
+input.
 
 ### Options
 
@@ -111,13 +112,16 @@ Word Alternatives:
 1. **Input** is read from an argument, file, or stdin.
 2. **Detection** adds 10 points to Spanish for any of `ñ ¿ ¡ á é í ó ú ü`, then
    adds 1 point per stopword match for each language. Dictionary membership adds
-   another point for content words, and a list of three or more Spanish
-   infinitives adds 2 points to Spanish. Ties and zero scores default to English
-   with a warning.
+   another point for content words, a full-input match against a bundled phrase
+   adds 3 points, and a list of three or more distinct Spanish infinitives with
+   at least two `-ar`/`-ir` forms adds 2 points to Spanish. Ties and zero scores
+   default to English with a warning.
 3. **Translation** tokenizes the text while keeping whitespace and punctuation.
    It tries dictionary phrases longest-first (up to the longest bundled phrase),
    then falls back to single-word lookup. Plural forms retry their singular
-   entry. Code-like tokens (snake_case, camelCase, paths, dotted names, file
+   entry. Lookups also normalize typographic apostrophes and fall back to
+   accent-folded keys, so `don’t` matches `don't` and `rapido` matches `rápido`.
+   Code-like tokens (snake_case, camelCase, paths, dotted names, file
    extensions) are preserved unchanged. Matched spans preserve the source
    capitalization. Unknown words are passed through or bracketed.
 4. **Alternatives** tokenize the translated output and look up up to three
@@ -127,7 +131,7 @@ Word Alternatives:
 ## Data
 
 The bundled dataset contains **2,252 bilingual pairs** (1,614 words and 638
-phrases), **668 Spanish→English reverse overrides**, and **1,147 synonym
+phrases), **671 Spanish→English reverse overrides**, and **1,147 synonym
 entries** (583 English and 564 Spanish), all embedded in the binary. Synonyms
 are curated in bilingual concept groups so the English and Spanish alternatives
 stay aligned. Words without a suitable synonym return an empty list.
@@ -160,6 +164,8 @@ lists.
    adjusted. `The red cars` may produce an ungrammatical word order.
 3. **Out-of-vocabulary words.** Proper nouns, slang, and technical terms are
    passed through unchanged by default. Use `--oov bracket` to mark them.
+4. **Heuristic detection.** Very short or mixed-language input without strong
+   signals may default to English.
 
 These limitations are also printed by `translate-cli --help`.
 
@@ -210,4 +216,4 @@ CHANGELOG.md
 
 ## License
 
-GPL-3.0. See `LICENSE`.
+GPL-3.0-only. See `LICENSE`.

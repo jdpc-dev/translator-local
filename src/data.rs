@@ -82,6 +82,8 @@ struct SynonymsFile {
 pub struct Dictionary {
     en_to_es: HashMap<String, String>,
     es_to_en: HashMap<String, String>,
+    en_to_es_folded: HashMap<String, String>,
+    es_to_en_folded: HashMap<String, String>,
     max_phrase_words: usize,
 }
 
@@ -94,6 +96,8 @@ impl Dictionary {
 
         let mut en_to_es = HashMap::new();
         let mut es_to_en = HashMap::new();
+        let mut en_keys = Vec::new();
+        let mut es_keys = Vec::new();
         let mut max_phrase_words = 1;
 
         for pair in file.pairs {
@@ -101,13 +105,16 @@ impl Dictionary {
                 .max(pair.en.split_whitespace().count())
                 .max(pair.es.split_whitespace().count());
 
+            let en_key = normalize_key(&pair.en);
+            let es_key = normalize_key(&pair.es);
+            en_keys.push(en_key.clone());
+            es_keys.push(es_key.clone());
+
             // Several English words can share a Spanish translation (fast/quick ->
             // rápido). Keep the first curated mapping so reverse lookups stay
             // deterministic.
-            en_to_es
-                .entry(normalize_key(&pair.en))
-                .or_insert_with(|| pair.es.clone());
-            es_to_en.entry(normalize_key(&pair.es)).or_insert(pair.en);
+            en_to_es.entry(en_key).or_insert(pair.es);
+            es_to_en.entry(es_key).or_insert(pair.en);
         }
 
         // Explicit reverse pairs cover Spanish inflections and object pronouns
@@ -115,22 +122,44 @@ impl Dictionary {
         // precedence over reverse lookups derived from the forward pairs.
         for pair in reverse.pairs {
             max_phrase_words = max_phrase_words.max(pair.es.split_whitespace().count());
-            es_to_en.insert(normalize_key(&pair.es), pair.en);
+            let es_key = normalize_key(&pair.es);
+            es_keys.push(es_key.clone());
+            es_to_en.insert(es_key, pair.en);
         }
+
+        let en_to_es_folded = folded_aliases(&en_keys, &en_to_es);
+        let es_to_en_folded = folded_aliases(&es_keys, &es_to_en);
 
         Self {
             en_to_es,
             es_to_en,
+            en_to_es_folded,
+            es_to_en_folded,
             max_phrase_words,
         }
     }
 
     pub fn lookup(&self, source: Lang, key: &str) -> Option<&str> {
-        let table = match source {
-            Lang::En => &self.en_to_es,
-            Lang::Es => &self.es_to_en,
+        let (table, folded) = match source {
+            Lang::En => (&self.en_to_es, &self.en_to_es_folded),
+            Lang::Es => (&self.es_to_en, &self.es_to_en_folded),
         };
-        table.get(key).map(String::as_str)
+
+        if let Some(value) = table.get(key) {
+            return Some(value);
+        }
+
+        // Folded aliases are ASCII, so try the key directly first.
+        if let Some(value) = folded.get(key) {
+            return Some(value);
+        }
+
+        let folded_key = fold_accents(key);
+        if folded_key.as_str() == key {
+            return None;
+        }
+
+        folded.get(&folded_key).map(String::as_str)
     }
 
     pub fn max_phrase_words(&self) -> usize {
@@ -160,7 +189,7 @@ impl Synonyms {
             Lang::Es => &self.es,
         };
         table
-            .get(&word.to_lowercase())
+            .get(&normalize_key(word))
             .map(Vec::as_slice)
             .unwrap_or(&[])
     }
@@ -168,7 +197,7 @@ impl Synonyms {
 
 fn lowercase_keys(map: HashMap<String, Vec<String>>) -> HashMap<String, Vec<String>> {
     map.into_iter()
-        .map(|(key, value)| (key.to_lowercase(), value))
+        .map(|(key, value)| (normalize_key(&key), value))
         .collect()
 }
 
@@ -177,6 +206,48 @@ pub fn normalize_key(text: &str) -> String {
         .collect::<Vec<_>>()
         .join(" ")
         .to_lowercase()
+        .replace(['’', '‘'], "'")
+}
+
+/// Fold Spanish accents so unaccented input can fall back to accented entries.
+fn fold_accents(text: &str) -> String {
+    text.chars()
+        .map(|c| match c {
+            'á' | 'à' | 'ä' | 'â' | 'ã' => 'a',
+            'é' | 'è' | 'ë' | 'ê' => 'e',
+            'í' | 'ì' | 'ï' | 'î' => 'i',
+            'ó' | 'ò' | 'ö' | 'ô' | 'õ' => 'o',
+            'ú' | 'ù' | 'ü' | 'û' => 'u',
+            'ñ' => 'n',
+            'ç' => 'c',
+            other => other,
+        })
+        .collect()
+}
+
+/// Build unaccented aliases in dataset order. Exact keys always win, and the
+/// first alias for a folded form is kept so lookups stay deterministic.
+fn folded_aliases(keys: &[String], table: &HashMap<String, String>) -> HashMap<String, String> {
+    let mut aliases = HashMap::new();
+
+    for key in keys {
+        // Short accented words (`año`, `sí`, `más`) collide too easily with
+        // unrelated unaccented words (`ano`, `si`, `mas`).
+        if key.chars().count() < 4 {
+            continue;
+        }
+
+        let folded = fold_accents(key);
+        if folded.as_str() == key.as_str() || table.contains_key(&folded) {
+            continue;
+        }
+
+        if let Some(value) = table.get(key) {
+            aliases.entry(folded).or_insert_with(|| value.clone());
+        }
+    }
+
+    aliases
 }
 
 static DICTIONARY: OnceLock<Dictionary> = OnceLock::new();
@@ -188,4 +259,43 @@ pub fn dictionary() -> &'static Dictionary {
 
 pub fn synonyms() -> &'static Synonyms {
     SYNONYMS.get_or_init(Synonyms::load)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn normalizes_typographic_apostrophes() {
+        assert_eq!(normalize_key("Don’t  worry"), "don't worry");
+        assert_eq!(normalize_key("I‘m sorry"), "i'm sorry");
+    }
+
+    #[test]
+    fn folds_spanish_accents() {
+        assert_eq!(
+            fold_accents("rápido, mañana, pingüino"),
+            "rapido, manana, pinguino"
+        );
+    }
+
+    #[test]
+    fn lookup_accepts_unaccented_spanish() {
+        let dictionary = dictionary();
+        assert_eq!(dictionary.lookup(Lang::Es, "rápido"), Some("fast"));
+        assert_eq!(dictionary.lookup(Lang::Es, "rapido"), Some("fast"));
+        assert_eq!(
+            dictionary.lookup(Lang::Es, "la manana"),
+            Some("the morning")
+        );
+    }
+
+    #[test]
+    fn does_not_fold_short_words_into_aliases() {
+        let mut table = HashMap::new();
+        table.insert("año".to_string(), "year".to_string());
+        let keys = vec!["año".to_string()];
+
+        assert!(folded_aliases(&keys, &table).is_empty());
+    }
 }

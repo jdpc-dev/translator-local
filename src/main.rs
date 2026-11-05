@@ -10,7 +10,7 @@ use clap::Parser;
 use cli::{Cli, OutputFormat};
 use data::Lang;
 use std::fs;
-use std::io::{self, IsTerminal, Read};
+use std::io::{self, IsTerminal, Read, Write};
 use std::process::ExitCode;
 
 fn main() -> ExitCode {
@@ -82,19 +82,28 @@ fn run(cli: Cli) -> Result<(), String> {
     let alternatives = alternatives::alternatives(&translation, target);
     let detected = detection.is_some();
 
-    match cli.format {
-        OutputFormat::Text => println!(
-            "{}",
+    let rendered = match cli.format {
+        OutputFormat::Text => {
             output::render_text(&text, source, target, detected, &translation, &alternatives)
-        ),
-        OutputFormat::Json => println!(
-            "{}",
+        }
+        OutputFormat::Json => {
             output::render_json(&text, source, target, &translation, &alternatives)
                 .map_err(|error| format!("cannot serialize output: {error}"))?
-        ),
-    }
+        }
+    };
 
-    Ok(())
+    write_output(&rendered)
+}
+
+fn write_output(text: &str) -> Result<(), String> {
+    let stdout = io::stdout();
+    let mut stdout = stdout.lock();
+
+    match writeln!(stdout, "{text}") {
+        Ok(()) => Ok(()),
+        Err(error) if error.kind() == io::ErrorKind::BrokenPipe => Ok(()),
+        Err(error) => Err(format!("cannot write output: {error}")),
+    }
 }
 
 fn read_input(cli: &Cli) -> Result<String, String> {

@@ -2,8 +2,9 @@
 name = "translator-local"
 version = "0.2.11"
 edition = "2024"
+rust-version = "1.88"
 description = "Offline, rule-based English-Spanish command-line translator"
-license = "GPL-3.0"
+license = "GPL-3.0-only"
 repository = "https://github.com/jdpc-dev/translator-local"
 readme = "README.md"
 

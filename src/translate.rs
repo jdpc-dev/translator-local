@@ -1,4 +1,4 @@
-use crate::data::{Lang, dictionary};
+use crate::data::{Lang, dictionary, normalize_key};
 use crate::tokenize::{Token, apply_case, tokenize};
 use clap::ValueEnum;
 
@@ -32,7 +32,7 @@ pub fn translate(text: &str, source: Lang, oov: OovMode) -> String {
             Token::Word(word) => Some(WordRef {
                 token_index,
                 text: word.clone(),
-                lower: word.to_lowercase(),
+                lower: normalize_key(word),
                 code_like: is_code_like(&tokens, token_index, word),
             }),
             _ => None,
@@ -133,7 +133,14 @@ pub fn translate(text: &str, source: Lang, oov: OovMode) -> String {
     for (index, token) in tokens.iter().enumerate() {
         match &replaced[index] {
             Some(piece) => output.push_str(piece),
-            None => output.push_str(token.text()),
+            None => match token {
+                // Inverted Spanish punctuation has no place in English output;
+                // the closing mark is preserved.
+                Token::Punct(punct) if source == Lang::Es => {
+                    output.extend(punct.chars().filter(|c| !matches!(c, '¿' | '¡')));
+                }
+                _ => output.push_str(token.text()),
+            },
         }
     }
     output
@@ -154,81 +161,26 @@ fn is_code_like(tokens: &[Token], token_index: usize, word: &str) -> bool {
 
     let prev = token_index.checked_sub(1).and_then(|i| tokens.get(i));
     let next = tokens.get(token_index + 1);
-    let path_punct = |token: &Token| matches!(token, Token::Punct(p) if matches!(p.as_str(), "/" | "\\" | "@" | "$"));
-    if prev.is_some_and(path_punct) || next.is_some_and(path_punct) {
-        return true;
-    }
 
-    let word_at = |index: usize| match tokens.get(index) {
-        Some(Token::Word(text)) => Some(text.as_str()),
-        _ => None,
+    let code_punct = |token: Option<&Token>| {
+        matches!(token, Some(Token::Punct(text))
+            if text
+                .chars()
+                .any(|c| matches!(c, '/' | '\\' | '@' | '$' | '_' | '-'))
+                || text.chars().any(|c| c.is_ascii_digit()))
     };
-
-    if let Some(Token::Punct(p)) = prev
-        && p == "."
-    {
-        if let Some(before) = token_index.checked_sub(2).and_then(word_at)
-            && (is_code_word(before) || is_file_extension(word))
-        {
-            return true;
-        }
-        if is_file_extension(word) {
-            return true;
-        }
-    }
-
-    if let Some(Token::Punct(p)) = next
-        && p == "."
-    {
-        if let Some(after) = word_at(token_index + 2)
-            && (is_code_word(after) || is_file_extension(after))
-        {
-            return true;
-        }
-        if is_file_extension(word) {
-            return true;
-        }
-    }
-
-    false
-}
-
-fn is_code_word(word: &str) -> bool {
-    if word.contains('_') || word.chars().any(|c| c.is_ascii_digit()) {
+    if code_punct(prev) || code_punct(next) {
         return true;
     }
-    let mut previous_lower = false;
-    for c in word.chars() {
-        if previous_lower && c.is_uppercase() {
-            return true;
-        }
-        previous_lower = c.is_lowercase();
-    }
-    false
-}
 
-fn is_file_extension(word: &str) -> bool {
-    matches!(
-        word,
-        "php"
-            | "vue"
-            | "js"
-            | "ts"
-            | "json"
-            | "md"
-            | "xlsx"
-            | "pdf"
-            | "csv"
-            | "txt"
-            | "html"
-            | "css"
-            | "yml"
-            | "yaml"
-            | "xml"
-            | "sql"
-            | "env"
-            | "lock"
-    )
+    // Keep dotted identifiers such as `user.name` together. A dot followed
+    // by whitespace or the end of the input is sentence punctuation.
+    if matches!(next, Some(Token::Punct(text)) if text == ".")
+        && matches!(tokens.get(token_index + 2), Some(Token::Word(_)))
+    {
+        return true;
+    }
+    matches!(prev, Some(Token::Punct(text)) if text == ".")
 }
 
 fn singular_candidates(word: &str) -> Vec<String> {
@@ -280,7 +232,8 @@ fn is_sentence_start(tokens: &[Token], token_index: usize) -> bool {
 /// English `I` is always capitalized, but its Spanish translation is not
 /// capitalized mid-sentence.
 fn is_english_pronoun_i(text: &str) -> bool {
-    matches!(text, "I" | "I'm" | "I've" | "I'll" | "I'd")
+    let normalized = text.replace('’', "'");
+    matches!(normalized.as_str(), "I" | "I'm" | "I've" | "I'll" | "I'd")
 }
 
 #[cfg(test)]
@@ -408,5 +361,55 @@ mod tests {
             translate("hello zorblax", Lang::En, OovMode::Bracket),
             "hola [zorblax]"
         );
+    }
+
+    #[test]
+    fn preserves_dotted_and_underscored_identifiers() {
+        for identifier in [
+            "user.name",
+            "hello.world",
+            "_private",
+            "CAT_2",
+            "hello123",
+            "api/v2/users",
+            "README.md",
+        ] {
+            assert_eq!(
+                translate(identifier, Lang::En, OovMode::Keep),
+                identifier,
+                "identifier was translated: {identifier}"
+            );
+        }
+    }
+
+    #[test]
+    fn still_translates_words_before_sentence_punctuation() {
+        assert_eq!(translate("hello.", Lang::En, OovMode::Keep), "hola.");
+        assert_eq!(
+            translate("hello. world", Lang::En, OovMode::Keep),
+            "hola. mundo"
+        );
+    }
+
+    #[test]
+    fn accepts_unaccented_spanish_and_typographic_apostrophes() {
+        assert_eq!(
+            translate("el gato rapido salta.", Lang::Es, OovMode::Keep),
+            "the fast cat jumps."
+        );
+        assert_eq!(
+            translate("don’t worry", Lang::En, OovMode::Keep),
+            "no te preocupes"
+        );
+        assert_eq!(translate("I’m sorry", Lang::En, OovMode::Keep), "Lo siento");
+    }
+
+    #[test]
+    fn removes_inverted_spanish_punctuation_from_english_output() {
+        assert_eq!(
+            translate("¿Dónde está la farmacia?", Lang::Es, OovMode::Keep),
+            "Where is the pharmacy?"
+        );
+        assert_eq!(translate("¡Hola!", Lang::Es, OovMode::Keep), "Hello!");
     }
 }

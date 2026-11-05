@@ -29,8 +29,8 @@ fn dictionary_pairs() -> Vec<(String, String)> {
 fn dictionary_seed_is_substantial_and_well_formed() {
     let pairs = dictionary_pairs();
     assert!(
-        pairs.len() >= 1500,
-        "expected at least 1500 pairs, found {}",
+        pairs.len() >= 2250,
+        "expected at least 2250 pairs, found {}",
         pairs.len()
     );
 
@@ -69,11 +69,11 @@ fn dictionary_seed_is_substantial_and_well_formed() {
     }
 
     assert!(
-        pairs.len() - phrases >= 1200,
-        "expected at least 1200 single-word entries"
+        pairs.len() - phrases >= 1600,
+        "expected at least 1600 single-word entries"
     );
-    assert!(phrases >= 300, "expected at least 300 phrases");
-    assert!(max_phrase_words >= 5, "expected five-word phrase coverage");
+    assert!(phrases >= 630, "expected at least 630 phrases");
+    assert!(max_phrase_words >= 7, "expected seven-word phrase coverage");
 }
 
 #[test]
@@ -89,6 +89,7 @@ fn required_demo_entries_are_present() {
         ("you're welcome", "de nada"),
         ("computer", "computadora"),
         ("where is the pharmacy", "dónde está la farmacia"),
+        ("sometimes", "a veces"),
         ("value", "valor"),
     ] {
         assert!(
@@ -105,8 +106,8 @@ fn reverse_overrides_are_well_formed() {
     let value: Value = serde_json::from_str(REVERSE_JSON).expect("reverse.json is valid");
     let pairs = value["pairs"].as_array().expect("pairs is an array");
     assert!(
-        pairs.len() >= 200,
-        "expected at least 200 reverse entries, found {}",
+        pairs.len() >= 665,
+        "expected at least 665 reverse entries, found {}",
         pairs.len()
     );
 
@@ -135,6 +136,9 @@ fn reverse_overrides_are_well_formed() {
         ("manipula", "manipulates"),
         ("nos miente", "lies to us"),
         ("nos manipula", "manipulates us"),
+        ("papel", "paper"),
+        ("la mañana", "the morning"),
+        ("el vino", "the wine"),
     ] {
         assert!(
             pairs
@@ -152,8 +156,8 @@ fn synonyms_are_clean_and_do_not_repeat_the_headword() {
     for lang in ["en", "es"] {
         let entries = value[lang].as_object().expect("language map is an object");
         assert!(
-            entries.len() >= 450,
-            "{lang} should have at least 450 synonym entries"
+            entries.len() >= 560,
+            "{lang} should have at least 560 synonym entries"
         );
 
         for (word, alternatives) in entries {

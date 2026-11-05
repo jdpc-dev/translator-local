@@ -1,6 +1,6 @@
 use serde_json::Value;
 use std::fs;
-use std::io::Write;
+use std::io::{Read, Write};
 use std::process::{Command, Output, Stdio};
 use std::time::{SystemTime, UNIX_EPOCH};
 
@@ -338,6 +338,51 @@ fn translates_moon_questions() {
 }
 
 #[test]
+fn translates_common_ambiguous_phrases() {
+    for (input, expected) in [
+        ("el papel", "the paper"),
+        ("la mañana", "the morning"),
+        ("el vino", "the wine"),
+        ("a veces", "sometimes"),
+    ] {
+        let output = run(&[input, "--format", "json"], None);
+        let value = json_output(&output);
+        assert_eq!(value["detected_language"], "es", "input: {input}");
+        assert_eq!(value["translation"], expected, "input: {input}");
+    }
+}
+
+#[test]
+fn preserves_code_identifiers() {
+    let input = "user.name hello.world _private CAT_2 hello123 api/v2/users";
+    let output = run(&[input, "--source", "en", "--format", "json"], None);
+    let value = json_output(&output);
+
+    assert_eq!(value["translation"], input);
+}
+
+#[test]
+fn translates_unaccented_and_typographic_input() {
+    for (input, expected) in [
+        ("el gato rapido salta", "the fast cat jumps"),
+        ("don’t worry", "no te preocupes"),
+        ("I’m sorry", "Lo siento"),
+    ] {
+        let output = run(&[input, "--format", "json"], None);
+        let value = json_output(&output);
+        assert_eq!(value["translation"], expected, "input: {input}");
+    }
+}
+
+#[test]
+fn removes_inverted_spanish_punctuation() {
+    let output = run(&["¿Dónde está la farmacia?", "--format", "json"], None);
+    let value = json_output(&output);
+
+    assert_eq!(value["translation"], "Where is the pharmacy?");
+}
+
+#[test]
 fn renders_human_readable_output() {
     let output = run(&["El gato rápido salta."], None);
     assert!(output.status.success());
@@ -449,4 +494,39 @@ fn rejects_empty_input() {
 
     assert!(!output.status.success());
     assert!(String::from_utf8_lossy(&output.stderr).contains("input text is empty"));
+}
+
+#[test]
+fn does_not_fail_when_stdout_closes_early() {
+    let unique = SystemTime::now()
+        .duration_since(UNIX_EPOCH)
+        .expect("clock is after 1970")
+        .as_nanos();
+    let path = std::env::temp_dir().join(format!(
+        "translate-cli-broken-pipe-{}-{unique}.txt",
+        std::process::id()
+    ));
+    fs::write(&path, "hello world ".repeat(10_000)).expect("test file is written");
+
+    let mut child = Command::new(env!("CARGO_BIN_EXE_translate-cli"))
+        .args(["--file", path.to_str().expect("utf-8 path")])
+        .stdout(Stdio::piped())
+        .stderr(Stdio::piped())
+        .spawn()
+        .expect("binary starts");
+
+    let mut stdout = child.stdout.take().expect("stdout is piped");
+    stdout
+        .read_exact(&mut [0u8; 1])
+        .expect("binary writes output");
+    drop(stdout);
+
+    let output = child.wait_with_output().expect("binary finishes");
+    fs::remove_file(&path).expect("test file is removed");
+
+    assert!(
+        output.status.success(),
+        "closed pipe caused an error: {}",
+        String::from_utf8_lossy(&output.stderr)
+    );
 }

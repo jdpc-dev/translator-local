@@ -9,7 +9,9 @@ Known limitations:
   2. There is no grammatical agreement for gender, number, or verb
      conjugation.
   3. Out-of-vocabulary words pass through unchanged by default; use
-     --oov bracket to mark them.";
+     --oov bracket to mark them.
+  4. Language detection is heuristic; very short or mixed-language input
+     may default to English.";
 
 #[derive(Debug, Parser)]
 #[command(

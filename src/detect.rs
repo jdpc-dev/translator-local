@@ -44,7 +44,8 @@ pub fn detect(text: &str) -> Detection {
 
     let mut en_score = 0;
     let mut en_dictionary_hits = 0;
-    let mut infinitive_like = 0;
+    let mut infinitive_words: Vec<&str> = Vec::new();
+    let mut ar_ir_count = 0;
     let dictionary = dictionary();
 
     for word in lower.split(|c: char| !c.is_alphanumeric()) {
@@ -77,19 +78,38 @@ pub fn detect(text: &str) -> Detection {
             _ => {}
         }
 
-        // Spanish infinitives are a useful signal when several appear and no
-        // English dictionary word is present. Requiring three avoids treating
-        // isolated -er/-ar/-ir English words as Spanish.
+        // Spanish infinitives are a useful signal when several distinct forms
+        // appear with no English dictionary word present. Requiring at least
+        // two -ar/-ir endings keeps lists of English -er agent nouns from
+        // being mistaken for Spanish.
         if !in_en
+            && !in_es
             && word.len() >= 4
             && (word.ends_with("ar") || word.ends_with("er") || word.ends_with("ir"))
+            && !infinitive_words.contains(&word)
         {
-            infinitive_like += 1;
+            if word.ends_with("ar") || word.ends_with("ir") {
+                ar_ir_count += 1;
+            }
+            infinitive_words.push(word);
         }
     }
 
-    if infinitive_like >= 3 && en_dictionary_hits == 0 {
+    if infinitive_words.len() >= 3 && ar_ir_count >= 2 && en_dictionary_hits == 0 {
         es_score += 2;
+    }
+
+    // A full-input phrase match is a stronger signal than isolated words,
+    // especially for short phrases such as "a veces".
+    let normalized_text =
+        normalize_key(text.trim_matches(|c: char| !c.is_alphanumeric() && !c.is_whitespace()));
+    if normalized_text.contains(' ') {
+        if dictionary.lookup(Lang::Es, &normalized_text).is_some() {
+            es_score += 3;
+        }
+        if dictionary.lookup(Lang::En, &normalized_text).is_some() {
+            en_score += 3;
+        }
     }
 
     let language = if es_score > en_score {
@@ -173,6 +193,26 @@ mod tests {
     fn does_not_mistake_english_er_words_for_spanish() {
         let result = detect("summer winter computer teacher");
         assert_eq!(result.language, Lang::En);
+        assert!(!result.ambiguous);
+    }
+
+    #[test]
+    fn does_not_mistake_oov_english_agent_nouns_for_infinitives() {
+        for text in [
+            "renderer compiler linker",
+            "docker container builder",
+            "buffer handler logger",
+            "bicker bicker bicker",
+        ] {
+            let result = detect(text);
+            assert_eq!(result.language, Lang::En, "text: {text}");
+        }
+    }
+
+    #[test]
+    fn detects_short_spanish_phrase_from_the_dictionary() {
+        let result = detect("a veces");
+        assert_eq!(result.language, Lang::Es);
         assert!(!result.ambiguous);
     }
 }
