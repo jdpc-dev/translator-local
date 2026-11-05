@@ -2185,6 +2185,202 @@
     "repeat": [
       "reiterate",
       "redo"
+    ],
+    "crashed": [
+      "failed",
+      "broke"
+    ],
+    "server": [
+      "host",
+      "machine"
+    ],
+    "syntax": [
+      "grammar",
+      "structure"
+    ],
+    "script": [
+      "code",
+      "program"
+    ],
+    "microservices": [
+      "services",
+      "components"
+    ],
+    "deploy": [
+      "release",
+      "launch"
+    ],
+    "cluster": [
+      "group",
+      "collection"
+    ],
+    "resolve": [
+      "solve",
+      "settle"
+    ],
+    "exceeded": [
+      "surpassed",
+      "overrun"
+    ],
+    "returning": [
+      "sending",
+      "yielding"
+    ],
+    "database": [
+      "datastore",
+      "repository"
+    ],
+    "corrupted": [
+      "damaged",
+      "broken"
+    ],
+    "restore": [
+      "recover",
+      "repair"
+    ],
+    "backup": [
+      "copy",
+      "snapshot"
+    ],
+    "lagging": [
+      "delayed",
+      "sluggish"
+    ],
+    "matchmaking": [
+      "pairing",
+      "ranking"
+    ],
+    "lobby": [
+      "room",
+      "hall"
+    ],
+    "walls": [
+      "barriers",
+      "sides"
+    ],
+    "attack": [
+      "strike",
+      "assault"
+    ],
+    "dodge": [
+      "evade",
+      "avoid"
+    ],
+    "grind": [
+      "farm",
+      "labor"
+    ],
+    "unlock": [
+      "open",
+      "release"
+    ],
+    "ranked": [
+      "competitive",
+      "rated"
+    ],
+    "troll": [
+      "mock",
+      "taunt"
+    ],
+    "hotfix": [
+      "patch",
+      "fix"
+    ],
+    "nerf": [
+      "weaken",
+      "reduce"
+    ],
+    "overpowered": [
+      "broken",
+      "dominant"
+    ],
+    "assault": [
+      "attack",
+      "strike"
+    ],
+    "rifle": [
+      "gun",
+      "firearm"
+    ],
+    "legendary": [
+      "mythic",
+      "epic"
+    ],
+    "armor": [
+      "protection",
+      "gear"
+    ],
+    "raid": [
+      "incursion",
+      "dungeon"
+    ],
+    "bot": [
+      "robot",
+      "automaton"
+    ],
+    "main": [
+      "primary",
+      "principal"
+    ],
+    "branch": [
+      "path",
+      "line"
+    ],
+    "untested": [
+      "unverified",
+      "unproven"
+    ],
+    "dumbass": [
+      "idiot",
+      "fool"
+    ],
+    "target": [
+      "goal",
+      "objective"
+    ],
+    "bazooka": [
+      "launcher",
+      "rocket"
+    ],
+    "dogshit": [
+      "garbage",
+      "crap"
+    ],
+    "bro": [
+      "dude",
+      "buddy"
+    ],
+    "cops": [
+      "police",
+      "officers"
+    ],
+    "drunk": [
+      "intoxicated",
+      "tipsy"
+    ],
+    "stingy": [
+      "cheap",
+      "miserly"
+    ],
+    "scene": [
+      "commotion",
+      "spectacle"
+    ],
+    "code": [
+      "program",
+      "cipher"
+    ],
+    "status": [
+      "state",
+      "condition"
+    ],
+    "requests": [
+      "calls",
+      "queries"
+    ],
+    "rate": [
+      "speed",
+      "frequency"
     ]
   },
   "es": {
@@ -4309,6 +4505,182 @@
     "repetir": [
       "reiterar",
       "rehacer"
+    ],
+    "servidor": [
+      "host",
+      "máquina"
+    ],
+    "sintaxis": [
+      "gramática",
+      "estructura"
+    ],
+    "script": [
+      "código",
+      "programa"
+    ],
+    "microservicios": [
+      "servicios",
+      "componentes"
+    ],
+    "desplegar": [
+      "implementar",
+      "instalar"
+    ],
+    "clúster": [
+      "grupo",
+      "conjunto"
+    ],
+    "conflictos": [
+      "desacuerdos",
+      "choques"
+    ],
+    "límite": [
+      "tope",
+      "restricción"
+    ],
+    "peticiones": [
+      "solicitudes",
+      "consultas"
+    ],
+    "superado": [
+      "excedido",
+      "rebosado"
+    ],
+    "corrupta": [
+      "dañada",
+      "defectuosa"
+    ],
+    "restaurar": [
+      "recuperar",
+      "reparar"
+    ],
+    "backup": [
+      "respaldo",
+      "copia"
+    ],
+    "madrugada": [
+      "amanecer",
+      "alba"
+    ],
+    "lag": [
+      "retraso",
+      "latencia"
+    ],
+    "paredes": [
+      "muros",
+      "tabiques"
+    ],
+    "ataque": [
+      "asalto",
+      "golpe"
+    ],
+    "esquivar": [
+      "evitar",
+      "eludir"
+    ],
+    "farmear": [
+      "recolectar",
+      "cultivar"
+    ],
+    "desbloquear": [
+      "abrir",
+      "liberar"
+    ],
+    "troleado": [
+      "burlado",
+      "provocado"
+    ],
+    "nerfear": [
+      "debilitar",
+      "reducir"
+    ],
+    "poderoso": [
+      "fuerte",
+      "potente"
+    ],
+    "rifle": [
+      "fusil",
+      "arma"
+    ],
+    "craftear": [
+      "fabricar",
+      "construir"
+    ],
+    "armadura": [
+      "protección",
+      "coraza"
+    ],
+    "legendaria": [
+      "épica",
+      "mítica"
+    ],
+    "compilar": [
+      "construir",
+      "generar"
+    ],
+    "rama": [
+      "línea",
+      "división"
+    ],
+    "idiota": [
+      "tonto",
+      "imbécil"
+    ],
+    "objetivo": [
+      "blanco",
+      "meta"
+    ],
+    "bazuca": [
+      "lanzacohetes",
+      "cohete"
+    ],
+    "puntería": [
+      "precisión",
+      "apuntado"
+    ],
+    "mierda": [
+      "porquería",
+      "basura"
+    ],
+    "tío": [
+      "bro",
+      "amigo"
+    ],
+    "estrelló": [
+      "falló",
+      "chocó"
+    ],
+    "fuga": [
+      "pérdida",
+      "escape"
+    ],
+    "memoria": [
+      "recuerdo",
+      "retención"
+    ],
+    "módulo": [
+      "componente",
+      "unidad"
+    ],
+    "daemon": [
+      "demonio",
+      "servicio"
+    ],
+    "devolviendo": [
+      "retornando",
+      "entregando"
+    ],
+    "código": [
+      "programa",
+      "clave"
+    ],
+    "host": [
+      "servidor",
+      "máquina"
+    ],
+    "remoto": [
+      "distante",
+      "lejano"
     ]
   }
 }

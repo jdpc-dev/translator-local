@@ -74,7 +74,13 @@ pub fn translate(text: &str, source: Lang, oov: OovMode) -> String {
 
         match chosen {
             Some((length, translation)) => {
-                let replacement = apply_case(translation, &words[index].text);
+                let source_word = &words[index].text;
+                let sentence_start = is_sentence_start(&tokens, words[index].token_index);
+                let replacement = if is_english_pronoun_i(source_word) && !sentence_start {
+                    translation.to_string()
+                } else {
+                    apply_case(translation, source_word)
+                };
                 let start = words[index].token_index;
                 let end = words[index + length - 1].token_index;
 
@@ -106,6 +112,25 @@ pub fn translate(text: &str, source: Lang, oov: OovMode) -> String {
         }
     }
     output
+}
+
+fn is_sentence_start(tokens: &[Token], token_index: usize) -> bool {
+    for token in tokens[..token_index].iter().rev() {
+        match token {
+            Token::Space(_) => continue,
+            Token::Punct(text) => {
+                return text.ends_with(['.', '!', '?', '…']);
+            }
+            Token::Word(_) => return false,
+        }
+    }
+    true
+}
+
+/// English `I` is always capitalized, but its Spanish translation is not
+/// capitalized mid-sentence.
+fn is_english_pronoun_i(text: &str) -> bool {
+    matches!(text, "I" | "I'm" | "I've" | "I'll" | "I'd")
 }
 
 #[cfg(test)]
@@ -169,6 +194,18 @@ mod tests {
         assert_eq!(
             translate("Hello, world!", Lang::En, OovMode::Keep),
             "Hola, mundo!"
+        );
+    }
+
+    #[test]
+    fn does_not_capitalize_english_i_mid_sentence() {
+        assert_eq!(
+            translate("I am here", Lang::En, OovMode::Keep),
+            "Estoy aquí"
+        );
+        assert_eq!(
+            translate("Hello, I am here", Lang::En, OovMode::Keep),
+            "Hola, estoy aquí"
         );
     }
 

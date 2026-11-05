@@ -3,7 +3,7 @@ use std::sync::LazyLock;
 
 static TOKEN_RE: LazyLock<Regex> = LazyLock::new(|| {
     Regex::new(
-        r"(?P<word>[\p{L}\p{M}]+(?:['’][\p{L}\p{M}]+)*)|(?P<space>\s+)|(?P<punct>[^\p{L}\p{M}\s]+)",
+        r"(?P<word>[\p{L}\p{M}]+(?:['’\-][\p{L}\p{M}]+)*)|(?P<space>\s+)|(?P<punct>[^\p{L}\p{M}\s]+)",
     )
     .expect("tokenizer regex is valid")
 });
@@ -85,6 +85,13 @@ mod tests {
     fn keeps_apostrophes_inside_words() {
         let tokens = tokenize("don't stop");
         assert_eq!(tokens[0], Token::Word("don't".into()));
+    }
+
+    #[test]
+    fn keeps_hyphens_inside_words() {
+        let tokens = tokenize("low-ass wage and one-shot");
+        assert_eq!(tokens[0], Token::Word("low-ass".into()));
+        assert_eq!(tokens[6], Token::Word("one-shot".into()));
     }
 
     #[test]

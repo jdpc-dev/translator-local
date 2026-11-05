@@ -174,6 +174,99 @@ fn translates_spanish_infinitive_verb_lists() {
 }
 
 #[test]
+fn translates_technical_prose() {
+    let output = run(
+        &[
+            "The daemon process crashed because of a memory leak in the kernel module.",
+            "--format",
+            "json",
+        ],
+        None,
+    );
+    let value = json_output(&output);
+    assert_eq!(
+        value["translation"],
+        "El proceso daemon se estrelló debido a una fuga de memoria en el módulo del kernel."
+    );
+
+    let output = run(
+        &[
+            "El servidor se cayó por un error de sintaxis en el script de bash.",
+            "--format",
+            "json",
+        ],
+        None,
+    );
+    let value = json_output(&output);
+    assert_eq!(
+        value["translation"],
+        "The server crashed because of a syntax error in the bash script."
+    );
+}
+
+#[test]
+fn translates_gaming_prose() {
+    let output = run(
+        &[
+            "El boss tiene un ataque de área que te hace one-shot si no esquivas el hitbox.",
+            "--format",
+            "json",
+        ],
+        None,
+    );
+    let value = json_output(&output);
+    assert_eq!(
+        value["translation"],
+        "The boss has an area attack that makes you one-shot if you don't dodge the hitbox."
+    );
+
+    let output = run(
+        &[
+            "I need to grind some XP to level up my character and unlock the skill tree.",
+            "--format",
+            "json",
+        ],
+        None,
+    );
+    let value = json_output(&output);
+    assert_eq!(
+        value["translation"],
+        "Necesito farmear algo de xp para subir de nivel a mi personaje y desbloquear el árbol de habilidades."
+    );
+}
+
+#[test]
+fn translates_slang_and_profanity() {
+    let output = run(
+        &[
+            "Tío, juegas como el culo, te han troleado hasta la madre en el puto lobby.",
+            "--format",
+            "json",
+        ],
+        None,
+    );
+    let value = json_output(&output);
+    assert_eq!(
+        value["translation"],
+        "Bro, you play like shit, they trolled you hard in the fucking lobby."
+    );
+
+    let output = run(
+        &[
+            "The fucking server crashed again because some dumbass pushed untested code to the main branch.",
+            "--format",
+            "json",
+        ],
+        None,
+    );
+    let value = json_output(&output);
+    assert_eq!(
+        value["translation"],
+        "El puto servidor se estrelló otra vez porque algún idiota subió código sin probar a la rama principal."
+    );
+}
+
+#[test]
 fn renders_human_readable_output() {
     let output = run(&["El gato rápido salta."], None);
     assert!(output.status.success());

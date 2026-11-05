@@ -14,7 +14,7 @@ network access.
 | :--- | :--- |
 | No AI/ML dependencies | Pure Rust with `regex`, `serde`, and `clap` only |
 | Footprint under 15 MB | 2.5 MB stripped release binary with embedded JSON data; verify with `make size` |
-| Under 50 ms | About 8 ms per invocation including process startup on the development machine; verify with `make bench` |
+| Under 50 ms | About 9 ms per invocation including process startup on the development machine; verify with `make bench` |
 | Single standalone binary | `data/*.json` is compiled in with `include_str!` |
 | Fully offline | No network calls at runtime; all data is bundled |
 
@@ -124,9 +124,9 @@ Word Alternatives:
 
 ## Data
 
-The bundled dataset contains **1,836 bilingual pairs** (1,410 words and 426
-phrases), **267 Spanish→English reverse overrides**, and **1,044 synonym
-entries** (530 English and 514 Spanish), all embedded in the binary. Synonyms
+The bundled dataset contains **2,068 bilingual pairs** (1,491 words and 577
+phrases), **303 Spanish→English reverse overrides**, and **1,137 synonym
+entries** (579 English and 558 Spanish), all embedded in the binary. Synonyms
 are curated in bilingual concept groups so the English and Spanish alternatives
 stay aligned. Words without a suitable synonym return an empty list.
 

@@ -7,6 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.6] - 2026-11-05
+
+### Added
+
+- Technical vocabulary and phrases for daemons, memory leaks, kernel modules,
+  microservices, deployment, Kubernetes, git/merge conflicts, API rate limits,
+  status codes, databases, restoring backups, and CI/CD.
+- Gaming vocabulary for ping/lag, matchmaking, boss mechanics, hitboxes, XP,
+  grinding, leveling, skill trees, ranked play, junglers, feeding, hotfixes,
+  nerfs, crafting, legendary armor, raids, aim, and lobbies.
+- English and Spanish slang/profanity coverage for the supplied corpus,
+  including `no mames`, `wey`, `trolear`, `curro`, `pesao`, `plata`,
+  `tacaño`, `me vale verga`, `me la pela`, and common insults.
+- Hyphenated tokens such as `low-ass` and `one-shot` are now preserved as single
+  tokens.
+- Regression tests for technical, gaming, slang, and profanity sentences.
+
+### Fixed
+
+- English pronoun `I` is no longer capitalized mid-sentence after translation.
+- Generic `for such a` no longer overrides reverse translations of `por un`.
+- Dataset now covers 2,068 pairs, 303 reverse overrides, and 1,137 synonym
+  entries.
+
 ## [0.2.5] - 2026-11-05
 
 ### Added

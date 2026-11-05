@@ -7344,6 +7344,934 @@
     {
       "en": "autumn",
       "es": "otoño"
+    },
+    {
+      "en": "daemon",
+      "es": "daemon"
+    },
+    {
+      "en": "daemon process",
+      "es": "proceso daemon"
+    },
+    {
+      "en": "the daemon process",
+      "es": "el proceso daemon"
+    },
+    {
+      "en": "memory leak",
+      "es": "fuga de memoria"
+    },
+    {
+      "en": "the memory leak",
+      "es": "la fuga de memoria"
+    },
+    {
+      "en": "a memory leak",
+      "es": "una fuga de memoria"
+    },
+    {
+      "en": "kernel",
+      "es": "kernel"
+    },
+    {
+      "en": "kernel module",
+      "es": "módulo del kernel"
+    },
+    {
+      "en": "the kernel module",
+      "es": "el módulo del kernel"
+    },
+    {
+      "en": "module",
+      "es": "módulo"
+    },
+    {
+      "en": "server",
+      "es": "servidor"
+    },
+    {
+      "en": "the server",
+      "es": "el servidor"
+    },
+    {
+      "en": "syntax",
+      "es": "sintaxis"
+    },
+    {
+      "en": "syntax error",
+      "es": "error de sintaxis"
+    },
+    {
+      "en": "script",
+      "es": "script"
+    },
+    {
+      "en": "bash",
+      "es": "bash"
+    },
+    {
+      "en": "microservice",
+      "es": "microservicio"
+    },
+    {
+      "en": "microservices",
+      "es": "microservicios"
+    },
+    {
+      "en": "the microservices",
+      "es": "los microservicios"
+    },
+    {
+      "en": "refactor",
+      "es": "refactorizar"
+    },
+    {
+      "en": "refactor the microservices",
+      "es": "refactorizar los microservicios"
+    },
+    {
+      "en": "deploy",
+      "es": "desplegar"
+    },
+    {
+      "en": "deploy them",
+      "es": "desplegarlos"
+    },
+    {
+      "en": "kubernetes",
+      "es": "kubernetes"
+    },
+    {
+      "en": "cluster",
+      "es": "clúster"
+    },
+    {
+      "en": "kubernetes cluster",
+      "es": "clúster de kubernetes"
+    },
+    {
+      "en": "to the kubernetes cluster",
+      "es": "al clúster de kubernetes"
+    },
+    {
+      "en": "git push",
+      "es": "git push"
+    },
+    {
+      "en": "forced",
+      "es": "forzado"
+    },
+    {
+      "en": "forced git push",
+      "es": "git push forzado"
+    },
+    {
+      "en": "merge",
+      "es": "merge"
+    },
+    {
+      "en": "merge conflict",
+      "es": "conflicto de merge"
+    },
+    {
+      "en": "merge conflicts",
+      "es": "conflictos de merge"
+    },
+    {
+      "en": "the merge conflicts",
+      "es": "los conflictos de merge"
+    },
+    {
+      "en": "api",
+      "es": "api"
+    },
+    {
+      "en": "rate limit",
+      "es": "límite de peticiones"
+    },
+    {
+      "en": "the api rate limit",
+      "es": "el límite de peticiones de la api"
+    },
+    {
+      "en": "exceeded",
+      "es": "superado"
+    },
+    {
+      "en": "was exceeded",
+      "es": "fue superado"
+    },
+    {
+      "en": "status code",
+      "es": "código de estado"
+    },
+    {
+      "en": "too many requests",
+      "es": "demasiadas solicitudes"
+    },
+    {
+      "en": "database",
+      "es": "base de datos"
+    },
+    {
+      "en": "the database",
+      "es": "la base de datos"
+    },
+    {
+      "en": "corrupt",
+      "es": "corrupto"
+    },
+    {
+      "en": "corrupted",
+      "es": "corrupta"
+    },
+    {
+      "en": "restore",
+      "es": "restaurar"
+    },
+    {
+      "en": "backup",
+      "es": "copia de seguridad"
+    },
+    {
+      "en": "the backup",
+      "es": "la copia de seguridad"
+    },
+    {
+      "en": "early morning",
+      "es": "madrugada"
+    },
+    {
+      "en": "ping",
+      "es": "ping"
+    },
+    {
+      "en": "lag",
+      "es": "lag"
+    },
+    {
+      "en": "lagging",
+      "es": "con lag"
+    },
+    {
+      "en": "matchmaking",
+      "es": "emparejamiento"
+    },
+    {
+      "en": "matchmaking lobby",
+      "es": "lobby de emparejamiento"
+    },
+    {
+      "en": "the matchmaking lobby",
+      "es": "el lobby de emparejamiento"
+    },
+    {
+      "en": "lobby",
+      "es": "lobby"
+    },
+    {
+      "en": "walls",
+      "es": "paredes"
+    },
+    {
+      "en": "the walls",
+      "es": "las paredes"
+    },
+    {
+      "en": "area attack",
+      "es": "ataque de área"
+    },
+    {
+      "en": "attack",
+      "es": "ataque"
+    },
+    {
+      "en": "dodge",
+      "es": "esquivar"
+    },
+    {
+      "en": "hitbox",
+      "es": "hitbox"
+    },
+    {
+      "en": "xp",
+      "es": "xp"
+    },
+    {
+      "en": "grind",
+      "es": "farmear"
+    },
+    {
+      "en": "level up",
+      "es": "subir de nivel"
+    },
+    {
+      "en": "level up my character",
+      "es": "subir de nivel a mi personaje"
+    },
+    {
+      "en": "skill tree",
+      "es": "árbol de habilidades"
+    },
+    {
+      "en": "the skill tree",
+      "es": "el árbol de habilidades"
+    },
+    {
+      "en": "unlock",
+      "es": "desbloquear"
+    },
+    {
+      "en": "ranked",
+      "es": "ranked"
+    },
+    {
+      "en": "jungler",
+      "es": "jungla"
+    },
+    {
+      "en": "troll",
+      "es": "trolear"
+    },
+    {
+      "en": "trolled",
+      "es": "troleado"
+    },
+    {
+      "en": "hotfix",
+      "es": "hotfix"
+    },
+    {
+      "en": "nerf",
+      "es": "nerfear"
+    },
+    {
+      "en": "overpowered",
+      "es": "demasiado poderoso"
+    },
+    {
+      "en": "assault rifle",
+      "es": "rifle de asalto"
+    },
+    {
+      "en": "the overpowered assault rifle",
+      "es": "el rifle de asalto demasiado poderoso"
+    },
+    {
+      "en": "craft",
+      "es": "craftear"
+    },
+    {
+      "en": "legendary",
+      "es": "legendario"
+    },
+    {
+      "en": "armor",
+      "es": "armadura"
+    },
+    {
+      "en": "legendary armor",
+      "es": "armadura legendaria"
+    },
+    {
+      "en": "the legendary armor",
+      "es": "la armadura legendaria"
+    },
+    {
+      "en": "raid",
+      "es": "raid"
+    },
+    {
+      "en": "compile",
+      "es": "compilar"
+    },
+    {
+      "en": "bot",
+      "es": "bot"
+    },
+    {
+      "en": "the bot",
+      "es": "el bot"
+    },
+    {
+      "en": "main branch",
+      "es": "rama principal"
+    },
+    {
+      "en": "the main branch",
+      "es": "la rama principal"
+    },
+    {
+      "en": "untested",
+      "es": "sin probar"
+    },
+    {
+      "en": "untested code",
+      "es": "código sin probar"
+    },
+    {
+      "en": "code",
+      "es": "código"
+    },
+    {
+      "en": "dumbass",
+      "es": "idiota"
+    },
+    {
+      "en": "stationary",
+      "es": "fijo"
+    },
+    {
+      "en": "target",
+      "es": "objetivo"
+    },
+    {
+      "en": "stationary target",
+      "es": "objetivo fijo"
+    },
+    {
+      "en": "bazooka",
+      "es": "bazuca"
+    },
+    {
+      "en": "accuracy",
+      "es": "puntería"
+    },
+    {
+      "en": "your aim",
+      "es": "tu puntería"
+    },
+    {
+      "en": "dogshit",
+      "es": "mierda"
+    },
+    {
+      "en": "server crashed",
+      "es": "servidor se estrelló"
+    },
+    {
+      "en": "the server crashed",
+      "es": "el servidor se estrelló"
+    },
+    {
+      "en": "we need to",
+      "es": "tenemos que"
+    },
+    {
+      "en": "we need",
+      "es": "necesitamos"
+    },
+    {
+      "en": "you have to",
+      "es": "tienes que"
+    },
+    {
+      "en": "i'm gonna",
+      "es": "voy a"
+    },
+    {
+      "en": "i'm not doing",
+      "es": "no voy a hacer"
+    },
+    {
+      "en": "let's grab a bite",
+      "es": "vamos a comer algo"
+    },
+    {
+      "en": "i'm starving",
+      "es": "me muero de hambre"
+    },
+    {
+      "en": "i'm broke",
+      "es": "estoy sin dinero"
+    },
+    {
+      "en": "i'm totally broke",
+      "es": "estoy totalmente sin dinero"
+    },
+    {
+      "en": "until payday",
+      "es": "hasta el día de pago"
+    },
+    {
+      "en": "that party",
+      "es": "esa fiesta"
+    },
+    {
+      "en": "totally lit",
+      "es": "totalmente genial"
+    },
+    {
+      "en": "we were vibing",
+      "es": "estábamos pasándolo bien"
+    },
+    {
+      "en": "until the cops showed up",
+      "es": "hasta que apareció la policía"
+    },
+    {
+      "en": "the cops",
+      "es": "la policía"
+    },
+    {
+      "en": "cops",
+      "es": "policías"
+    },
+    {
+      "en": "ghost him",
+      "es": "ignorarlo"
+    },
+    {
+      "en": "he's been acting super sus lately",
+      "es": "ha estado actuando muy sospechoso últimamente"
+    },
+    {
+      "en": "giving me the ick",
+      "es": "dándome asco"
+    },
+    {
+      "en": "dude",
+      "es": "tío"
+    },
+    {
+      "en": "that guy",
+      "es": "ese chavo"
+    },
+    {
+      "en": "out of line",
+      "es": "pasado de vergüez"
+    },
+    {
+      "en": "got drunk",
+      "es": "se emborrachó"
+    },
+    {
+      "en": "made a scene",
+      "es": "armó un escándalo"
+    },
+    {
+      "en": "what a cold shoulder",
+      "es": "qué corte de manga"
+    },
+    {
+      "en": "left me on read",
+      "es": "me dejó en visto"
+    },
+    {
+      "en": "it turns out that",
+      "es": "resulta que"
+    },
+    {
+      "en": "he has no money",
+      "es": "no tiene plata"
+    },
+    {
+      "en": "what a cheapskate",
+      "es": "qué tacaño"
+    },
+    {
+      "en": "i'm fed up",
+      "es": "estoy hasta las narices"
+    },
+    {
+      "en": "this job",
+      "es": "este curro"
+    },
+    {
+      "en": "the boss is annoying",
+      "es": "el jefe es un pesao"
+    },
+    {
+      "en": "they won't raise my salary",
+      "es": "no me suben el sueldo"
+    },
+    {
+      "en": "what the fuck",
+      "es": "qué coño"
+    },
+    {
+      "en": "what is wrong with you",
+      "es": "qué te pasa"
+    },
+    {
+      "en": "you fucked up",
+      "es": "la cagaste"
+    },
+    {
+      "en": "presentation",
+      "es": "presentación"
+    },
+    {
+      "en": "the presentation",
+      "es": "la presentación"
+    },
+    {
+      "en": "for fuck's sake",
+      "es": "me cago en la puta"
+    },
+    {
+      "en": "it broke on me",
+      "es": "se me ha jodido"
+    },
+    {
+      "en": "the fucking computer",
+      "es": "el puto ordenador"
+    },
+    {
+      "en": "this shit is bullshit",
+      "es": "esta mierda es una mierda"
+    },
+    {
+      "en": "crappy job",
+      "es": "trabajo de mierda"
+    },
+    {
+      "en": "low wage",
+      "es": "sueldo bajo"
+    },
+    {
+      "en": "you're a fucking bastard",
+      "es": "eres un puto cabrón"
+    },
+    {
+      "en": "you owe me money",
+      "es": "me debes dinero"
+    },
+    {
+      "en": "you don't answer me",
+      "es": "no me contestas"
+    },
+    {
+      "en": "the fucking messages",
+      "es": "los putos mensajes"
+    },
+    {
+      "en": "i don't give a shit",
+      "es": "me importa una mierda"
+    },
+    {
+      "en": "your excuses",
+      "es": "tus excusas"
+    },
+    {
+      "en": "get over here",
+      "es": "ponte aquí"
+    },
+    {
+      "en": "what the fuck are you saying",
+      "es": "qué coño dices"
+    },
+    {
+      "en": "you're an asshole",
+      "es": "eres un gilipollas"
+    },
+    {
+      "en": "you don't even know how to",
+      "es": "no sabes ni"
+    },
+    {
+      "en": "hammer a nail",
+      "es": "poner un clavo"
+    },
+    {
+      "en": "i don't give a fuck",
+      "es": "me vale verga"
+    },
+    {
+      "en": "what people think",
+      "es": "lo que piense la gente"
+    },
+    {
+      "en": "whether they like me or not",
+      "es": "si les caigo bien o mal"
+    },
+    {
+      "en": "some dumbass",
+      "es": "algún idiota"
+    },
+    {
+      "en": "pushed untested code",
+      "es": "subió código sin probar"
+    },
+    {
+      "en": "to the main branch",
+      "es": "a la rama principal"
+    },
+    {
+      "en": "fuck the dev",
+      "es": "me cago en los muertos del dev"
+    },
+    {
+      "en": "the fucking bot",
+      "es": "el puto bot"
+    },
+    {
+      "en": "doesn't compile",
+      "es": "no compila"
+    },
+    {
+      "en": "i have to fix",
+      "es": "me toca arreglar"
+    },
+    {
+      "en": "this shit",
+      "es": "esta mierda"
+    },
+    {
+      "en": "your aim is dogshit",
+      "es": "tu puntería es una mierda"
+    },
+    {
+      "en": "you couldn't hit",
+      "es": "no podrías darle a"
+    },
+    {
+      "en": "fucking bazooka",
+      "es": "puta bazuca"
+    },
+    {
+      "en": "you play like shit",
+      "es": "juegas como el culo"
+    },
+    {
+      "en": "they trolled you",
+      "es": "te han troleado"
+    },
+    {
+      "en": "trolled hard",
+      "es": "troleado hasta la madre"
+    },
+    {
+      "en": "in the fucking lobby",
+      "es": "en el puto lobby"
+    },
+    {
+      "en": "bro",
+      "es": "tío"
+    },
+    {
+      "en": "fucking",
+      "es": "puto"
+    },
+    {
+      "en": "shit",
+      "es": "mierda"
+    },
+    {
+      "en": "bullshit",
+      "es": "mierda"
+    },
+    {
+      "en": "crappy",
+      "es": "de mierda"
+    },
+    {
+      "en": "wage",
+      "es": "salario"
+    },
+    {
+      "en": "excuses",
+      "es": "excusas"
+    },
+    {
+      "en": "asshole",
+      "es": "gilipollas"
+    },
+    {
+      "en": "bastard",
+      "es": "cabrón"
+    },
+    {
+      "en": "nail",
+      "es": "clavo"
+    },
+    {
+      "en": "drunk",
+      "es": "borracho"
+    },
+    {
+      "en": "stingy",
+      "es": "tacaño"
+    },
+    {
+      "en": "salary",
+      "es": "sueldo"
+    },
+    {
+      "en": "scene",
+      "es": "escándalo"
+    },
+    {
+      "en": "cold shoulder",
+      "es": "corte de manga"
+    },
+    {
+      "en": "annoying",
+      "es": "pesao"
+    },
+    {
+      "en": "resolve",
+      "es": "resolver"
+    },
+    {
+      "en": "we need to fix",
+      "es": "tenemos que arreglar"
+    },
+    {
+      "en": "crashed",
+      "es": "se estrelló"
+    },
+    {
+      "en": "crash",
+      "es": "estrellarse"
+    },
+    {
+      "en": "returning",
+      "es": "devolviendo"
+    },
+    {
+      "en": "returns",
+      "es": "devuelve"
+    },
+    {
+      "en": "devs",
+      "es": "desarrolladores"
+    },
+    {
+      "en": "the devs",
+      "es": "los desarrolladores"
+    },
+    {
+      "en": "just dropped",
+      "es": "acaban de lanzar"
+    },
+    {
+      "en": "to nerf",
+      "es": "para nerfear"
+    },
+    {
+      "en": "so high",
+      "es": "tan alto"
+    },
+    {
+      "en": "i'm lagging",
+      "es": "tengo lag"
+    },
+    {
+      "en": "my ping is so high",
+      "es": "mi ping es tan alto"
+    },
+    {
+      "en": "some xp",
+      "es": "algo de xp"
+    },
+    {
+      "en": "to level up",
+      "es": "para subir de nivel"
+    },
+    {
+      "en": "to craft",
+      "es": "para craftear"
+    },
+    {
+      "en": "before the",
+      "es": "antes del"
+    },
+    {
+      "en": "is way out of line",
+      "es": "está bien pasado de vergüez"
+    },
+    {
+      "en": "now it turns out that",
+      "es": "ahora sale que"
+    },
+    {
+      "en": "what the fuck is wrong with you",
+      "es": "qué coño te pasa"
+    },
+    {
+      "en": "completely fucked up",
+      "es": "arruinaste completamente"
+    },
+    {
+      "en": "the fucking computer broke on me",
+      "es": "se me ha jodido el puto ordenador"
+    },
+    {
+      "en": "low-ass wage",
+      "es": "sueldo de mierda"
+    },
+    {
+      "en": "my fucking messages",
+      "es": "los putos mensajes"
+    },
+    {
+      "en": "about your excuses",
+      "es": "sobre tus excusas"
+    },
+    {
+      "en": "put a fucking nail",
+      "es": "poner un puto clavo"
+    },
+    {
+      "en": "a fucking bazooka",
+      "es": "una puta bazuca"
+    },
+    {
+      "en": "an area attack",
+      "es": "un ataque de área"
+    },
+    {
+      "en": "makes you",
+      "es": "te hace"
+    },
+    {
+      "en": "if you don't",
+      "es": "si no"
+    },
+    {
+      "en": "we need to restore",
+      "es": "necesitamos restaurar"
+    },
+    {
+      "en": "of this job",
+      "es": "de este curro"
+    },
+    {
+      "en": "you don't answer my fucking messages",
+      "es": "no me contestas los putos mensajes"
+    },
+    {
+      "en": "for a",
+      "es": "por un"
+    },
+    {
+      "en": "low-ass",
+      "es": "de mierda"
+    },
+    {
+      "en": "for such a low-ass wage",
+      "es": "por un sueldo de mierda"
+    },
+    {
+      "en": "one-shot",
+      "es": "one-shot"
+    },
+    {
+      "en": "so high that",
+      "es": "tan alto que"
+    },
+    {
+      "en": "to level up my character",
+      "es": "para subir de nivel a mi personaje"
+    },
+    {
+      "en": "get your ass over here right now",
+      "es": "ponte aquí ahora mismo"
+    },
+    {
+      "en": "my ping is so high that",
+      "es": "mi ping es tan alto que"
     }
   ]
 }
