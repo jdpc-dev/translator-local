@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-05
+
 ### Changed
 
 - Expanded the embedded dictionary from 967 to 1,719 pairs: 1,367 words and 352
