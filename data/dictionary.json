@@ -8980,6 +8980,18 @@
     {
       "en": "based on",
       "es": "basado en"
+    },
+    {
+      "en": "hide",
+      "es": "esconder"
+    },
+    {
+      "en": "medkit",
+      "es": "botiquín"
+    },
+    {
+      "en": "medkits",
+      "es": "botiquines"
     }
   ]
 }

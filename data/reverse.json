@@ -2648,6 +2648,18 @@
     {
       "es": "semillas",
       "en": "seeds"
+    },
+    {
+      "es": "ocultar",
+      "en": "hide"
+    },
+    {
+      "es": "medkits",
+      "en": "medkits"
+    },
+    {
+      "es": "medkit",
+      "en": "medkit"
     }
   ]
 }

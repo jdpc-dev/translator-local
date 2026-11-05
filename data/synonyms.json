@@ -2385,6 +2385,10 @@
     "hurts": [
       "aches",
       "pains"
+    ],
+    "hide": [
+      "conceal",
+      "cover"
     ]
   },
   "es": {
@@ -4689,6 +4693,18 @@
     "duele": [
       "lastima",
       "molesta"
+    ],
+    "ocultar": [
+      "esconder",
+      "tapar"
+    ],
+    "esconder": [
+      "ocultar",
+      "tapar"
+    ],
+    "medkits": [
+      "botiquines",
+      "botiquín"
     ]
   }
 }

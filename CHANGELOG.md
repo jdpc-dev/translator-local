@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.9] - 2026-11-05
+
+### Added
+
+- `hide`/`esconder`, plus reverse overrides for `ocultar` → `hide`.
+- `medkit`/`botiquín`, `medkits`/`botiquines`, and identity handling for the
+  Spanish gaming loanword `medkits`.
+- Alternatives for `hide`, `ocultar`, `esconder`, and `medkits`.
+- Regression test for single Spanish infinitive input and `ocultar medkits`.
+
+### Fixed
+
+- Single Spanish infinitive words such as `ocultar` now detect as Spanish and
+  translate instead of defaulting to English and passing through.
+
 ## [0.2.8] - 2026-11-05
 
 ### Added

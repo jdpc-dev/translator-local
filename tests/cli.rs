@@ -307,6 +307,16 @@ fn translates_prompt_corpus_technical_lines() {
 }
 
 #[test]
+fn translates_single_spanish_infinitive_and_gaming_term() {
+    for (input, expected) in [("ocultar medkits", "hide medkits"), ("ocultar", "hide")] {
+        let output = run(&[input, "--format", "json"], None);
+        let value = json_output(&output);
+        assert_eq!(value["detected_language"], "es", "input: {input}");
+        assert_eq!(value["translation"], expected, "input: {input}");
+    }
+}
+
+#[test]
 fn renders_human_readable_output() {
     let output = run(&["El gato rápido salta."], None);
     assert!(output.status.success());
