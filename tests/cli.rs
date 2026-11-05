@@ -138,6 +138,22 @@ fn translates_plural_nouns_and_anatomy_vocabulary() {
 }
 
 #[test]
+fn translates_spanish_articles_and_object_phrases() {
+    let output = run(
+        &["si la perra esta amarrada. dejenla que llore todo el dia, no la deben de soltar"],
+        None,
+    );
+    assert!(output.status.success());
+
+    let stdout = String::from_utf8_lossy(&output.stdout);
+    assert!(stdout.contains(
+        "Target (EN): if the bitch is tied up. let her cry all day, you should not let her go"
+    ));
+    assert!(stdout.contains("- bitch → (cur, mongrel)"));
+    assert!(stdout.contains("- tied → (bound, fastened)"));
+}
+
+#[test]
 fn renders_human_readable_output() {
     let output = run(&["El gato rápido salta."], None);
     assert!(output.status.success());

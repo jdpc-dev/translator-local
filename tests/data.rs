@@ -5,6 +5,11 @@ const DICTIONARY_JSON: &str = include_str!("../data/dictionary.json");
 const REVERSE_JSON: &str = include_str!("../data/reverse.json");
 const SYNONYMS_JSON: &str = include_str!("../data/synonyms.json");
 
+fn is_latin_word(word: &str, allow_spanish_accents: bool) -> bool {
+    word.chars()
+        .all(|c| c.is_ascii_alphabetic() || (allow_spanish_accents && "áéíóúüñ".contains(c)))
+}
+
 fn dictionary_pairs() -> Vec<(String, String)> {
     let value: Value = serde_json::from_str(DICTIONARY_JSON).expect("dictionary.json is valid");
     value["pairs"]
@@ -153,6 +158,10 @@ fn synonyms_are_clean_and_do_not_repeat_the_headword() {
 
         for (word, alternatives) in entries {
             assert_eq!(*word, word.to_lowercase(), "synonym key is not lowercase");
+            assert!(
+                is_latin_word(word, lang == "es"),
+                "synonym key contains unsupported characters: {word:?}"
+            );
             let alternatives = alternatives
                 .as_array()
                 .expect("alternative list is an array");
@@ -166,6 +175,10 @@ fn synonyms_are_clean_and_do_not_repeat_the_headword() {
                     *alternative,
                     alternative.to_lowercase(),
                     "synonym is not lowercase: {alternative:?}"
+                );
+                assert!(
+                    is_latin_word(alternative, lang == "es"),
+                    "synonym contains unsupported characters: {alternative:?}"
                 );
                 assert_ne!(
                     alternative.to_lowercase(),

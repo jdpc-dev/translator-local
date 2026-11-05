@@ -19,15 +19,15 @@
     },
     {
       "es": "la",
-      "en": "her"
+      "en": "the"
     },
     {
       "es": "los",
-      "en": "them"
+      "en": "the"
     },
     {
       "es": "las",
-      "en": "them"
+      "en": "the"
     },
     {
       "es": "le",
@@ -1012,6 +1012,62 @@
     {
       "es": "no nos gusta",
       "en": "we do not like"
+    },
+    {
+      "es": "una",
+      "en": "a"
+    },
+    {
+      "es": "unas",
+      "en": "some"
+    },
+    {
+      "es": "unos",
+      "en": "some"
+    },
+    {
+      "es": "esta amarrada",
+      "en": "is tied up"
+    },
+    {
+      "es": "todo el dia",
+      "en": "all day"
+    },
+    {
+      "es": "no la deben de soltar",
+      "en": "you should not let her go"
+    },
+    {
+      "es": "no la deben soltar",
+      "en": "you should not let her go"
+    },
+    {
+      "es": "dejenla que llore",
+      "en": "let her cry"
+    },
+    {
+      "es": "dejenla",
+      "en": "leave her"
+    },
+    {
+      "es": "amarrada",
+      "en": "tied"
+    },
+    {
+      "es": "llore",
+      "en": "cries"
+    },
+    {
+      "es": "dia",
+      "en": "day"
+    },
+    {
+      "es": "soltar",
+      "en": "release"
+    },
+    {
+      "es": "deben de",
+      "en": "should"
     }
   ]
 }

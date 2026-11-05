@@ -7,6 +7,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.2.4] - 2026-11-05
+
+### Added
+
+- Reverse overrides and phrase entries for `la perra` / `the bitch`,
+  `esta amarrada` / `is tied up`, `dejenla que llore` / `let her cry`,
+  `todo el dia` / `all day`, and
+  `no la deben de soltar` / `you should not let her go`.
+- Singular/plural vocabulary for `bitch`, `tied`, `release`, `cries`, and
+  related terms, plus alternatives.
+- Data tests now reject non-Latin characters in synonym entries.
+
+### Fixed
+
+- Spanish articles `la`, `las`, and `los` now translate to `the` instead of
+  being treated as object pronouns. Object-pronoun uses are handled by explicit
+  phrase entries.
+- Unaccented Spanish variants such as `dia` and `esta amarrada` are recognized.
+- Dataset now covers 1,829 pairs (1,403 words and 426 phrases), 267 reverse
+  overrides, and 1,034 synonym entries.
+
 ## [0.2.3] - 2026-11-05
 
 ### Added
