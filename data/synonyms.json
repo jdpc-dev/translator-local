@@ -2397,6 +2397,32 @@
     "shine": [
       "glow",
       "sparkle"
+    ],
+    "multiple": [
+      "several",
+      "various"
+    ],
+    "reload": [
+      "recharge",
+      "refill"
+    ],
+    "shotgun": [
+      "scattergun"
+    ],
+    "animation": [
+      "motion",
+      "cartoon"
+    ],
+    "frame": [
+      "still",
+      "snapshot"
+    ],
+    "till": [
+      "until"
+    ],
+    "shell": [
+      "cartridge",
+      "round"
     ]
   },
   "es": {
@@ -4721,6 +4747,30 @@
     "brillar": [
       "relucir",
       "resplandecer"
+    ],
+    "múltiple": [
+      "varios",
+      "diversos"
+    ],
+    "recarga": [
+      "reposición",
+      "abastecimiento"
+    ],
+    "recargar": [
+      "reabastecer",
+      "reponer"
+    ],
+    "animación": [
+      "movimiento",
+      "dinamismo"
+    ],
+    "fotograma": [
+      "cuadro",
+      "imagen"
+    ],
+    "cartucho": [
+      "cápsula",
+      "carga"
     ]
   }
 }

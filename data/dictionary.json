@@ -9016,6 +9016,78 @@
     {
       "en": "pencil",
       "es": "lápiz"
+    },
+    {
+      "en": "multiple",
+      "es": "múltiple"
+    },
+    {
+      "en": "reload",
+      "es": "recargar"
+    },
+    {
+      "en": "shotgun",
+      "es": "escopeta"
+    },
+    {
+      "en": "animation",
+      "es": "animación"
+    },
+    {
+      "en": "frame",
+      "es": "fotograma"
+    },
+    {
+      "en": "till",
+      "es": "hasta"
+    },
+    {
+      "en": "shell",
+      "es": "cartucho"
+    },
+    {
+      "en": "multiple reload",
+      "es": "recarga múltiple"
+    },
+    {
+      "en": "reload animation",
+      "es": "animación de recarga"
+    },
+    {
+      "en": "shotgun animation",
+      "es": "animación de la escopeta"
+    },
+    {
+      "en": "multiple reload shotgun animation",
+      "es": "la animación de recarga múltiple de la escopeta"
+    },
+    {
+      "en": "shotgun shell",
+      "es": "cartucho de escopeta"
+    },
+    {
+      "en": "should not",
+      "es": "no debería"
+    },
+    {
+      "en": "go far from",
+      "es": "alejarse de"
+    },
+    {
+      "en": "go far from frame",
+      "es": "alejarse del fotograma"
+    },
+    {
+      "en": "last shell",
+      "es": "último cartucho"
+    },
+    {
+      "en": "till last shell",
+      "es": "hasta el último cartucho"
+    },
+    {
+      "en": "until last shell",
+      "es": "hasta el último cartucho"
     }
   ]
 }

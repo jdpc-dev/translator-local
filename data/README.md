@@ -28,7 +28,7 @@ They are the complete offline dataset; the tool makes no network requests.
   infinitive entry at lookup time, so adding the base form covers regular
   inflections.
 
-Current coverage: 2,254 pairs — 1,616 single words and 638 phrases.
+Current coverage: 2,272 pairs — 1,623 single words and 649 phrases.
 
 ## `reverse.json`
 
@@ -64,7 +64,7 @@ Current coverage: 672 overrides.
 - Headwords and duplicate alternatives are not allowed.
 - A word may legitimately have no list; the tool returns `[]` for it.
 
-Current coverage: 1,147 entries — 583 English and 564 Spanish.
+Current coverage: 1,160 entries — 590 English and 570 Spanish.
 
 ## Provenance
 

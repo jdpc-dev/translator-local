@@ -253,6 +253,33 @@ fn translates_gaming_prose() {
 }
 
 #[test]
+fn translates_shotgun_animation_instructions() {
+    let input = "multiple reload shotgun animation should not go far from frame 4 till last shell";
+    let output = run(&[input, "--format", "json"], None);
+    let value = json_output(&output);
+    assert_eq!(value["detected_language"], "en");
+    assert_eq!(
+        value["translation"],
+        "la animación de recarga múltiple de la escopeta no debería alejarse del fotograma 4 hasta el último cartucho"
+    );
+
+    let output = run(
+        &[
+            "la animación de recarga múltiple de la escopeta no debería alejarse del fotograma 4 hasta el último cartucho",
+            "--format",
+            "json",
+        ],
+        None,
+    );
+    let value = json_output(&output);
+    assert_eq!(value["detected_language"], "es");
+    assert_eq!(
+        value["translation"],
+        "multiple reload shotgun animation should not go far from frame 4 till last shell"
+    );
+}
+
+#[test]
 fn translates_slang_and_profanity() {
     let output = run(
         &[

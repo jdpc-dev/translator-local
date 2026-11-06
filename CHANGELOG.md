@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Added
+
+- Shotgun-animation vocabulary: `multiple`/`múltiple`, `reload`/`recargar`,
+  `shotgun`/`escopeta`, `animation`/`animación`, `frame`/`fotograma`,
+  `till`/`hasta`, and `shell`/`cartucho`.
+- Phrase coverage for `multiple reload shotgun animation`, `should not`,
+  `go far from frame`, `till last shell`, and related reload/animation terms.
+- Synonyms for the new vocabulary.
+- Regression tests for the shotgun reload animation instruction in both
+  directions.
+
+### Fixed
+
+- The shotgun reload instruction no longer leaves English words untranslated
+  or preserves English word order in the Spanish output.
+- Dataset now covers 2,272 pairs (1,623 words and 649 phrases) and 1,160
+  synonym entries.
+
 ## [0.2.12] - 2026-11-05
 
 ### Added
